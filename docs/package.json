@@ -1081,5 +1081,6 @@
     "license": "MIT",
     "historical_source_baseline": true,
     "portable_verifier": "../scripts/verify_publication.py"
-  }
+  },
+  "public_source_url": "https://github.com/CptAYounes/sfm-fx-new-age/blob/main"
 }

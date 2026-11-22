@@ -25,6 +25,10 @@ def main():
             target=Path(os.path.normpath(target))
             if target.is_relative_to(root) and str(target.relative_to(root)) in ids:
                 val='#'+ids[str(target.relative_to(root))]
+            elif meta.get('public_source_url') and target.is_relative_to(root.parent) and not target.is_relative_to(root):
+                # A docs-only Pages deployment does not serve sibling source.
+                # Keep source anchors navigable through the public repository.
+                val=meta['public_source_url'].rstrip('/')+'/'+quote(str(target.relative_to(root.parent)),safe='/._-')+('#'+u.fragment if u.fragment else '')
             else:
                 val=quote(os.path.relpath(target,root),safe='/._-')+('#'+u.fragment if u.fragment else '')
             return attr+'="'+html.escape(val,quote=True)+'"'
