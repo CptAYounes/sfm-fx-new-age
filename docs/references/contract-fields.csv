@@ -1,0 +1,281 @@
+module,contract,field,type,default,line
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,source_scope,str,REQUIRED,21
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,source_epoch,str,REQUIRED,22
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,symbol,str,REQUIRED,23
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,timeframe,str,REQUIRED,24
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,available_at,str,REQUIRED,25
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,origin,Origin,REQUIRED,26
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,method_version,str,REQUIRED,27
+src/sfm_fx_new_age/contracts/analytics.py,Lineage,profile_hash,str,REQUIRED,28
+src/sfm_fx_new_age/contracts/analytics.py,Level,level_id,str,REQUIRED,39
+src/sfm_fx_new_age/contracts/analytics.py,Level,revision,int,REQUIRED,40
+src/sfm_fx_new_age/contracts/analytics.py,Level,kind,str,REQUIRED,41
+src/sfm_fx_new_age/contracts/analytics.py,Level,low,Decimal,REQUIRED,42
+src/sfm_fx_new_age/contracts/analytics.py,Level,high,Decimal,REQUIRED,43
+src/sfm_fx_new_age/contracts/analytics.py,Level,side,str,REQUIRED,44
+src/sfm_fx_new_age/contracts/analytics.py,Level,state,str,REQUIRED,45
+src/sfm_fx_new_age/contracts/analytics.py,Level,root_ids,"tuple[str, ...]",REQUIRED,46
+src/sfm_fx_new_age/contracts/analytics.py,Level,lineage,Lineage,REQUIRED,47
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,evidence_id,str,REQUIRED,58
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,level_id,str,REQUIRED,59
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,root_id,str,REQUIRED,60
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,cluster_id,str,REQUIRED,61
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,fingerprint,str,REQUIRED,62
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,domain,str,REQUIRED,63
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,side,str,REQUIRED,64
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,low,Decimal,REQUIRED,65
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,high,Decimal,REQUIRED,66
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,strength,Decimal,REQUIRED,67
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,reliability,Decimal,REQUIRED,68
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,expires_at,str,REQUIRED,69
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,lineage,Lineage,REQUIRED,70
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,confirmed,bool,True,71
+src/sfm_fx_new_age/contracts/analytics.py,Evidence,locality,str,'ENTRY_LOCAL',72
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,recipe_id,str,REQUIRED,87
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,version,int,REQUIRED,88
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,name,str,REQUIRED,89
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,required_nodes,"tuple[str, ...]",REQUIRED,90
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,source_ref,str,REQUIRED,91
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,profile_hash,str,REQUIRED,92
+src/sfm_fx_new_age/contracts/analytics.py,Recipe,state,str,'RESEARCH_ONLY',93
+src/sfm_fx_new_age/contracts/analytics.py,Variant,variant_id,str,REQUIRED,103
+src/sfm_fx_new_age/contracts/analytics.py,Variant,buffer_code,str,REQUIRED,104
+src/sfm_fx_new_age/contracts/analytics.py,Variant,buffer_fraction,Decimal,REQUIRED,105
+src/sfm_fx_new_age/contracts/analytics.py,Variant,stop_price,Decimal,REQUIRED,106
+src/sfm_fx_new_age/contracts/analytics.py,Variant,distance_pips,Decimal,REQUIRED,107
+src/sfm_fx_new_age/contracts/analytics.py,Variant,w1_atr_fraction,Decimal,REQUIRED,108
+src/sfm_fx_new_age/contracts/analytics.py,Variant,actual_band,str,REQUIRED,109
+src/sfm_fx_new_age/contracts/analytics.py,Variant,target_price,Decimal | None,REQUIRED,110
+src/sfm_fx_new_age/contracts/analytics.py,Variant,reward_r,Decimal | None,REQUIRED,111
+src/sfm_fx_new_age/contracts/analytics.py,Variant,blockers,"tuple[str, ...]",(),112
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,candidate_id,str,REQUIRED,126
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,setup_id,str,REQUIRED,127
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,revision,int,REQUIRED,128
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,recipe_id,str,REQUIRED,129
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,recipe_version,int,REQUIRED,130
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,zone_id,str,REQUIRED,131
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,side,str,REQUIRED,132
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,entry,Decimal,REQUIRED,133
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,anchor,Decimal,REQUIRED,134
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,target,Decimal | None,REQUIRED,135
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,evidence_ids,"tuple[str, ...]",REQUIRED,136
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,variants,"tuple[Variant, ...]",REQUIRED,137
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,lineage,Lineage,REQUIRED,138
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,expires_at,str,REQUIRED,139
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,confidence,Decimal | None,None,140
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,quality,Decimal | None,None,141
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,blockers,"tuple[str, ...]",(),142
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,research_state,str,'RESEARCH_UNCALIBRATED',143
+src/sfm_fx_new_age/contracts/analytics.py,MarketCandidate,gates,"tuple[tuple[str, bool | None], ...]",(),144
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,overlay_id,str,REQUIRED,165
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,revision,int,REQUIRED,166
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,kind,str,REQUIRED,167
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,object_id,str,REQUIRED,168
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,low,Decimal,REQUIRED,169
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,high,Decimal,REQUIRED,170
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,state,str,REQUIRED,171
+src/sfm_fx_new_age/contracts/analytics.py,Overlay,lineage,Lineage,REQUIRED,172
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,key,str,REQUIRED,182
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,owner,str,REQUIRED,183
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,data_type,str,REQUIRED,184
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,unit,str,REQUIRED,185
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,scope,str,REQUIRED,186
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,symbol,str | None,None,187
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,timeframe,str | None,None,188
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,quote_basis,str,'NOT_APPLICABLE',189
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,maturity,str,'NOT_APPLICABLE',190
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,max_age_seconds,int | None,None,191
+src/sfm_fx_new_age/contracts/analytics.py,VariableDefinition,version,int,1,192
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,key,str,REQUIRED,207
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,owner,str,REQUIRED,208
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,data_type,str,REQUIRED,209
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,unit,str,REQUIRED,210
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,scope,str,'GLOBAL',211
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,minimum,Decimal | None,None,212
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,maximum,Decimal | None,None,213
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,choices,"tuple[str, ...]",(),214
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,activation_boundary,str,'CORE_EVENT',215
+src/sfm_fx_new_age/contracts/analytics.py,ParameterDefinition,default,Any,None,216
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,surface_id,str,REQUIRED,238
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,owner,str,REQUIRED,239
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,parameter_keys,"tuple[str, ...]",REQUIRED,240
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,subtab_id,str,REQUIRED,241
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,command,str,'PROPOSE_VERSIONED_PARAM_CHANGE',242
+src/sfm_fx_new_age/contracts/analytics.py,MutableSurface,classification,str,'RESEARCH_CONFIGURATION',243
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,study_id,str,REQUIRED,12
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,dataset_id,str,REQUIRED,13
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,symbol,str,REQUIRED,14
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,timeframe,str,REQUIRED,15
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,method_id,str,REQUIRED,16
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,stop_bps,"tuple[str, ...]","('10', '20')",17
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,reward_r,"tuple[str, ...]","('1', '2')",18
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,holding_bars,int,5,19
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,train,int,100,20
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,test,int,30,21
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,cost_bps,str,'0',22
+src/sfm_fx_new_age/contracts/backtest.py,StudyRequest,information_clock,str,'AS_OBSERVED',23
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,name,str,REQUIRED,59
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,backend_owner,str,REQUIRED,60
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,status,str,REQUIRED,61
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,required_fields,"tuple[str, ...]",(),62
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,optional_fields,"tuple[str, ...]",(),63
+src/sfm_fx_new_age/contracts/commands.py,CommandCapability,detail,str,'',64
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,account_id,str,REQUIRED,79
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,symbol,str,REQUIRED,80
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,broker_symbol_id,int,REQUIRED,81
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,pip_size,Decimal,REQUIRED,82
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,tick_size,Decimal,REQUIRED,83
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,volume_min,Decimal,REQUIRED,84
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,volume_max,Decimal,REQUIRED,85
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,volume_step,Decimal,REQUIRED,86
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,units_per_lot,Decimal,REQUIRED,87
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,origin,Origin,REQUIRED,88
+src/sfm_fx_new_age/contracts/domain.py,SymbolSpec,scope_id,str,'UNBOUND',89
+src/sfm_fx_new_age/contracts/domain.py,Bar,symbol,str,REQUIRED,111
+src/sfm_fx_new_age/contracts/domain.py,Bar,timeframe,str,REQUIRED,112
+src/sfm_fx_new_age/contracts/domain.py,Bar,open_time,str,REQUIRED,113
+src/sfm_fx_new_age/contracts/domain.py,Bar,close_time,str,REQUIRED,114
+src/sfm_fx_new_age/contracts/domain.py,Bar,available_at,str,REQUIRED,115
+src/sfm_fx_new_age/contracts/domain.py,Bar,open,Decimal,REQUIRED,116
+src/sfm_fx_new_age/contracts/domain.py,Bar,high,Decimal,REQUIRED,117
+src/sfm_fx_new_age/contracts/domain.py,Bar,low,Decimal,REQUIRED,118
+src/sfm_fx_new_age/contracts/domain.py,Bar,close,Decimal,REQUIRED,119
+src/sfm_fx_new_age/contracts/domain.py,Bar,source_epoch,str,REQUIRED,120
+src/sfm_fx_new_age/contracts/domain.py,Bar,origin,Origin,REQUIRED,121
+src/sfm_fx_new_age/contracts/domain.py,Bar,scope_id,str,'UNBOUND',122
+src/sfm_fx_new_age/contracts/domain.py,Bar,revision,int,1,123
+src/sfm_fx_new_age/contracts/domain.py,Bar,quote_basis,str,'UNKNOWN',124
+src/sfm_fx_new_age/contracts/domain.py,Bar,construction,str,'NATIVE_OBSERVED',125
+src/sfm_fx_new_age/contracts/domain.py,Bar,tick_volume,int | None,None,126
+src/sfm_fx_new_age/contracts/domain.py,Quote,account_id,str,REQUIRED,149
+src/sfm_fx_new_age/contracts/domain.py,Quote,symbol,str,REQUIRED,150
+src/sfm_fx_new_age/contracts/domain.py,Quote,bid,Decimal,REQUIRED,151
+src/sfm_fx_new_age/contracts/domain.py,Quote,ask,Decimal,REQUIRED,152
+src/sfm_fx_new_age/contracts/domain.py,Quote,available_at,str,REQUIRED,153
+src/sfm_fx_new_age/contracts/domain.py,Quote,source_epoch,str,REQUIRED,154
+src/sfm_fx_new_age/contracts/domain.py,Quote,origin,Origin,REQUIRED,155
+src/sfm_fx_new_age/contracts/domain.py,Quote,scope_id,str,'UNBOUND',156
+src/sfm_fx_new_age/contracts/domain.py,Quote,bid_at,str | None,None,157
+src/sfm_fx_new_age/contracts/domain.py,Quote,ask_at,str | None,None,158
+src/sfm_fx_new_age/contracts/domain.py,Quote,sequence,int,0,159
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,account_id,str,REQUIRED,178
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,endpoint_class,str,REQUIRED,179
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,currency,str,REQUIRED,180
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,authenticated,bool,REQUIRED,181
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,trading_scope,bool,REQUIRED,182
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,origin,Origin,REQUIRED,183
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,account_type,str,'UNKNOWN',184
+src/sfm_fx_new_age/contracts/domain.py,AccountContext,broker_id,str,'UNSPECIFIED',185
+src/sfm_fx_new_age/contracts/domain.py,Candidate,signal_id,str,REQUIRED,202
+src/sfm_fx_new_age/contracts/domain.py,Candidate,setup_id,str,REQUIRED,203
+src/sfm_fx_new_age/contracts/domain.py,Candidate,revision,int,REQUIRED,204
+src/sfm_fx_new_age/contracts/domain.py,Candidate,symbol,str,REQUIRED,205
+src/sfm_fx_new_age/contracts/domain.py,Candidate,side,str,REQUIRED,206
+src/sfm_fx_new_age/contracts/domain.py,Candidate,entry_price,Decimal,REQUIRED,207
+src/sfm_fx_new_age/contracts/domain.py,Candidate,invalidation_price,Decimal,REQUIRED,208
+src/sfm_fx_new_age/contracts/domain.py,Candidate,units,Decimal,REQUIRED,209
+src/sfm_fx_new_age/contracts/domain.py,Candidate,expires_at,str,REQUIRED,210
+src/sfm_fx_new_age/contracts/domain.py,Candidate,available_at,str,REQUIRED,211
+src/sfm_fx_new_age/contracts/domain.py,Candidate,source_epoch,str,REQUIRED,212
+src/sfm_fx_new_age/contracts/domain.py,Candidate,origin,Origin,REQUIRED,213
+src/sfm_fx_new_age/contracts/domain.py,Candidate,profile,str,'RESEARCH_ONLY',214
+src/sfm_fx_new_age/contracts/domain.py,Candidate,scope_id,str,'UNBOUND',215
+src/sfm_fx_new_age/contracts/domain.py,Candidate,market_candidate_id,str | None,None,216
+src/sfm_fx_new_age/contracts/domain.py,Candidate,market_candidate_revision,int | None,None,217
+src/sfm_fx_new_age/contracts/domain.py,Candidate,source_candidate_hash,str | None,None,218
+src/sfm_fx_new_age/contracts/domain.py,Candidate,variant_id,str | None,None,219
+src/sfm_fx_new_age/contracts/domain.py,BrokerOutcome,state,OrderState,REQUIRED,244
+src/sfm_fx_new_age/contracts/domain.py,BrokerOutcome,broker_order_id,str | None,None,245
+src/sfm_fx_new_age/contracts/domain.py,BrokerOutcome,position_id,str | None,None,246
+src/sfm_fx_new_age/contracts/domain.py,BrokerOutcome,detail,str,'',247
+src/sfm_fx_new_age/contracts/extensions.py,VariableUpdate,key,str,REQUIRED,10
+src/sfm_fx_new_age/contracts/extensions.py,VariableUpdate,value,Any,REQUIRED,11
+src/sfm_fx_new_age/contracts/extensions.py,VariableUpdate,available_at,str,REQUIRED,12
+src/sfm_fx_new_age/contracts/extensions.py,VariableUpdate,freshness,str,'CURRENT',13
+src/sfm_fx_new_age/contracts/extensions.py,AnalyticalResult,state,str,REQUIRED,22
+src/sfm_fx_new_age/contracts/extensions.py,AnalyticalResult,value,Any,None,23
+src/sfm_fx_new_age/contracts/extensions.py,AnalyticalResult,objects,"tuple[Level | Evidence | MarketCandidate | Overlay, ...]",(),24
+src/sfm_fx_new_age/contracts/extensions.py,AnalyticalResult,reason,str,'',25
+src/sfm_fx_new_age/contracts/extensions.py,AnalyticalResult,variables,"tuple[VariableUpdate, ...]",(),26
+src/sfm_fx_new_age/contracts/models.py,Event,topic,str,REQUIRED,40
+src/sfm_fx_new_age/contracts/models.py,Event,source_component,str,REQUIRED,41
+src/sfm_fx_new_age/contracts/models.py,Event,payload,"Mapping[str, Any]",field(default_factory=dict),42
+src/sfm_fx_new_age/contracts/models.py,Event,priority,Priority,Priority.P2,43
+src/sfm_fx_new_age/contracts/models.py,Event,partition_key,str,'GLOBAL',44
+src/sfm_fx_new_age/contracts/models.py,Event,source_epoch,str,'LOCAL-FOUNDATION',45
+src/sfm_fx_new_age/contracts/models.py,Event,event_id,str,field(default_factory=lambda: str(uuid4())),46
+src/sfm_fx_new_age/contracts/models.py,Event,produced_at_utc,str,field(default_factory=utc_now),47
+src/sfm_fx_new_age/contracts/models.py,Event,freshness,Freshness,Freshness.CURRENT,48
+src/sfm_fx_new_age/contracts/models.py,Command,name,str,REQUIRED,58
+src/sfm_fx_new_age/contracts/models.py,Command,target_component,str,REQUIRED,59
+src/sfm_fx_new_age/contracts/models.py,Command,source_view,str,REQUIRED,60
+src/sfm_fx_new_age/contracts/models.py,Command,payload,"Mapping[str, Any]",field(default_factory=dict),61
+src/sfm_fx_new_age/contracts/models.py,Command,priority,Priority,Priority.P2,62
+src/sfm_fx_new_age/contracts/models.py,Command,command_id,str,field(default_factory=lambda: str(uuid4())),63
+src/sfm_fx_new_age/contracts/models.py,Command,created_at_utc,str,field(default_factory=utc_now),64
+src/sfm_fx_new_age/contracts/models.py,CommandResult,command_id,str,REQUIRED,74
+src/sfm_fx_new_age/contracts/models.py,CommandResult,status,CommandStatus,REQUIRED,75
+src/sfm_fx_new_age/contracts/models.py,CommandResult,message,str,REQUIRED,76
+src/sfm_fx_new_age/contracts/models.py,CommandResult,emitted_topics,"tuple[str, ...]",(),77
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,main_tab,int,REQUIRED,82
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,main_tab_title,str,REQUIRED,83
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,subtab_id,str,REQUIRED,84
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,title,str,REQUIRED,85
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,backend_owner,str,REQUIRED,86
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,subscribed_topics,"tuple[str, ...]",REQUIRED,87
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,commands,"tuple[str, ...]",REQUIRED,88
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,priority,Priority,REQUIRED,89
+src/sfm_fx_new_age/contracts/models.py,SubtabDefinition,purpose,str,REQUIRED,90
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,source,str,REQUIRED,95
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,destination,str,REQUIRED,96
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,topic,str,REQUIRED,97
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,trigger,str,REQUIRED,98
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,priority,Priority,REQUIRED,99
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,rule,str,REQUIRED,100
+src/sfm_fx_new_age/contracts/models.py,RouteDefinition,status,str,REQUIRED,101
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,key,str,REQUIRED,11
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,name,str,REQUIRED,12
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,family,str,REQUIRED,13
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,warmup,int,REQUIRED,14
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,rules,str,REQUIRED,15
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,sources,"tuple[str, ...]",REQUIRED,16
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,parameters,"tuple[tuple[str, object], ...]",(),17
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,version,int,1,18
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,input_frames,"tuple[str, ...]",(),19
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,data_kind,str,'',20
+src/sfm_fx_new_age/contracts/public_strategies.py,ProjectionMethod,document_recipes,"tuple[str, ...]",(),21
+src/sfm_fx_new_age/contracts/strategy_signals.py,SignalPolicy,key,str,REQUIRED,14
+src/sfm_fx_new_age/contracts/strategy_signals.py,SignalPolicy,trigger,str,REQUIRED,15
+src/sfm_fx_new_age/contracts/strategy_signals.py,SignalPolicy,description,str,REQUIRED,16
+src/sfm_fx_new_age/contracts/strategy_signals.py,SignalPolicy,version,int,1,17
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,provider_id,str,REQUIRED,15
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,kind,str,REQUIRED,16
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,scope_id,str,REQUIRED,17
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,source_epoch,str,REQUIRED,18
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,symbol,str,REQUIRED,19
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,origin,str,REQUIRED,20
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,source_ref,str,REQUIRED,21
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,venue,str,REQUIRED,22
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,instrument,str,REQUIRED,23
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,price_domain,str,REQUIRED,24
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,unit,str,REQUIRED,25
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,window_start,str,REQUIRED,26
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,window_end,str,REQUIRED,27
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,available_at,str,REQUIRED,28
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,valid_until,str,REQUIRED,29
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,complete,bool,REQUIRED,30
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,records,"tuple[dict, ...]",REQUIRED,31
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,parameters,dict,REQUIRED,32
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,revision,int,1,33
+src/sfm_fx_new_age/contracts/supplemental.py,SupplementalEvidence,schema_version,int,1,34
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,dataset,str,REQUIRED,31
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,symbol,str | None,None,32
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,timeframe,str | None,None,33
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,as_of,str | None,None,34
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,object_id,str | None,None,35
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,run_id,str | None,None,36
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,limit,int,500,37
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,cursor,int,0,38
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,history,bool,False,39
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,expected_hash,str | None,None,40
+src/sfm_fx_new_age/contracts/tab_data.py,DataRequest,acknowledge_research,bool,False,41

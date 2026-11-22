@@ -1,0 +1,2388 @@
+[
+  {
+    "key": "sma_cross",
+    "name": "SMA crossover",
+    "family": "Trend",
+    "warmup": 51,
+    "rules": "20/50 completed-close SMA crossing; equality is not a new cross.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/trend/simple-moving-average/"
+    ],
+    "parameters": [
+      [
+        "fast",
+        20
+      ],
+      [
+        "slow",
+        50
+      ]
+    ],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.sma_cross.v1",
+    "method_version": "PUBLIC_FOREX_SMA_CROSS_V1",
+    "profile_hash": "2773ae7958eed3b74e56b25881a5b33b987dc95e24355ea6924f58b812d29f9f",
+    "required_nodes": [],
+    "policy": {
+      "key": "sma_cross",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SMA_CROSS_V1",
+    "policy_hash": "cfab505487b6b20f73467686d8184acf1d1f5cbc8f64c84744d819a62f3e1e53"
+  },
+  {
+    "key": "ema_cross",
+    "name": "EMA crossover",
+    "family": "Trend",
+    "warmup": 51,
+    "rules": "20/50 close EMA, arithmetic-mean seed at each full period; strict crossover.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/trend/exponential-moving-average/"
+    ],
+    "parameters": [
+      [
+        "fast",
+        20
+      ],
+      [
+        "slow",
+        50
+      ]
+    ],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.ema_cross.v1",
+    "method_version": "PUBLIC_FOREX_EMA_CROSS_V1",
+    "profile_hash": "ad76cbacb16de3d2da6ae6b52f98ac5cc141a60d358fe6cb05d76590e30f35c6",
+    "required_nodes": [],
+    "policy": {
+      "key": "ema_cross",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_EMA_CROSS_V1",
+    "policy_hash": "cb885c03a19ff26d0180a642e708f51020fddba357c9c5d0ae1c9ff22453b340"
+  },
+  {
+    "key": "macd",
+    "name": "MACD signal crossover",
+    "family": "Momentum",
+    "warmup": 35,
+    "rules": "12/26 close EMAs; 9-period EMA of valid MACD values. Strict signal crossover; no price-axis oscillator line.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/oscillators/macd-crossover/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.macd.v1",
+    "method_version": "PUBLIC_FOREX_MACD_V1",
+    "profile_hash": "d59c4721902b507b4055bd26efc89a18a1d7ed41824581de34a8c4a955657e19",
+    "required_nodes": [],
+    "policy": {
+      "key": "macd",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_MACD_V1",
+    "policy_hash": "3890cb169d06765a628e979b2407f29d62bd4d181515e9d58e2aa9b4d9e2df94"
+  },
+  {
+    "key": "rsi",
+    "name": "RSI oversold/overbought re-entry",
+    "family": "Momentum",
+    "warmup": 16,
+    "rules": "Wilder RSI(14), mean seed; BUY crossing back above 30, SELL back below 70. Flat=50; no loss=100.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/oscillators/relative-strength-index/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.rsi.v1",
+    "method_version": "PUBLIC_FOREX_RSI_V1",
+    "profile_hash": "02d14773d8f01c633f24520b5aeaddb9d6a43b7c788c65aebceb677dfd838243",
+    "required_nodes": [],
+    "policy": {
+      "key": "rsi",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_RSI_V1",
+    "policy_hash": "1988b947e853ca89406db6311e16952fbe6252327ca42d8dfddfd20b2c79cff5"
+  },
+  {
+    "key": "stochastic",
+    "name": "Stochastic extreme crossover",
+    "family": "Momentum",
+    "warmup": 19,
+    "rules": "14-bar raw %K; SMA(3) slow K and SMA(3) D; cross from K<=20 BUY / K>=80 SELL. Flat range=50.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/oscillators/stochastic-oscillator/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.stochastic.v1",
+    "method_version": "PUBLIC_FOREX_STOCHASTIC_V1",
+    "profile_hash": "bcc75fc14a19cab4f652a644b6822ab2f0c0cd69d40f9b0e025d5750e2293a87",
+    "required_nodes": [],
+    "policy": {
+      "key": "stochastic",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_STOCHASTIC_V1",
+    "policy_hash": "f362f6a0b6f617a0b1594a3324dae26e0f65377fa5921feb1b3d79d37740db34"
+  },
+  {
+    "key": "adx",
+    "name": "ADX directional crossover",
+    "family": "Trend",
+    "warmup": 29,
+    "rules": "Wilder TR/DM(14), DX and ADX(14); DI crossover only with current ADX>=25. Negative DM uses previous low minus current low.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/trend/directional-movement-system/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.adx.v1",
+    "method_version": "PUBLIC_FOREX_ADX_V1",
+    "profile_hash": "fcc8276669886e7a0c0392280f264826e34d19cfb690f0904d91b4f94a607278",
+    "required_nodes": [],
+    "policy": {
+      "key": "adx",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ADX_V1",
+    "policy_hash": "44a6d4f3ca3c19426873e894787bf9452e648e306d50adf9f426e172d295ec25"
+  },
+  {
+    "key": "ichimoku",
+    "name": "Ichimoku cloud breakout",
+    "family": "Trend",
+    "warmup": 79,
+    "rules": "9/26/52 midranges. Cloud at index i uses spans computed i-26; close crosses outside cloud with matching Tenkan/Kijun direction. Never backdate current close as evidence.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/other/ichimoku-kinko-hyo/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.ichimoku.v1",
+    "method_version": "PUBLIC_FOREX_ICHIMOKU_V1",
+    "profile_hash": "434336a82ccc17ce7119b7c4e05a481e988e8d057e2464a63a29e4ee51c7a4f5",
+    "required_nodes": [],
+    "policy": {
+      "key": "ichimoku",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ICHIMOKU_V1",
+    "policy_hash": "ef89d73d4ed8515c9a941b73bccf73c639768a1a26abd32829eb500aba62363b"
+  },
+  {
+    "key": "donchian",
+    "name": "Donchian channel breakout",
+    "family": "Breakout",
+    "warmup": 21,
+    "rules": "Strict completed close beyond previous 20-bar high/low, excluding the breakout bar. One crossing event, not one per trend bar.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/donchian-channel/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.donchian.v1",
+    "method_version": "PUBLIC_FOREX_DONCHIAN_V1",
+    "profile_hash": "7b554cb359d78c615f153d1c1301b4ceeaf31335770b908a41280cd8d507b74b",
+    "required_nodes": [],
+    "policy": {
+      "key": "donchian",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_DONCHIAN_V1",
+    "policy_hash": "fe7cb5a485c9a1ebbba77d0f7a12f2dbafec06cb9d09de43a3502a52514240e9"
+  },
+  {
+    "key": "momentum",
+    "name": "Time-series momentum",
+    "family": "Momentum",
+    "warmup": 22,
+    "rules": "20-bar close ratio minus one; crossing zero projects direction. This is a price momentum lens, not the custom M38/M39 portfolio rules.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/oscillators/momentum-oscillator/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.momentum.v1",
+    "method_version": "PUBLIC_FOREX_MOMENTUM_V1",
+    "profile_hash": "a2ba84397d5b6c1ed23eace22568cc86431b82043af001201b07169e071f6ab7",
+    "required_nodes": [],
+    "policy": {
+      "key": "momentum",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_MOMENTUM_V1",
+    "policy_hash": "6827de1ff04e9457f371d4138e5d0306f4574a31246d5f0997cd131cc3b3b10b"
+  },
+  {
+    "key": "bollinger",
+    "name": "Bollinger band re-entry",
+    "family": "Mean reversion",
+    "warmup": 22,
+    "rules": "SMA(20) +/-2 population standard deviations. BUY on return inside from below lower band, SELL from above upper band.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/bollinger-bands/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.bollinger.v1",
+    "method_version": "PUBLIC_FOREX_BOLLINGER_V1",
+    "profile_hash": "4dc2b2001887a9f3a6601b6eb7128428aa67b8be7431dab876fcc144faa298d6",
+    "required_nodes": [],
+    "policy": {
+      "key": "bollinger",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_BOLLINGER_V1",
+    "policy_hash": "ae6e86217adb7e785988f2e540859a6944f3a2f35198b0230c96286d25808ebe"
+  },
+  {
+    "key": "engulfing",
+    "name": "Bullish / bearish engulfing",
+    "family": "Candlesticks",
+    "warmup": 2,
+    "rules": "Opposite non-doji bodies; current body strictly exceeds and contains previous body. Shape observation only, not a context-qualified trade. Prior trend and optional volume qualification are not inferred.",
+    "sources": [
+      "https://cmcmarkets.com/en-gb/technical-analysis/bullish-and-bearish-candle-stick-patterns"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.engulfing.v1",
+    "method_version": "PUBLIC_FOREX_ENGULFING_V1",
+    "profile_hash": "6326bc8c646e5d098e23d4e8e99f771aa77b4eea0add2fe169096ef76f4e1ec3",
+    "required_nodes": [],
+    "policy": {
+      "key": "engulfing",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ENGULFING_V1",
+    "policy_hash": "306e2f64caa2a78dc090e657271c0890b46d9a1cc21b6b4493d9240137307411"
+  },
+  {
+    "key": "pinbar",
+    "name": "Hammer / shooting-star rejection",
+    "family": "Candlesticks",
+    "warmup": 1,
+    "rules": "Dominant wick>=2*body and >=60% range; opposite wick<=20% range and body<=30%. Shape only; no fabricated trend or volume confirmation.",
+    "sources": [
+      "https://www.learntotradethemarket.com/forex-trading-strategies/price-action-setups-pin-bars-fakeys-inside-bars"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.pinbar.v1",
+    "method_version": "PUBLIC_FOREX_PINBAR_V1",
+    "profile_hash": "c1aa1e90037f84b5ab0211eb665adbaea693b8be5fb408c549bebfed41bfbecd",
+    "required_nodes": [],
+    "policy": {
+      "key": "pinbar",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PINBAR_V1",
+    "policy_hash": "1ffe62c6360b995b99ad11a91ae4792d765b14a55ba157d6ed2950dc471168a4"
+  },
+  {
+    "key": "inside_break",
+    "name": "Inside-bar breakout",
+    "family": "Candlesticks",
+    "warmup": 3,
+    "rules": "Strict inside bar followed by strict completed close outside its mother high/low.",
+    "sources": [
+      "https://www.learntotradethemarket.com/forex-trading-strategies/price-action-setups-pin-bars-fakeys-inside-bars"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.inside_break.v1",
+    "method_version": "PUBLIC_FOREX_INSIDE_BREAK_V1",
+    "profile_hash": "99e0733fabbaa5b129963e77e14add9625f2385402ec4ed398fc8957f335b5dd",
+    "required_nodes": [],
+    "policy": {
+      "key": "inside_break",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_INSIDE_BREAK_V1",
+    "policy_hash": "e68ad6ec57dbf46492fad1aaf1fc721e2e3e2e6b8de49bee09837b571cdc9b74"
+  },
+  {
+    "key": "structure",
+    "name": "Market structure · BOS / CHoCH",
+    "family": "Structure",
+    "warmup": 6,
+    "rules": "First strict close across latest already-confirmed shared-profile swing (default 2-left/2-right). Same-direction break=BOS, opposite prior break=CHoCH; initial direction=BOS. Each pivot consumed once.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/break-of-structure/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.structure.v1",
+    "method_version": "PUBLIC_FOREX_STRUCTURE_V1",
+    "profile_hash": "e3801398bec58fbc93f5a78c9ed04573f3b24bf5ed11cf7cb851afe468528dc4",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "structure",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_STRUCTURE_V1",
+    "policy_hash": "c31d95b69be29d2d769f145a72087ac0353c45cad7b20e52fb1df0b860dfcc3e"
+  },
+  {
+    "key": "liquidity",
+    "name": "Liquidity sweep and reclaim",
+    "family": "Structure",
+    "warmup": 6,
+    "rules": "Wick strictly breaches an already-confirmed pivot but closes back inside; labels price-derived liquidity, not actual institutional orders. Includes measured equal-high/low clusters.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.liquidity.v1",
+    "method_version": "PUBLIC_FOREX_LIQUIDITY_V1",
+    "profile_hash": "33b8caedbc4069dcdf0293e684514005579d6f3f0779be32b2a35fee89af3335",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "liquidity",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_LIQUIDITY_V1",
+    "policy_hash": "122f1bd5c45929f8cc83191c476a46fedd75ba937fdbba8fb0c62fcf9b620220"
+  },
+  {
+    "key": "order_block",
+    "name": "Order blocks",
+    "family": "Structure",
+    "warmup": 20,
+    "rules": "Existing causal opposite-candle / displacement / pivot-break producer; full source high/low, touch and close-beyond-distal invalidation. Its SFM stable ID is retained, not excluded.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/order-block/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "sfm.order_block.research.v1",
+    "method_version": "PUBLIC_FOREX_ORDER_BLOCK_V1",
+    "profile_hash": "028d86cc1c60e2b0ee1d9858fd975b46544f5676baef2ca781c5033ba8f65dc5",
+    "required_nodes": [
+      "ORDER_BLOCK"
+    ],
+    "policy": {
+      "key": "order_block",
+      "trigger": "NATIVE_OB_ZONE",
+      "description": "Confirmed native Order Block zone; proximal Limit entry and distal invalidation. This single-method profile is NOT the separately gated D1/H4 MTF recipe.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ORDER_BLOCK_V1",
+    "policy_hash": "5d7fca44826e88937ac57581dd88a6d2c954e74367b4ddbbac76c8b58822a6e3"
+  },
+  {
+    "key": "fvg",
+    "name": "Fair-value gaps",
+    "family": "Structure",
+    "warmup": 3,
+    "rules": "Strict three-closed-bar high/low gap. Subsequent contact=TOUCHED, full wick traversal=FILLED, strict distal close=INVALIDATED. Starts only after confirmation.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/fair-value-gap/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.fvg.v1",
+    "method_version": "PUBLIC_FOREX_FVG_V1",
+    "profile_hash": "6cf8e14f65893ac03322888fb9c06d7da970601cd9e719fdf10c8059064e3605",
+    "required_nodes": [],
+    "policy": {
+      "key": "fvg",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_FVG_V1",
+    "policy_hash": "37c8259865f06404bc1be0b834306564f80af8f6ac136bdd05f5cde23674eb6f"
+  },
+  {
+    "key": "pullback_ob",
+    "name": "Order-block pullback / mitigation",
+    "family": "Structure",
+    "warmup": 21,
+    "rules": "First later intersection of a causally confirmed order block, directional candle response and close back beyond proximal. Distinct from the custom M21 capital/qualification rules.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/order-block/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.pullback_ob.v1",
+    "method_version": "PUBLIC_FOREX_PULLBACK_OB_V1",
+    "profile_hash": "4fa77c963ea936081960c458fd722f0fb9bc512f338925798189270927554a54",
+    "required_nodes": [
+      "SMC_STRUCTURE"
+    ],
+    "policy": {
+      "key": "pullback_ob",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PULLBACK_OB_V1",
+    "policy_hash": "3eb4146ff9117bb80232033e9817e4b4adec3bd78a460ba914ef5fce71312d87"
+  },
+  {
+    "key": "pullback_fvg",
+    "name": "FVG pullback / mitigation",
+    "family": "Structure",
+    "warmup": 4,
+    "rules": "First later gap intersection with directional candle response and close beyond proximal, before invalidation/full fill.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/fair-value-gap/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.pullback_fvg.v1",
+    "method_version": "PUBLIC_FOREX_PULLBACK_FVG_V1",
+    "profile_hash": "56e1c426686cda3c5ac24c920ec93bec0cf7d401055da4c963b6d457eecae5dc",
+    "required_nodes": [],
+    "policy": {
+      "key": "pullback_fvg",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PULLBACK_FVG_V1",
+    "policy_hash": "2ce93ad639d2a5ffac949fa0e76ebe184c4cb22da79de997d2292e78d60e2904"
+  },
+  {
+    "key": "wyckoff",
+    "name": "Wyckoff · Spring / UTAD / SOS / SOW",
+    "family": "Structure",
+    "warmup": 22,
+    "rules": "Bounded 20-bar range hypothesis; >=2 separated tests on each boundary within 10% width. Sweep/reclaim=Spring/UTAD; later lower-range test without a new low or upper test without a new high=TEST. Strong close outside range=SOS/SOW. OHLC hypothesis, not volume-confirmed phase certainty.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.wyckoff.v1",
+    "method_version": "PUBLIC_FOREX_WYCKOFF_V1",
+    "profile_hash": "b46a3fb6e4409fb80993125a2fdce58f96f676f70d5d684318c209c571656341",
+    "required_nodes": [],
+    "policy": {
+      "key": "wyckoff",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_WYCKOFF_V1",
+    "policy_hash": "9b85c9f632f381b8e269c87da97287e06b7c1bc86ec89e329ae643f28df7228b"
+  },
+  {
+    "key": "elliott_impulse",
+    "name": "Elliott impulse hypothesis",
+    "family": "Patterns",
+    "warmup": 26,
+    "rules": "Six consecutive alternating confirmed pivots. Wave2<100% wave1, wave3 exceeds wave1 and is not shortest, wave4 does not overlap wave1, wave5 exceeds wave3. No recursive degree, diagonal or truncation claim.",
+    "sources": [
+      "https://www.elliottwave.com/waveopedia/impulse/",
+      "https://www.elliottwave.com/waveopedia/motive-waves/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.elliott_impulse.v1",
+    "method_version": "PUBLIC_FOREX_ELLIOTT_IMPULSE_V1",
+    "profile_hash": "0783eb1015a21972377333326c7fcea129f212f6613488b9badd95ff728fbb5f",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "elliott_impulse",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ELLIOTT_IMPULSE_V1",
+    "policy_hash": "7dcece1d574c42e57191b598ffb279943e0bc227af5fd3e20ad15ebe0bf715ee"
+  },
+  {
+    "key": "elliott_abc",
+    "name": "Elliott ABC zigzag hypothesis",
+    "family": "Patterns",
+    "warmup": 16,
+    "rules": "Four consecutive alternating confirmed pivots; B retraces less than A and C extends beyond A. Completed-pivot price skeleton only; no claim of verified 5-3-5 internal subdivisions.",
+    "sources": [
+      "https://www.elliottwave.com/waveopedia/zigzags/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.elliott_abc.v1",
+    "method_version": "PUBLIC_FOREX_ELLIOTT_ABC_V1",
+    "profile_hash": "19de7b9b4598bc07577f9f32517ec3a916bdbf89cecf05211a698bdc440846b7",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "elliott_abc",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ELLIOTT_ABC_V1",
+    "policy_hash": "2bc0c5a1c576155c6e4bb923d6ed629eb1cb1295904d3d6661ef9ba2ce4b270c"
+  },
+  {
+    "key": "abcd",
+    "name": "Harmonic AB=CD",
+    "family": "Patterns",
+    "warmup": 16,
+    "rules": "Four consecutive alternating confirmed pivots: BC/AB .382-.886; CD/BC 1.13-2.618; CD/AB=1 +/-5%. Price-ratio skeleton, not time symmetry or calibration.",
+    "sources": [
+      "https://harmonictrader.com/harmonic-patterns/abcd-pattern/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.abcd.v1",
+    "method_version": "PUBLIC_FOREX_ABCD_V1",
+    "profile_hash": "1cb5e898cde618400c19abe03e14cd404f10e9f459df0a7f15d006bc6a8bff6a",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "abcd",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ABCD_V1",
+    "policy_hash": "62ad2e5c73bd85583be43b4dcbfaf51d506ff0240476311b803e7e7f5382a779"
+  },
+  {
+    "key": "gartley",
+    "name": "Harmonic Gartley",
+    "family": "Patterns",
+    "warmup": 21,
+    "rules": "Five consecutive alternating confirmed pivots. B/XA=.618 +/-5%, BC/AB .382-.886, AD/XA=.786 +/-5%, CD/BC 1.27-1.618 and CD/AB=1 +/-5%. Relative tolerance is engineering configuration.",
+    "sources": [
+      "https://harmonictrader.com/harmonic-patterns/gartley-pattern/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.gartley.v1",
+    "method_version": "PUBLIC_FOREX_GARTLEY_V1",
+    "profile_hash": "fc9523dae3db3b413bdb7ac58216eed3bb68ffef1e3e8652691fcab31585f519",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "gartley",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_GARTLEY_V1",
+    "policy_hash": "a84bb18c7e42937939f41855a0ed1ae54b2d490f3d9b87312ab51ba083b7f673"
+  },
+  {
+    "key": "bat",
+    "name": "Harmonic Bat",
+    "family": "Patterns",
+    "warmup": 21,
+    "rules": "Five consecutive alternating confirmed pivots. B/XA .382-.5, BC/AB .382-.886, AD/XA=.886 +/-5%, CD/BC 1.618-2.618 and CD/AB>=.95. Explicit bounded price skeleton, not calibrated prediction.",
+    "sources": [
+      "https://harmonictrader.com/harmonic-patterns/bat-pattern/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.bat.v1",
+    "method_version": "PUBLIC_FOREX_BAT_V1",
+    "profile_hash": "5b369633f8e519a6434de16c8de435e77642a2e012ee1aa03a3bc3b280c90d26",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "bat",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_BAT_V1",
+    "policy_hash": "5631c23b65cdc2129a28f4b35da04d1cbcb61b0afb789cc23b9958f414b8b440"
+  },
+  {
+    "key": "butterfly",
+    "name": "Harmonic Butterfly",
+    "family": "Patterns",
+    "warmup": 21,
+    "rules": "Five consecutive alternating confirmed pivots. B/XA=.786 +/-5%, BC/AB .382-.886, AD/XA=1.27 +/-5%, CD/BC 1.618-2.618 and CD/AB .95-1.3335. Explicit bounded price skeleton.",
+    "sources": [
+      "https://harmonictrader.com/harmonic-patterns/butterfly-pattern/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.butterfly.v1",
+    "method_version": "PUBLIC_FOREX_BUTTERFLY_V1",
+    "profile_hash": "e6bf48d1b439083a6ad007db89449e313cad5dfa004b4789d3a82c98974ec6b3",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "butterfly",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_BUTTERFLY_V1",
+    "policy_hash": "87378145a14c0291eb10cc4c094e46e6b3643d9c2bc14ce42eb6cd78473292cd"
+  },
+  {
+    "key": "support_resistance",
+    "name": "Confirmed swing support / resistance",
+    "family": "Levels",
+    "warmup": 6,
+    "rules": "Last eight causally confirmed swing highs/lows, each line starts at its confirmation time, not its earlier pivot time.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/break-of-structure/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.support_resistance.v1",
+    "method_version": "PUBLIC_FOREX_SUPPORT_RESISTANCE_V1",
+    "profile_hash": "cb7e31101504043a125515d33c6e34c9c0c77f752d26d80cf24f3c7fd56c8ecb",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "support_resistance",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SUPPORT_RESISTANCE_V1",
+    "policy_hash": "d04cf0fe276d11603b2c3ef65fcd0afdbf9b7b5df2739a068dc08d27cb67e01c"
+  },
+  {
+    "key": "fibonacci",
+    "name": "Fibonacci retracement",
+    "family": "Levels",
+    "warmup": 10,
+    "rules": "Latest alternating confirmed swing leg; .382/.5/.618/.786 measurements from leg end toward origin. No predictive success claim.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/fibonacci-retracement/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.fibonacci.v1",
+    "method_version": "PUBLIC_FOREX_FIBONACCI_V1",
+    "profile_hash": "9d230016b5733696422ed01193323015eee77345f26534c8dc3da6297620dbe9",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "fibonacci",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_FIBONACCI_V1",
+    "policy_hash": "78e40f90a6b91dcd34dc9fa0844564f3a1dded3b4b29be0c733790a5d7c93c11"
+  },
+  {
+    "key": "ote",
+    "name": "Optimal trade entry (OTE)",
+    "family": "Levels",
+    "warmup": 10,
+    "rules": "Confirmed leg .62-.79 retracement zone and .705 midpoint. Versioned explicit decimal convention, not automatic entry.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/optimal-trade-entry/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.ote.v1",
+    "method_version": "PUBLIC_FOREX_OTE_V1",
+    "profile_hash": "dccf1c551fb827fcde1c45614d38b9d22d56091a6a91cc0b3890e06260501bf5",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "ote",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_OTE_V1",
+    "policy_hash": "1a68a17bfa5342188a134a59973f424236cf8e50510a1b1fa59e538aa5b41415"
+  },
+  {
+    "key": "previous_extremes",
+    "name": "Previous D1 / W1 high and low",
+    "family": "Levels",
+    "warmup": 2,
+    "rules": "Latest causally completed D1/W1 high and low projected onto each pair chart with original source-frame labels. No broker-calendar reconstruction.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.previous_extremes.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_EXTREMES_V1",
+    "profile_hash": "2ccadb8f1931997cfa8cba9f391488496a543b0f5ad2b4812a9eba602d693ca0",
+    "required_nodes": [],
+    "policy": {
+      "key": "previous_extremes",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_EXTREMES_V1",
+    "policy_hash": "99ead9dcb1b97b729750fe5a014166ed052f89bf0ea597a008c3532df0ab2335"
+  },
+  {
+    "key": "open_midpoint",
+    "name": "D1 / W1 open and midpoint",
+    "family": "Levels",
+    "warmup": 2,
+    "rules": "Observed latest completed D1/W1 open plus (high+low)/2; explicitly last-completed, never invented current-session OHLC.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/smart-money-concepts/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.open_midpoint.v1",
+    "method_version": "PUBLIC_FOREX_OPEN_MIDPOINT_V1",
+    "profile_hash": "0a764d9a573d65b1e4733aa6e923cb27a6cbfcf5ad7190e9b69ce911d2604998",
+    "required_nodes": [],
+    "policy": {
+      "key": "open_midpoint",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_OPEN_MIDPOINT_V1",
+    "policy_hash": "253985faff99c4cec03306a096f658728904bcfb9678fc4c343f76877054ef3a"
+  },
+  {
+    "key": "compression",
+    "name": "Compression breakout",
+    "family": "Breakout",
+    "warmup": 42,
+    "rules": "Previous 10-bar range<=50% preceding 30-bar range; current directional body>=60% own range and close strictly outside compression. No custom M20 execution lifecycle.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/donchian-channel/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.compression.v1",
+    "method_version": "PUBLIC_FOREX_COMPRESSION_V1",
+    "profile_hash": "42798a1d661022b6086f1b011c2e5c7e35429743c6f60e53b85a142a17d0186c",
+    "required_nodes": [],
+    "policy": {
+      "key": "compression",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_COMPRESSION_V1",
+    "policy_hash": "6ee2f2b04ab4b931c2be978011011986bf63e6557830a33178d7f6250da4916c"
+  },
+  {
+    "key": "displacement",
+    "name": "Price displacement",
+    "family": "Structure",
+    "warmup": 16,
+    "rules": "Completed directional body >=60% own range and >=1.0 times previous 14-bar mean true range, excluding current bar. Price pressure only, not traded volume.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/ict-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.displacement.v1",
+    "method_version": "PUBLIC_FOREX_DISPLACEMENT_V1",
+    "profile_hash": "fbcd9741d6f1b19dceb1324dce65aee947bba699ae40d976a9b6a555bb9168cc",
+    "required_nodes": [],
+    "policy": {
+      "key": "displacement",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_DISPLACEMENT_V1",
+    "policy_hash": "aa8dd22c04de2f09fd9ef0b5eced64c9da262b9d2186329f2d23edefd6d5308c"
+  },
+  {
+    "key": "mss",
+    "name": "Market structure shift · sweep / displacement",
+    "family": "Structure",
+    "warmup": 16,
+    "rules": "Confirmed pivot sweep/reclaim, later opposite displacement, then close-confirmed break of an already-known controlling opposite pivot within 8 bars. No same-bar chronological inference.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/ict-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.mss.v1",
+    "method_version": "PUBLIC_FOREX_MSS_V1",
+    "profile_hash": "1a17e383743b8ad42341d92cde9614b9b1f2aa5d08194b86d7dea39c5928f243",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "mss",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_MSS_V1",
+    "policy_hash": "734c84d0fb8de00033990525b4a12e0c48f6eb737ead6bc00968c5349a7c63ca"
+  },
+  {
+    "key": "sweep_context",
+    "name": "Sweep depth / severity context",
+    "family": "Liquidity",
+    "warmup": 16,
+    "rules": "Unique confirmed pivot breach and reclaim. Report observed overshoot divided by prior 14 true-range mean and bars since confirmation. No estimate of actual stop volume.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.sweep_context.v1",
+    "method_version": "PUBLIC_FOREX_SWEEP_CONTEXT_V1",
+    "profile_hash": "ff377b35ef3929fb78c0073e8785cef8303d2c35485679aa8228f604f6e588be",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "sweep_context",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SWEEP_CONTEXT_V1",
+    "policy_hash": "cb2874cd81ec5d2b7c559ab339daa1a3e1a4c560708fedd8795784d354f2fdf2"
+  },
+  {
+    "key": "liquidity_pools",
+    "name": "Liquidity pools · lifecycle / density",
+    "family": "Liquidity",
+    "warmup": 6,
+    "rules": "Confirmed swing and <=2 native-tick equal-extreme clusters. Freeze pool roots/bounds at confirmation; count later contacts; reclaim=consumed sweep, close beyond=broken, expiry=128 own-frame bars. Density counts price roots, not orders.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.liquidity_pools.v1",
+    "method_version": "PUBLIC_FOREX_LIQUIDITY_POOLS_V1",
+    "profile_hash": "25ab070e484127ea76811aa093c38d873363277f0c887b137bdd231178223909",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "liquidity_pools",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_LIQUIDITY_POOLS_V1",
+    "policy_hash": "070bb9948275ee8ea7d4e259217e21fe9e2956304be45facbc105e9706946749"
+  },
+  {
+    "key": "pool_rejection",
+    "name": "Liquidity pool · confirmed rejection",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "Price-pool sweep/reclaim -> later displacement -> controlling close break -> later origin retest with directional response. Sweep extreme invalidates; 8-bar confirmation and 16-bar retest deadlines.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.pool_rejection.v1",
+    "method_version": "PUBLIC_FOREX_POOL_REJECTION_V1",
+    "profile_hash": "b5548ba59e947c2f88da216f5c0193a050238015ca66896330ee9058d7a6bda4",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "pool_rejection",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_POOL_REJECTION_V1",
+    "policy_hash": "932362bf2e02ecf3cdfe216138a2c2805ce568d686450093d4b15d371093870d"
+  },
+  {
+    "key": "pool_breakout",
+    "name": "Liquidity pool · acceptance / held retest",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "Frozen confirmed pivot boundary -> displacement close beyond -> second later close accepted beyond -> still later held boundary retest and directional close. Prior broken geometry is not a reversal by default.",
+    "sources": [
+      "https://fxopen.com/blog/en/trading-with-support-and-resistance-zones/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.pool_breakout.v1",
+    "method_version": "PUBLIC_FOREX_POOL_BREAKOUT_V1",
+    "profile_hash": "a87bc9c7da2a677dd35ae36774979ee99df16afc0484eedc57866d535f89286c",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "pool_breakout",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_POOL_BREAKOUT_V1",
+    "policy_hash": "f50c5943d7276857ccf12d02445af52011747a09fad2c6c7394f560f61b619e1"
+  },
+  {
+    "key": "sweep_reversal",
+    "name": "Sweep reversal · confirmed origin retest",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "Confirmed pivot sweep/reclaim -> later displacement -> opposite structure break -> last opposite source candle no earlier than two bars before the sweep, or newly created FVG -> first subsequent directional held retest. No retrospective fill or automatic signal.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/",
+      "https://cmcmarketsfunded.com/learn/ict-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R01_LIQ_SWEEP_OB"
+    ],
+    "recipe_id": "public.forex.sweep_reversal.v1",
+    "method_version": "PUBLIC_FOREX_SWEEP_REVERSAL_V1",
+    "profile_hash": "ad20a501c3c954e4c262c09b691395bc257e384579de58f58852e62077d14df1",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "sweep_reversal",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SWEEP_REVERSAL_V1",
+    "policy_hash": "f133f5fff519a403d43e07546e4f4333643436f1ffe18bc0405c25b816ac6eef"
+  },
+  {
+    "key": "compression_retest",
+    "name": "Compression breakout · acceptance / retest",
+    "family": "Composed",
+    "warmup": 42,
+    "rules": "Previous 10-bar range <=50% preceding 30-bar range; displacement break -> later accepted close -> later held retest within 16 bars. Close back inside invalidates before retest. Engineering profile, not archived M20 acceptance.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/donchian-channel/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.compression_retest.v1",
+    "method_version": "PUBLIC_FOREX_COMPRESSION_RETEST_V1",
+    "profile_hash": "025c5de7021d86dd74d5ecb24864e5826f490fc050f920f9636282ed9d26b0bc",
+    "required_nodes": [],
+    "policy": {
+      "key": "compression_retest",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_COMPRESSION_RETEST_V1",
+    "policy_hash": "da9c8590da632af3826c64d25170b9f92ee2a5d4a69bd5cc8283ae70e34d6329"
+  },
+  {
+    "key": "break_confirmation",
+    "name": "Break confirmation · failed reclaim / micro break",
+    "family": "Composed",
+    "warmup": 23,
+    "rules": "Prior 20-bar boundary -> displacement breakout -> later acceptance -> failed reclaim/held retest -> still later close beyond retest candle high/low within 8 bars. No new entry family or broker command.",
+    "sources": [
+      "https://fxopen.com/blog/en/trading-with-support-and-resistance-zones/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.break_confirmation.v1",
+    "method_version": "PUBLIC_FOREX_BREAK_CONFIRMATION_V1",
+    "profile_hash": "fce74a299af16eb2bd20537837a3bd48a5e63b6ea93af7fbac6c0da81d47bf4a",
+    "required_nodes": [],
+    "policy": {
+      "key": "break_confirmation",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_BREAK_CONFIRMATION_V1",
+    "policy_hash": "d337e97e377ce429396ed4891d853dbbc6b78d668266d24d014d7fa6444ada98"
+  },
+  {
+    "key": "trend_ob",
+    "name": "Continuation pullback · order block",
+    "family": "Composed",
+    "warmup": 20,
+    "rules": "Existing displacement/BOS source candle; same-direction preceding D1 structure context (W1 for D1/W1), directional later OB retest, intact distal and opposite confirmed swing objective. FVG is never substituted for the OB.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/order-block/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "D1",
+      "W1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.trend_ob.v1",
+    "method_version": "PUBLIC_FOREX_TREND_OB_V1",
+    "profile_hash": "278c73d481a14834944528e8742ef68c2fd035993a4eb26b98ce936215f368db",
+    "required_nodes": [
+      "SMC_STRUCTURE",
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "trend_ob",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_TREND_OB_V1",
+    "policy_hash": "2843088cabcd54e41a02e052a0886d573f3f6e5c1d8e8784e04010d6c696387a"
+  },
+  {
+    "key": "trend_fvg",
+    "name": "Continuation pullback · FVG",
+    "family": "Composed",
+    "warmup": 20,
+    "rules": "Close-confirmed displacement structure and same-direction preceding D1 context (W1 for D1/W1); later first held FVG mitigation before full traversal or invalidation; open opposing swing objective.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/fair-value-gap/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "D1",
+      "W1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.trend_fvg.v1",
+    "method_version": "PUBLIC_FOREX_TREND_FVG_V1",
+    "profile_hash": "e3b9212d558859dd0f1d8747b57124d2aa81aae489cf18bc2dcc752d76007b6d",
+    "required_nodes": [
+      "SMC_STRUCTURE",
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "trend_fvg",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_TREND_FVG_V1",
+    "policy_hash": "203f982a5a8ce7afcf7f1ca4489fe970bd4a8897b111670eba5d88e0837a45fb"
+  },
+  {
+    "key": "smc_zone_retest",
+    "name": "Structure / displacement · OB or FVG retest",
+    "family": "Composed",
+    "warmup": 20,
+    "rules": "Known controlling BOS/CHoCH with displacement -> causally formed OB or FVG -> first later directional held retest. Distinct source-zone roots; no MTF or volume consensus fabricated.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/ict-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R05_SMC_FVG_OB"
+    ],
+    "recipe_id": "public.forex.smc_zone_retest.v1",
+    "method_version": "PUBLIC_FOREX_SMC_ZONE_RETEST_V1",
+    "profile_hash": "ba3dcfe2186ac2d62629393e7ba15e89dfa18a05d936a4ece0b0ab960943e420",
+    "required_nodes": [
+      "SMC_STRUCTURE",
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "smc_zone_retest",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SMC_ZONE_RETEST_V1",
+    "policy_hash": "ff4606c2ccf681afb2130ccdf18b73c7d9ef02aeae1295b0f376b746d62c738d"
+  },
+  {
+    "key": "breaker",
+    "name": "Breaker block · failed OB conversion",
+    "family": "Structure",
+    "warmup": 20,
+    "rules": "Causally formed order block -> later liquidity sweep -> opposite displacement and controlling structure break through its distal -> later retest from flipped side. Each stage ordered; original OB failure is retained.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/breaker-block/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.breaker.v1",
+    "method_version": "PUBLIC_FOREX_BREAKER_V1",
+    "profile_hash": "4ac62e39dc77935076bba39dbff17febc3a40b99707236e0a9fb449b2959a113",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "breaker",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_BREAKER_V1",
+    "policy_hash": "39d0e44d8a496a564fe2d66509e326dd4ac780538e60e174d2b1fd334328beff"
+  },
+  {
+    "key": "mitigation_block",
+    "name": "Mitigation block · failure swing / MSS",
+    "family": "Structure",
+    "warmup": 16,
+    "rules": "Known high-low-high lower-high or low-high-low higher-low failure swing, without taking the first extreme -> later displacement close through intervening swing -> source candle of failed leg -> later opposite held retest.",
+    "sources": [
+      "https://fxopen.com/blog/en/mitigation-blocks-how-may-traders-identify-and-trade-them/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.mitigation_block.v1",
+    "method_version": "PUBLIC_FOREX_MITIGATION_BLOCK_V1",
+    "profile_hash": "32f244e09c16aa63283b1cf1827f2e53956e3beec82476c62f44cf46b6c6cb8c",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "mitigation_block",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_MITIGATION_BLOCK_V1",
+    "policy_hash": "dac6ea139c67d0671ce8b15c7b36d6772b04697fbf70382a2332dcfab691373f"
+  },
+  {
+    "key": "inducement",
+    "name": "Inducement · internal sweep / origin response",
+    "family": "Structure",
+    "warmup": 20,
+    "rules": "Known controlling displacement break establishes origin; newly confirmed internal pivot stays between origin and break extreme; later internal sweep then subsequent directional origin retest. Public price hypothesis, never proof of intentional trapping.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/inducement-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.inducement.v1",
+    "method_version": "PUBLIC_FOREX_INDUCEMENT_V1",
+    "profile_hash": "465da3632d7b2b5a084c12ea2df6df8e868872f59f554606de286a602c3446e6",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "inducement",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_INDUCEMENT_V1",
+    "policy_hash": "07cde442419630322da43ec2de18221af64f613d3e3da497e145b51101705acc"
+  },
+  {
+    "key": "liquidity_void",
+    "name": "Liquidity void · multi-candle return",
+    "family": "Structure",
+    "warmup": 18,
+    "rules": "Three same-direction >=60%-body candles, each body overlap <=25% smaller body, total move >=2 preceding 14-bar mean TR. Later return into frozen body corridor with directional response; far-edge close invalidates. Not three-bar FVG or genuine order-flow measurement.",
+    "sources": [
+      "https://fxopen.com/blog/en/fair-value-gaps-vs-liquidity-voids-in-trading/amp"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.liquidity_void.v1",
+    "method_version": "PUBLIC_FOREX_LIQUIDITY_VOID_V1",
+    "profile_hash": "9641ad3c2bc6b668c3ba38b903ac36de937bb480064f0d67701144129ff85dfa",
+    "required_nodes": [],
+    "policy": {
+      "key": "liquidity_void",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_LIQUIDITY_VOID_V1",
+    "policy_hash": "16c502d1ce9a01aee8cd52e5973bd48da419b69ab81d5a6c9405ba04b234380b"
+  },
+  {
+    "key": "previous_day_sweep",
+    "name": "Previous-day high/low · sweep reversal",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "At each bar select D1 closed and available before its open. Breach/reclaim -> later displacement / controlling pivot break -> later held origin retest. Daily identity freezes at sweep; no future daily boundary or duplicate order.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "D1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.previous_day_sweep.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_DAY_SWEEP_V1",
+    "profile_hash": "97fa1870eee97bff443ce4d2b92f4c3a8ae48c02fad3c16c99d317982ffbb330",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "previous_day_sweep",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_DAY_SWEEP_V1",
+    "policy_hash": "772f25214f0325035bf2a6f18fa08b8ba0d97cfec82d6533a535781a9d2917ed"
+  },
+  {
+    "key": "previous_day_breakout",
+    "name": "Previous-day high/low · acceptance retest",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "Frozen prior available D1 high/low -> displacement close beyond -> later accepted close -> later held boundary retest. A new D1 record cannot re-anchor an existing sequence.",
+    "sources": [
+      "https://fxopen.com/blog/en/trading-with-support-and-resistance-zones/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "D1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.previous_day_breakout.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_DAY_BREAKOUT_V1",
+    "profile_hash": "7bbf1ca9d978699528d435f2ae7fbe9693ddfd75e23bfdd2c15d282870d85346",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "previous_day_breakout",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_DAY_BREAKOUT_V1",
+    "policy_hash": "34198d6132d3c634f38806229bfd3e5a5e445e66e2532a132a95289c81647da0"
+  },
+  {
+    "key": "session_asia",
+    "name": "Asian session · complete range",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "Asia/Tokyo 09:00–15:00 local, six contiguous closed H1 bars. Emit only at session completion; retain exact UTC interval and H1 roots. This explicit research window is not a universal broker session.",
+    "sources": [
+      "https://fxopen.com/blog/en/forex-trading-time-zones-market-hours-and-overlaps"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.session_asia.v1",
+    "method_version": "PUBLIC_FOREX_SESSION_ASIA_V1",
+    "profile_hash": "0bba7147432e8bdce646372ff347df68b3c62eff419f1dd2df0b342d52c0075a",
+    "required_nodes": [],
+    "policy": {
+      "key": "session_asia",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SESSION_ASIA_V1",
+    "policy_hash": "ee8b2c6c6a19184f67b130fd80a0655f588e0ddc2cb867e2c2b181366a55cd2f"
+  },
+  {
+    "key": "session_london",
+    "name": "London session · complete range",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "Europe/London 08:00–16:00 local with IANA DST, eight contiguous H1 bars. Missing/inexact session support is unavailable, not an invented range.",
+    "sources": [
+      "https://fxopen.com/blog/en/forex-trading-time-zones-market-hours-and-overlaps"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.session_london.v1",
+    "method_version": "PUBLIC_FOREX_SESSION_LONDON_V1",
+    "profile_hash": "69f312cf9459d6685a2fb5d1d9343e1cdddc73f4e09bf20618edff7d866212ad",
+    "required_nodes": [],
+    "policy": {
+      "key": "session_london",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SESSION_LONDON_V1",
+    "policy_hash": "d60c56fe2d44b9cb5d9986a9664fc4b03661da4fa04239c363a57d9bc5acd812"
+  },
+  {
+    "key": "session_new_york",
+    "name": "New York session · complete range",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "America/New_York 08:00–17:00 local with IANA DST, nine contiguous H1 bars. Only actual fully observed completed sessions produce range levels.",
+    "sources": [
+      "https://fxopen.com/blog/en/forex-trading-time-zones-market-hours-and-overlaps"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.session_new_york.v1",
+    "method_version": "PUBLIC_FOREX_SESSION_NEW_YORK_V1",
+    "profile_hash": "d31b40a53699eed927a5551133980207c6c0c2958448297bb671ba9ffcbac564",
+    "required_nodes": [],
+    "policy": {
+      "key": "session_new_york",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SESSION_NEW_YORK_V1",
+    "policy_hash": "0d61950e0153deccf7473212a0258ef0e177d2247a65b389e23f0e849a15137e"
+  },
+  {
+    "key": "session_sweep",
+    "name": "Session extremes · confirmed sweep response",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "Last complete Asia/London/New York H1 session range -> later breach/reclaim -> subsequent H1 displacement and structure break -> later held origin retest. Max 24 observed H1 bars after session; no calendar/news assumption.",
+    "sources": [
+      "https://cmcmarketsfunded.com/learn/liquidity-sweep/",
+      "https://fxopen.com/blog/en/forex-trading-time-zones-market-hours-and-overlaps"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.session_sweep.v1",
+    "method_version": "PUBLIC_FOREX_SESSION_SWEEP_V1",
+    "profile_hash": "7a52ec155cc6d551ad3a988f5d141eb4f4c19fd827f0b763703c6b7f731fa913",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "session_sweep",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SESSION_SWEEP_V1",
+    "policy_hash": "fff1b81e9fa47d4ed99573105632282316b03b63d6aaadc03dd6306f0d9142b2"
+  },
+  {
+    "key": "session_breakout",
+    "name": "Session range · breakout / acceptance retest",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "Complete named-session H1 range -> later displacement break -> accepted close -> later held retest, within 24 observed H1 bars after session end. Original session bounds remain fixed.",
+    "sources": [
+      "https://fxopen.com/blog/en/trading-with-support-and-resistance-zones/",
+      "https://fxopen.com/blog/en/forex-trading-time-zones-market-hours-and-overlaps"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.session_breakout.v1",
+    "method_version": "PUBLIC_FOREX_SESSION_BREAKOUT_V1",
+    "profile_hash": "6ae611b28526089f33cb1269ddf76962ff7c56f6fb6fadf09f61706500a02fa6",
+    "required_nodes": [],
+    "policy": {
+      "key": "session_breakout",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_SESSION_BREAKOUT_V1",
+    "policy_hash": "11bf99c7e01a1a1663f61a94a0aa43a10d90f77c24940366b94ee513ed46b973"
+  },
+  {
+    "key": "killzones",
+    "name": "ICT killzones · DST-aware time context",
+    "family": "Sessions",
+    "warmup": 1,
+    "rules": "Explicit America/New_York windows: Asia 20–24, London 02–05, NY 07–10, London-close 10–12. Label only observed contiguous H1 windows; timing context is not confirmation or a broker-open claim.",
+    "sources": [
+      "https://fxopen.com/blog/en/kill-zone-trading-in-forex/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "H1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.killzones.v1",
+    "method_version": "PUBLIC_FOREX_KILLZONES_V1",
+    "profile_hash": "f869a73088df4629a71acadaf88cb8c7dc7a85cb5243e65f8e7ea46572ef9668",
+    "required_nodes": [],
+    "policy": {
+      "key": "killzones",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_KILLZONES_V1",
+    "policy_hash": "85d2458e656d4ac0de7797eb36ecdeca3923140e7b54713821d5c9049eb2f857"
+  },
+  {
+    "key": "range_rotation",
+    "name": "Range equilibrium · confirmed boundary rotation",
+    "family": "Composed",
+    "warmup": 61,
+    "rules": "20-bar range with >=2 separated tests each side within 10% width, current ATR14 <= prior 40-bar mean ATR, no 20-bar trend break; directional boundary reclaim -> later internal break. Display midpoint objective only, not partial-close instructions.",
+    "sources": [
+      "https://fxopen.com/blog/en/how-to-trade-in-ranges-range-trading-strategies"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.range_rotation.v1",
+    "method_version": "PUBLIC_FOREX_RANGE_ROTATION_V1",
+    "profile_hash": "4483b8b205d053a66a35cb161da6d1eba9bbda68bbcb1f3e63e9ad4202cb7298",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "range_rotation",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_RANGE_ROTATION_V1",
+    "policy_hash": "2618a8de842824672b4d2fb05a7527dfcd59bd532411ce06c2391128b587ccba"
+  },
+  {
+    "key": "wyckoff_phase",
+    "name": "Wyckoff · causal price-phase hypotheses",
+    "family": "Wyckoff",
+    "warmup": 22,
+    "rules": "Frozen tested 20-bar range; B=range, C=Spring/UTAD, D=SOS/SOW plus held retest, E=later continuation outside. Optional A requires prior climax/automatic response. Price-only phase uncertainty remains explicit; no volume-confirmed institutional claim.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.wyckoff_phase.v1",
+    "method_version": "PUBLIC_FOREX_WYCKOFF_PHASE_V1",
+    "profile_hash": "2a7d34d800408cf7fbae69329b8dd2bcb388d80942a96ca1bc2050006427a162",
+    "required_nodes": [],
+    "policy": {
+      "key": "wyckoff_phase",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_WYCKOFF_PHASE_V1",
+    "policy_hash": "5e88b75b2b1eb97656705cd497ebc7982b3260724020d3973df5457456f37ab9"
+  },
+  {
+    "key": "wyckoff_spring_test",
+    "name": "Wyckoff Spring · secondary test / response",
+    "family": "Wyckoff",
+    "warmup": 22,
+    "rules": "Tested frozen range -> low sweep and reclaim (Spring) -> later lower-boundary secondary test without new low -> later bullish response above test high within 10 bars. Spring extreme invalidates.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R02_WYCKOFF_SPRING"
+    ],
+    "recipe_id": "public.forex.wyckoff_spring_test.v1",
+    "method_version": "PUBLIC_FOREX_WYCKOFF_SPRING_TEST_V1",
+    "profile_hash": "053cc7fcf65bd857700e94830683d1781e6596593f5764f87a494e292783deca",
+    "required_nodes": [],
+    "policy": {
+      "key": "wyckoff_spring_test",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_WYCKOFF_SPRING_TEST_V1",
+    "policy_hash": "62291f56f0caaf6b7187bc9bc0efc2a89c1be2f9c1b66fae651c71b295b2b1e1"
+  },
+  {
+    "key": "wyckoff_utad_test",
+    "name": "Wyckoff UTAD · secondary test / response",
+    "family": "Wyckoff",
+    "warmup": 22,
+    "rules": "Tested frozen range -> upper sweep and reclaim (UTAD) -> later upper-boundary test without new high -> later bearish response below test low. Explicit price-only distribution hypothesis.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R03_WYCKOFF_UTAD"
+    ],
+    "recipe_id": "public.forex.wyckoff_utad_test.v1",
+    "method_version": "PUBLIC_FOREX_WYCKOFF_UTAD_TEST_V1",
+    "profile_hash": "e847e33ded5fc5818cd398502229fc00d31ae82f0fa20d4ee74cc008b9ba2f6c",
+    "required_nodes": [],
+    "policy": {
+      "key": "wyckoff_utad_test",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_WYCKOFF_UTAD_TEST_V1",
+    "policy_hash": "a3b0f69470011f1ccc3a85a8cd26482dd499a94b9d8d6239883f5d8a116224fd"
+  },
+  {
+    "key": "wyckoff_break_retest",
+    "name": "Wyckoff SOS / SOW · held range retest",
+    "family": "Wyckoff",
+    "warmup": 24,
+    "rules": "Tested frozen range and preceding Spring/UTAD/test context -> displacement SOS/SOW -> later accepted close -> subsequent held range-boundary retest. Does not count Spring and its sweep as independent votes.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R04_WYCKOFF_SOS_SOW"
+    ],
+    "recipe_id": "public.forex.wyckoff_break_retest.v1",
+    "method_version": "PUBLIC_FOREX_WYCKOFF_BREAK_RETEST_V1",
+    "profile_hash": "daecbde37c315c609d8f057c3f56fd704b0c01808417c0300f79348fc750b583",
+    "required_nodes": [],
+    "policy": {
+      "key": "wyckoff_break_retest",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_WYCKOFF_BREAK_RETEST_V1",
+    "policy_hash": "00165d706a6d360ecb2f9b1f4cd857e77f819813c8929848bd9879ada2a4638f"
+  },
+  {
+    "key": "elliott_alternatives",
+    "name": "Elliott · competing counts / invalidation / Fib",
+    "family": "Patterns",
+    "warmup": 16,
+    "rules": "At each new confirmation compare consecutive 4-pivot ABC, 5-pivot developing impulse and 6-pivot impulse windows. Preserve competing IDs and hard-rule invalidation. Project .618/1.0/1.618 first-leg measured alternatives from the latest confirmed anchor: along a developing impulse, against a completed impulse or ABC. No recursive all-degrees claim.",
+    "sources": [
+      "https://www.elliottwave.com/waveopedia/impulse/",
+      "https://www.elliottwave.com/waveopedia/zigzags/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.elliott_alternatives.v1",
+    "method_version": "PUBLIC_FOREX_ELLIOTT_ALTERNATIVES_V1",
+    "profile_hash": "97601fb168171a06df20d0dc12e6b912f6f6fa1b991b78f00b79cc8df3eea26e",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "elliott_alternatives",
+      "trigger": "WAVE_RESPONSE",
+      "description": "A prior available wave completion/invalidation zone plus a later directional closed-bar reclaim; competing counts remain competing, not extra votes.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ELLIOTT_ALTERNATIVES_V1",
+    "policy_hash": "0cc13376a33ad72e23c2d7a9bb033def891256423c97dc19efdbb487194cc8af"
+  },
+  {
+    "key": "macro_elliott",
+    "name": "W1 extreme / Elliott · linked structural retest",
+    "family": "Composed",
+    "warmup": 20,
+    "rules": "Causal W1 13-bar extreme context and valid competing wave hypothesis, matching D1 structure, linked own-frame displacement zone retest within W1 extreme range. Optional COT is not a mandatory hidden gate; waves alone emit no setup.",
+    "sources": [
+      "https://www.elliottwave.com/waveopedia/impulse/",
+      "https://cmcmarketsfunded.com/learn/ict-trading/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "W1",
+      "D1"
+    ],
+    "data_kind": "",
+    "document_recipes": [
+      "R07_MACRO_EW_EXTREME"
+    ],
+    "recipe_id": "public.forex.macro_elliott.v1",
+    "method_version": "PUBLIC_FOREX_MACRO_ELLIOTT_V1",
+    "profile_hash": "3c050338a1e467a4502ed77c601a563e3e90a7e381e162dbcdfc16af522fe535",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "macro_elliott",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_MACRO_ELLIOTT_V1",
+    "policy_hash": "07a5a4147fa4c80d21a0b04a717839c355e489f452c4cc13912f35310b5f809b"
+  },
+  {
+    "key": "harmonic_prz",
+    "name": "Harmonic PRZ · independent later response",
+    "family": "Composed",
+    "warmup": 16,
+    "rules": "Confirmed AB=CD/Gartley/Bat/Butterfly ratios -> intersection of +/-5% 1:1 AB=CD (Gartley/AB=CD), or 1.27/1.618 AB=CD extension (Bat/Butterfly), and applicable XA/BC projection bands -> later zone visit with directional response and later local structure break. X/D invalidation, no hindsight D fill.",
+    "sources": [
+      "https://harmonictrader.com/harmonic-patterns/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [
+      "R08_HARMONIC_PRZ"
+    ],
+    "recipe_id": "public.forex.harmonic_prz.v1",
+    "method_version": "PUBLIC_FOREX_HARMONIC_PRZ_V1",
+    "profile_hash": "95c3c9eecc9457099fa88390049cfea9ec3c894ce27090869f333828d7335a29",
+    "required_nodes": [
+      "SWING_MAP"
+    ],
+    "policy": {
+      "key": "harmonic_prz",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_HARMONIC_PRZ_V1",
+    "policy_hash": "a621af06c28397c9f3a154c41637404640eb1396dd1f053234d8214c97344ff8"
+  },
+  {
+    "key": "previous_body",
+    "name": "Previous-body recovery · completed bar",
+    "family": "Candlesticks",
+    "warmup": 2,
+    "rules": "Previous completed bearish/bullish body high/low traversed by a later completed close in the opposite direction. Does not require engulfing opening position and is not live intrabar evidence.",
+    "sources": [
+      "https://help.ctrader.com/ctrader-algo/references/MarketData/Bars/Bar/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.previous_body.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_BODY_V1",
+    "profile_hash": "880488caba7a00d703f0d73ed869bc80a1c3345a6c9aafc948eafc70e95fce2b",
+    "required_nodes": [],
+    "policy": {
+      "key": "previous_body",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_BODY_V1",
+    "policy_hash": "24180cfed9c6791bd6a41abe23e04589e25d472c43da0008e5ea0ce3a454fddb"
+  },
+  {
+    "key": "previous_body_live",
+    "name": "Previous-body recovery · provisional quote",
+    "family": "Candlesticks",
+    "warmup": 2,
+    "rules": "Fresh same-source coherent Bid/Ask midpoint beyond preceding completed bearish body high or bullish body low. Previous close <= quote event time; future, stale and crossed sides rejected. Provisional price observation, not a reconstructed forming OHLC bar.",
+    "sources": [
+      "https://help.ctrader.com/ctrader-algo/references/MarketData/Bars/Bar/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "LIVE_QUOTE",
+    "document_recipes": [],
+    "recipe_id": "public.forex.previous_body_live.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_BODY_LIVE_V1",
+    "profile_hash": "8671f72130708c2809fa3c6a8fe8b6712c29b18731dd4c09804e6759cf34217c",
+    "required_nodes": [],
+    "policy": {
+      "key": "previous_body_live",
+      "trigger": "LIVE_BODY",
+      "description": "Fresh coherent same-source midpoint recovery of a previous body; provisional quote trigger, not completed OHLC confirmation. Body-boundary Limit retest with original side-clock expiry.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_BODY_LIVE_V1",
+    "policy_hash": "8631eb77a1efeb72d6092aca0d65a327142dcae41ef65f9d5888fba15bde7283"
+  },
+  {
+    "key": "previous_body_retest",
+    "name": "Previous-body recovery · HTF level / retest",
+    "family": "Composed",
+    "warmup": 4,
+    "rules": "Own-frame completed previous-body recovery overlapping an available completed D1/W1 high/low; later held body-boundary retest with directional response, within 8 bars. H1 is the R06 documented completed-bar alternative; no invented live traversal.",
+    "sources": [
+      "https://help.ctrader.com/ctrader-algo/references/MarketData/Bars/Bar/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "D1",
+      "W1"
+    ],
+    "data_kind": "",
+    "document_recipes": [
+      "R06_H1_PREVIOUS_BODY"
+    ],
+    "recipe_id": "public.forex.previous_body_retest.v1",
+    "method_version": "PUBLIC_FOREX_PREVIOUS_BODY_RETEST_V1",
+    "profile_hash": "bb5dd262a9f6c8f8cad1edde7a25f56c9d5aa71b6f3fb0f2067a5ab5f7e6d737",
+    "required_nodes": [],
+    "policy": {
+      "key": "previous_body_retest",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PREVIOUS_BODY_RETEST_V1",
+    "policy_hash": "62bf524417d5cbc72479d038c1775532c6721f52b9da5f88db5d6ec8a962bbc5"
+  },
+  {
+    "key": "rolling_extremes",
+    "name": "Observed 13 / 52 / 104-week extremes",
+    "family": "Levels",
+    "warmup": 1,
+    "rules": "Separate 13/52/104-completed-W1 maximum/minimum levels. Missing lookback stays warm-up; finite history is never labelled all-time high/low.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/donchian-channel/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [
+      "W1"
+    ],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.rolling_extremes.v1",
+    "method_version": "PUBLIC_FOREX_ROLLING_EXTREMES_V1",
+    "profile_hash": "cd1af32aaaadb8459dfdd3f219c123a388380d2bda665952b5b2f27b521c5bb4",
+    "required_nodes": [],
+    "policy": {
+      "key": "rolling_extremes",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ROLLING_EXTREMES_V1",
+    "policy_hash": "5eaf70e9889132f42c1248e03f0c972ebc42909581f6dfd8a04850bb96c87fdb"
+  },
+  {
+    "key": "round_numbers",
+    "name": "Round-number liquidity context",
+    "family": "Levels",
+    "warmup": 1,
+    "rules": "Nearest five 100-native-pip increments to latest close, snapped to native TickSize. No symbol-dependent guessed pip, actual depth or stop-count claim.",
+    "sources": [
+      "https://fxopen.com/blog/en/trading-with-support-and-resistance-zones/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.round_numbers.v1",
+    "method_version": "PUBLIC_FOREX_ROUND_NUMBERS_V1",
+    "profile_hash": "c2785d8d8f2db533f851d903d7b1bcefc7d95c8f38144dc143c1b3eeabd39024",
+    "required_nodes": [],
+    "policy": {
+      "key": "round_numbers",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ROUND_NUMBERS_V1",
+    "policy_hash": "f4a6eaff7d3bf2269111f60da8097779c1cf802a6afd19e9fcb02967b89ad0b9"
+  },
+  {
+    "key": "candle_pressure",
+    "name": "Balance of Power · price-only pressure",
+    "family": "Momentum",
+    "warmup": 15,
+    "rules": "(close-open)/(high-low), zero for zero range, 14-bar average; zero-cross observation. Explicit OHLC proxy, not actual volume, delta or institutional identity.",
+    "sources": [
+      "https://www.tradingview.com/support/solutions/43000589100-balance-of-power-bop"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.candle_pressure.v1",
+    "method_version": "PUBLIC_FOREX_CANDLE_PRESSURE_V1",
+    "profile_hash": "38fc7f63df7f707d05d31e5d1ce9a3dca3a89d3c520dd3e927ee6286ccef93f3",
+    "required_nodes": [],
+    "policy": {
+      "key": "candle_pressure",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_CANDLE_PRESSURE_V1",
+    "policy_hash": "aecba756999b0b0d787acbfe6c5b3560bb3b7110d51a802c98aa4c3178da960b"
+  },
+  {
+    "key": "regime_context",
+    "name": "Trend / range / volatility context",
+    "family": "Trend",
+    "warmup": 60,
+    "rules": "Wilder ADX14 >=25 trend, <=20 range, otherwise transition; current ATR14 / previous 40 valid ATR mean gives expansion >=1.5 or contraction <=.67. Context only, no strategy auto-switch or risk changes.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/trend/directional-movement-system/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.regime_context.v1",
+    "method_version": "PUBLIC_FOREX_REGIME_CONTEXT_V1",
+    "profile_hash": "e6271febe5f04803160d5dfa7c22b24f67213226ab5a9cd98967347ea4da794e",
+    "required_nodes": [],
+    "policy": {
+      "key": "regime_context",
+      "trigger": "REGIME_RECOVERY",
+      "description": "Observed TREND regime (ADX>=25) plus completed previous-body recovery; regime alone never chooses direction. Range/transition waits.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_REGIME_CONTEXT_V1",
+    "policy_hash": "0f39446569cf44b2c1a052a381962c6db4ee82255ce923d5e1f1b3d9618df4d5"
+  },
+  {
+    "key": "trend_persistence",
+    "name": "Trend persistence · directional efficiency",
+    "family": "Trend",
+    "warmup": 22,
+    "rules": "20-bar net-change / sum absolute close changes, plus proportion positive/negative returns. Signed efficiency crossing +/-0.5 identifies persistent price direction; not the local portfolio-weighted M39 policy.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/oscillators/momentum-oscillator/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.trend_persistence.v1",
+    "method_version": "PUBLIC_FOREX_TREND_PERSISTENCE_V1",
+    "profile_hash": "be0409b83e1845c4d312a5061a4f2648297b094c9c8e063931fd630840a76d46",
+    "required_nodes": [],
+    "policy": {
+      "key": "trend_persistence",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_TREND_PERSISTENCE_V1",
+    "policy_hash": "3264d26645bf2662f396a4cba3cf09e47bd800aa5cf3ef19b13c8bcaaea70a7d"
+  },
+  {
+    "key": "atr_trail",
+    "name": "ATR anchor trail · display only",
+    "family": "Trend",
+    "warmup": 23,
+    "rules": "Chandelier-style 22-bar high minus 3*ATR14 / low plus 3*ATR14. Separate long/short research lines; no stop mutation, position adoption or account sizing.",
+    "sources": [
+      "https://help.ctrader.com/indicators/built-in/volatility/average-true-range/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "",
+    "document_recipes": [],
+    "recipe_id": "public.forex.atr_trail.v1",
+    "method_version": "PUBLIC_FOREX_ATR_TRAIL_V1",
+    "profile_hash": "bacb242170d2b353d6c688941278338cd1764f5805f83c70691153a1f39c1e70",
+    "required_nodes": [],
+    "policy": {
+      "key": "atr_trail",
+      "trigger": "TRAIL_CROSS",
+      "description": "Completed close crosses the prior available Chandelier research line. Trigger-body retracement Limit; no existing position or broker stop is modified.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_ATR_TRAIL_V1",
+    "policy_hash": "6f83e64bd9a3cf5e031ecc0aaa99bdcb56f850c9a324ea7f6821c2e53b1deff2"
+  },
+  {
+    "key": "volume_displacement",
+    "name": "Volume-backed displacement",
+    "family": "Genuine data",
+    "warmup": 16,
+    "rules": "Price displacement plus own-bar genuine venue traded quantity >=1.5 prior 14-bar mean traded quantity. Tick count, missing weights, mapped foreign-contract prices and unknown provenance are not genuine pair volume.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "TRADED_PRINTS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.volume_displacement.v1",
+    "method_version": "PUBLIC_FOREX_VOLUME_DISPLACEMENT_V1",
+    "profile_hash": "c638f6f1dd13bf21dd55f0818b51648dbf363d507cf414b0497a529507cee292",
+    "required_nodes": [],
+    "policy": {
+      "key": "volume_displacement",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_VOLUME_DISPLACEMENT_V1",
+    "policy_hash": "04b5cf41a717a02aac6be6beddb67a0c48e156d31fb3d794c6b205a95b58e9b3"
+  },
+  {
+    "key": "effort_result",
+    "name": "Wyckoff effort / result · absorption",
+    "family": "Genuine data",
+    "warmup": 21,
+    "rules": "Genuine traded quantity >=1.5 prior 20-bar mean with own body <=50% prior 20-bar mean body; bullish/bearish price reaction near prior range edge. Price/volume divergence hypothesis, not known trader identity.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "TRADED_PRINTS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.effort_result.v1",
+    "method_version": "PUBLIC_FOREX_EFFORT_RESULT_V1",
+    "profile_hash": "81cdcc4ef7c6c8d76b0b5df9ac924b37443b7875959ba5a66668f33af73b01a9",
+    "required_nodes": [],
+    "policy": {
+      "key": "effort_result",
+      "trigger": "LATEST_DIRECTIONAL_EVENT",
+      "description": "Original method directional event, confirmed at the latest observed completed bar (pivot methods at actual confirmation). New research entry policy: 50% trigger-body Limit retracement; explicit method invalidation when supplied, otherwise beyond the two-bar extreme; original opposing pivot objective, 4-hour maximum lifetime. No retrospective fill, automatic sizing, confidence probability or automatic Issue.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_EFFORT_RESULT_V1",
+    "policy_hash": "d629753d552dd6b43a1308582b6d9502e009fee61da2d81dea8915a7ac94c8bb"
+  },
+  {
+    "key": "cause_effect",
+    "name": "Wyckoff P&F · automatic / explicit count",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Default automatic research profile PNF_CLOSE_ATR20_FROZEN_3BOX_TRIPLE_V1: original own-frame closes; first 20 true ranges seed a native-tick-ceiling ATR20 box frozen at bar 21. Three-box reversals; equal preceding X highs / O lows plus third-column break define a five-column triple top/bottom. Objective = pattern low + (5*box*3), or pattern high minus extension. Retire objectives already observed or later reached/invalidated; no inferred intrabar path. Finite-window reconstruction, not calibrated prediction. Explicit POINT_FIGURE_TICKS publications override automatic mode and retain their declared count settings.",
+    "sources": [
+      "https://www.wyckoffanalytics.com/wyckoff-method/",
+      "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts",
+      "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/p-and-f-price-objectives/p-and-f-price-objectives-horizontal-counts"
+    ],
+    "parameters": [
+      [
+        "automatic_profile",
+        "PNF_CLOSE_ATR20_FROZEN_3BOX_TRIPLE_V1"
+      ]
+    ],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "POINT_FIGURE_TICKS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.cause_effect.v1",
+    "method_version": "PUBLIC_FOREX_CAUSE_EFFECT_V1",
+    "profile_hash": "fa2c948d52d39af58990d303f34cce225c810ef7d232fd02fa9a2e2a7b24c3ff",
+    "required_nodes": [],
+    "policy": {
+      "key": "cause_effect",
+      "trigger": "PNF_RESPONSE",
+      "description": "An unreached original P&F objective plus aligned completed-body recovery; objective must remain beyond entry and untraded. Count is not an entry by itself.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_CAUSE_EFFECT_V1",
+    "policy_hash": "5e48e47669b6d219f62f2735b658fc3901a9770f2f6b153214a5abe9bde591bc"
+  },
+  {
+    "key": "profile_tpo",
+    "name": "Market Profile / TPO · POC / value / IB",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Observed intrabar price samples grouped by explicit session and 30-minute UTC slots; one TPO per visited tick bin per slot. 70% contiguous value expansion from max-TPO POC; first two complete slots form IB. No filling unobserved OHLC price bins.",
+    "sources": [
+      "https://www.sierrachart.com/index.php?page=doc/StudiesReference/TimePriceOpportunityCharts.html"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "INTRABAR_PRICES",
+    "document_recipes": [],
+    "recipe_id": "public.forex.profile_tpo.v1",
+    "method_version": "PUBLIC_FOREX_PROFILE_TPO_V1",
+    "profile_hash": "7ff9d40f5a519ce0d2f6ed5af9525d37d8fb7d52280d0e6452735fb0ae382639",
+    "required_nodes": [],
+    "policy": {
+      "key": "profile_tpo",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_PROFILE_TPO_V1",
+    "policy_hash": "595236f8312d823155b3fdbc2550495472235fea78da9f5a38436358da0252d0"
+  },
+  {
+    "key": "volume_profile",
+    "name": "Volume Profile · POC / value area",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Actual eligible executed-print quantity per native tick bin, explicit session anchor. 70% contiguous value expansion from highest-volume bin; deterministic nearest-midpoint/lower-price ties. No tick-volume conversion.",
+    "sources": [
+      "https://www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=141&Name=Volume_by_Price"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "TRADED_PRINTS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.volume_profile.v1",
+    "method_version": "PUBLIC_FOREX_VOLUME_PROFILE_V1",
+    "profile_hash": "5baebbef7ddeccdb70df4e1f1cb7e36e990c77a78533e155365e1d4a6d182ca8",
+    "required_nodes": [],
+    "policy": {
+      "key": "volume_profile",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_VOLUME_PROFILE_V1",
+    "policy_hash": "952591b027f5537bc15f27173a499b6901c3ffdc8c2ce5c41a8020a0112e1971"
+  },
+  {
+    "key": "vwap_bands",
+    "name": "Anchored VWAP · genuine weighted bands",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Explicit session-anchored sum(price*traded quantity)/sum(quantity); weighted population price deviation gives +/-1 and +/-2 sigma. Stable weighted moments, real executed prices/weights only.",
+    "sources": [
+      "https://www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=108"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "TRADED_PRINTS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.vwap_bands.v1",
+    "method_version": "PUBLIC_FOREX_VWAP_BANDS_V1",
+    "profile_hash": "d88d5d04643a3dc35ba23895ee170f2ae6b058eeaef5a7f88b73a63f81b4e4d6",
+    "required_nodes": [],
+    "policy": {
+      "key": "vwap_bands",
+      "trigger": "PRIOR_LEVEL_RESPONSE",
+      "description": "Freeze this method on observations available BEFORE the trigger bar opens. A later bullish close back above the upper boundary, or bearish close back below the lower boundary, after touching the prior zone; require the declared directional zone side when present. Research Limit at the tested boundary, invalidation beyond the trigger/zone extreme; original opposing pivot objective, 4-hour maximum lifetime. Context alone emits no direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_VWAP_BANDS_V1",
+    "policy_hash": "1713eb6bd1334295fc9cbe630a149a4a7e0e4e68b7ff5a077ce1400fef3c2e68"
+  },
+  {
+    "key": "dom_imbalance",
+    "name": "Broker / venue DOM · displayed-size imbalance",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Fresh genuine broker- or venue-scoped displayed depth, top five observed bid/ask levels; imbalance=(bid size-ask size)/(sum). >=.2 BUY / <=-.2 SELL context at observed midpoint. Broker input uses its original <=15s local receipt, never a native event clock/sequence or full-book claim. Native-chain and checksum venue scopes remain distinct. Not global FX book or executed volume.",
+    "sources": [
+      "https://www.sierrachart.com/index.php?page=doc/StudiesReference.php&ID=375",
+      "https://help.ctrader.com/trading-with-ctrader/depth-of-market/"
+    ],
+    "parameters": [],
+    "version": 2,
+    "input_frames": [],
+    "data_kind": "VENUE_BOOK",
+    "document_recipes": [],
+    "recipe_id": "public.forex.dom_imbalance.v1",
+    "method_version": "PUBLIC_FOREX_DOM_IMBALANCE_V2",
+    "profile_hash": "68be07b430ed8e3aa25041d74c2d2c3d04d5f2e5973d4c7cbef90f052c3838ff",
+    "required_nodes": [],
+    "policy": {
+      "key": "dom_imbalance",
+      "trigger": "FLOW_RECOVERY",
+      "description": "Original displayed-depth directional imbalance plus aligned completed-body recovery; quote must be fresh. Displayed sizes are never executed volume.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_DOM_IMBALANCE_V1",
+    "policy_hash": "7b7991bdc1d2b2ad7466442f99e6ba50fb56040e5a8335fcff11581670d9ebec"
+  },
+  {
+    "key": "footprint_delta",
+    "name": "Footprint / delta · executed aggressors",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Executed quantity aggregated per actual tick price and documented BUY/SELL aggressor; delta=buy-sell, cumulative sum in explicit session. Unknown aggressors unavailable; quote/tick direction is not substituted.",
+    "sources": [
+      "https://www.sierrachart.com/index.php?page=doc/NumbersBars.php"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "AGGRESSOR_PRINTS",
+    "document_recipes": [],
+    "recipe_id": "public.forex.footprint_delta.v1",
+    "method_version": "PUBLIC_FOREX_FOOTPRINT_DELTA_V1",
+    "profile_hash": "0cb4bef15ab7986403d590a20ae769bcd9dd8db137e826c05f40d5355a81a63e",
+    "required_nodes": [],
+    "policy": {
+      "key": "footprint_delta",
+      "trigger": "FLOW_RECOVERY",
+      "description": "Original documented executed-aggressor directional delta plus aligned completed-body recovery; no quote-direction substitution.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_FOOTPRINT_DELTA_V1",
+    "policy_hash": "55eeaf2aeb834565a402119d59d0d195e62c86dc69043418234e77315895b935"
+  },
+  {
+    "key": "cot_macro",
+    "name": "COT · published futures positioning context",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Published CFTC currency-futures mapping with report date separate from actual release time; (noncommercial long-short)/open interest, USD-base sign reversed. Label futures proxy and observed FX reference only; no position-derived entry.",
+    "sources": [
+      "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "CFTC_REPORT",
+    "document_recipes": [],
+    "recipe_id": "public.forex.cot_macro.v1",
+    "method_version": "PUBLIC_FOREX_COT_MACRO_V1",
+    "profile_hash": "c49346e4089856693d9570bca6a55a2dd5062d748ccd7fb06c5e057bb502714a",
+    "required_nodes": [],
+    "policy": {
+      "key": "cot_macro",
+      "trigger": "COT_RECOVERY",
+      "description": "Previously available published COT futures bias plus aligned completed-body recovery. Futures positioning is context, not a spot entry or a new publication-time claim.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_COT_MACRO_V1",
+    "policy_hash": "6005facadb909db68f205809c2a4de1ffbc6240b6ff8464130557c2f57070104"
+  },
+  {
+    "key": "calendar_context",
+    "name": "Official calendar · release-risk context",
+    "family": "Genuine data",
+    "warmup": 1,
+    "rules": "Explicit official release observation/publication times, affected pair currency and [release-30m, release+30m) window. Known scheduled release markers only; empty/incomplete feed cannot imply no event risk.",
+    "sources": [
+      "https://www.federalreserve.gov/newsevents/calendar.htm"
+    ],
+    "parameters": [],
+    "version": 1,
+    "input_frames": [],
+    "data_kind": "OFFICIAL_CALENDAR",
+    "document_recipes": [],
+    "recipe_id": "public.forex.calendar_context.v1",
+    "method_version": "PUBLIC_FOREX_CALENDAR_CONTEXT_V1",
+    "profile_hash": "9314d8561c080f6a4e209e915d028c601914161f158d8fd6199b0bef4c27f1bc",
+    "required_nodes": [],
+    "policy": {
+      "key": "calendar_context",
+      "trigger": "CALENDAR_RECOVERY",
+      "description": "Explicit provider schedule coverage and no affected event within the declared +/-30-minute blackout, plus completed-body recovery. An empty/unknown calendar is never clearance; releases never assign direction.",
+      "version": 1
+    },
+    "policy_id": "PUBLIC_LIMIT_RESEARCH_CALENDAR_CONTEXT_V1",
+    "policy_hash": "0bc61a1fb7b48db49f159d66414333dbea2bf1f7f2691f86e69bceeb50cbfb25"
+  }
+]

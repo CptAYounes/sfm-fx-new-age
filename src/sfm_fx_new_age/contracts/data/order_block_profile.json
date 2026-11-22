@@ -1,0 +1,19 @@
+{
+  "method_version": "SFM_OB_CLOSED_PIVOT_RESEARCH_V1",
+  "recipe_id": "sfm.order_block.research.v1",
+  "classification": "RESEARCH_UNCALIBRATED_PROJECTION_ONLY",
+  "source_document": "SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+  "source_document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+  "source_sections": ["6.2 Structural and strategy sensors", "5.1 Causal dependency invalidation"],
+  "rules": {
+    "structure": "Strict completed close crossing the most recent eligible confirmed swing; no wick-only break, no future/right-hand pivot borrowing, each pivot consumed once per direction.",
+    "displacement": "Directional close body at least 1.00 times the arithmetic mean of the previous 14 same-timeframe True Ranges, and body/range at least 0.60. Previous ranges exclude the break bar. These are explicit uncalibrated research-profile defaults, not a recovered numerical policy or profitability claim.",
+    "source": "Last opposite-colour completed candle among the previous 20 candles, before the qualifying break. Dojis do not qualify. Full source high/low define the zone: BUY proximal=high/distal=low; SELL proximal=low/distal=high.",
+    "lifecycle": "Only bars after the confirming break count as touches. Strict completed close beyond distal invalidates; wick contact alone touches. Invalidation is terminal. Revisions retain causal availability; a corrected-away event is invalidated, never deleted from historical reads.",
+    "activation": "Default off. Enabling starts ORDER_BLOCK publication through the existing scanner. Disabling suppresses current projection without deleting historical research. Re-enabling recomputes coherent current state.",
+    "scope": "W1/D1/H4/H1 independently from canonical source-scoped completed bars. Bounded trailing 2048 bars and latest 64 break events per frame; not a claim of exhaustive all-history scanning.",
+    "execution": "No MarketCandidate, fabricated qualification gates, confidence probability, risk sizing or broker command. Human Issue and cancellation remain separately owned by core. This is not complete M21A execution qualification."
+  },
+  "parameters": {"lookback": 14, "body_fraction": "0.60", "range_multiple": "1.00", "source_lookback": 20},
+  "enabled_default": false
+}

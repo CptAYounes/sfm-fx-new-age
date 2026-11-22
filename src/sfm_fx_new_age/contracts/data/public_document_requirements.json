@@ -1,0 +1,1301 @@
+{
+  "classification_rule": "Independent public documentation, never SFM prefix or module number.",
+  "corpus_inventory_sha256": "1ec589772452558f9333d8350e0714ac24c1fe19e96d01b6ae0387d6e9ea69f6",
+  "excluded_claims": [
+    "historical SFM execution identity equivalence",
+    "profitability",
+    "genuine data source provision",
+    "all discretionary variants of a framework"
+  ],
+  "expected_catalogue_ids": [
+    "abcd",
+    "adx",
+    "atr_trail",
+    "bat",
+    "bollinger",
+    "break_confirmation",
+    "breaker",
+    "butterfly",
+    "calendar_context",
+    "candle_pressure",
+    "cause_effect",
+    "compression",
+    "compression_retest",
+    "cot_macro",
+    "displacement",
+    "dom_imbalance",
+    "donchian",
+    "effort_result",
+    "elliott_abc",
+    "elliott_alternatives",
+    "elliott_impulse",
+    "ema_cross",
+    "engulfing",
+    "fibonacci",
+    "footprint_delta",
+    "fvg",
+    "gartley",
+    "harmonic_prz",
+    "ichimoku",
+    "inducement",
+    "inside_break",
+    "killzones",
+    "liquidity",
+    "liquidity_pools",
+    "liquidity_void",
+    "macd",
+    "macro_elliott",
+    "mitigation_block",
+    "momentum",
+    "mss",
+    "open_midpoint",
+    "order_block",
+    "ote",
+    "pinbar",
+    "pool_breakout",
+    "pool_rejection",
+    "previous_body",
+    "previous_body_live",
+    "previous_body_retest",
+    "previous_day_breakout",
+    "previous_day_sweep",
+    "previous_extremes",
+    "profile_tpo",
+    "pullback_fvg",
+    "pullback_ob",
+    "range_rotation",
+    "regime_context",
+    "rolling_extremes",
+    "round_numbers",
+    "rsi",
+    "session_asia",
+    "session_breakout",
+    "session_london",
+    "session_new_york",
+    "session_sweep",
+    "sma_cross",
+    "smc_zone_retest",
+    "stochastic",
+    "structure",
+    "support_resistance",
+    "sweep_context",
+    "sweep_reversal",
+    "trend_fvg",
+    "trend_ob",
+    "trend_persistence",
+    "volume_displacement",
+    "volume_profile",
+    "vwap_bands",
+    "wyckoff",
+    "wyckoff_break_retest",
+    "wyckoff_phase",
+    "wyckoff_spring_test",
+    "wyckoff_utad_test"
+  ],
+  "required_method_ids": [
+    "abcd",
+    "atr_trail",
+    "bat",
+    "break_confirmation",
+    "breaker",
+    "butterfly",
+    "calendar_context",
+    "candle_pressure",
+    "cause_effect",
+    "compression_retest",
+    "cot_macro",
+    "displacement",
+    "dom_imbalance",
+    "donchian",
+    "effort_result",
+    "elliott_abc",
+    "elliott_alternatives",
+    "elliott_impulse",
+    "fibonacci",
+    "footprint_delta",
+    "fvg",
+    "gartley",
+    "harmonic_prz",
+    "inducement",
+    "killzones",
+    "liquidity_pools",
+    "liquidity_void",
+    "macro_elliott",
+    "mitigation_block",
+    "momentum",
+    "mss",
+    "open_midpoint",
+    "order_block",
+    "ote",
+    "pool_breakout",
+    "pool_rejection",
+    "previous_body",
+    "previous_body_live",
+    "previous_body_retest",
+    "previous_day_breakout",
+    "previous_day_sweep",
+    "previous_extremes",
+    "profile_tpo",
+    "pullback_fvg",
+    "pullback_ob",
+    "range_rotation",
+    "regime_context",
+    "rolling_extremes",
+    "round_numbers",
+    "session_asia",
+    "session_breakout",
+    "session_london",
+    "session_new_york",
+    "session_sweep",
+    "smc_zone_retest",
+    "structure",
+    "support_resistance",
+    "sweep_context",
+    "sweep_reversal",
+    "trend_fvg",
+    "trend_ob",
+    "trend_persistence",
+    "volume_displacement",
+    "volume_profile",
+    "vwap_bands",
+    "wyckoff_break_retest",
+    "wyckoff_phase",
+    "wyckoff_spring_test",
+    "wyckoff_utad_test"
+  ],
+  "requirements": [
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M01 | Liquidity Vacuum Detector |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3080,
+      "method_ids": [
+        "liquidity_void"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M01"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M02 | Institutional Trap Classifier |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3081,
+      "method_ids": [
+        "sweep_reversal"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M02"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M03 | Volume Displacement Pressure Bot |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3082,
+      "method_ids": [
+        "volume_displacement"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M03"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M04 | Synthetic Order Flow Proxy |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3083,
+      "method_ids": [
+        "candle_pressure"
+      ],
+      "reason": "Public price-only Balance of Power analogue; explicitly not genuine order flow or identity-equivalent to the local synthetic-flow implementation.",
+      "requirement_id": "M04"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M05 | Liquidity Density Mapper |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3084,
+      "method_ids": [
+        "liquidity_pools"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M05"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M06 | Sweep Severity Classifier |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3085,
+      "method_ids": [
+        "sweep_context"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M06"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M07 | Wyckoff Phase Classifier |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3086,
+      "method_ids": [
+        "wyckoff_phase"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M07"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M08 | Spring and UTAD Detector |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3087,
+      "method_ids": [
+        "wyckoff_spring_test",
+        "wyckoff_utad_test"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M08"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M09 | Effort versus Result / Absorption Detector |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3088,
+      "method_ids": [
+        "effort_result"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M09"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M10 | Cause-to-Effect Projection Tool |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3089,
+      "method_ids": [
+        "cause_effect"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M10"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M11 | Killzone Session Engine |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3090,
+      "method_ids": [
+        "killzones"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M11"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M12 | Liquidity Pools and EQH/EQL Scanner |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3091,
+      "method_ids": [
+        "liquidity_pools"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M12"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M13 | PD Array Mapper: order block, FVG, mitigation, breaker |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3092,
+      "method_ids": [
+        "order_block",
+        "fvg",
+        "pullback_ob",
+        "pullback_fvg",
+        "breaker",
+        "mitigation_block"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M13"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M14 | OTE Zone Tool |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3093,
+      "method_ids": [
+        "ote"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M14"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M15 | Daily/Weekly Open and Midpoint Engine |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3094,
+      "method_ids": [
+        "open_midpoint"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M15"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M16 | BOS and CHOCH High-Precision Engine |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3095,
+      "method_ids": [
+        "structure",
+        "mss"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M16"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M17 | Inducement Detector |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3096,
+      "method_ids": [
+        "inducement"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M17"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M18 | Liquidity Void and Imbalance Return Predictor |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3097,
+      "method_ids": [
+        "liquidity_void"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M18"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M19 | Sweep Reversal Assassin |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3098,
+      "method_ids": [
+        "sweep_reversal"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M19"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M20 | Compression Breakout Hunter |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3099,
+      "method_ids": [
+        "compression_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M20"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M21 | Smart Pullback Sniper; family registry separates OB and FVG paths |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3100,
+      "method_ids": [
+        "trend_ob",
+        "trend_fvg"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M21"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M22 | Dynamic Risk Compression Manager |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3101,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M22"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M23 | Liquidity-Aware Stop Optimizer; legacy name, internal-protection rule still controls |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3102,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M23"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M24 | Correlation Hedge Manager |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3103,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M24"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M25 | Slippage Bias Analyzer |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3104,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M25"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M26 | Spread Spike Predictor |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3105,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M26"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M27 | Latency Drift Watchdog |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3106,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M27"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M28 | Daily Risk Governor |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3107,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M28"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M29 | Regime Adaptive Switcher |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3108,
+      "method_ids": [
+        "regime_context"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M29"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M30 | Opposite-Trade Pairing Controller |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3109,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M30"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M31 | Rotation Ladder Planner |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3110,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M31"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M32 | Pending-Order Lot Distributor |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3111,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M32"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M33 | Trade Cluster and Exposure Cap Enforcer |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3112,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M33"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M34 | Bad-Trade Reabsorption Router |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3113,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M34"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M35 | Nullification and Treasury Overflow Manager |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3114,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M35"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M36 | Rotation Exit Arbiter |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3115,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M36"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M37 | Anti-Martingale Sentinel |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3116,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M37"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M38 | Time-Series Momentum Bias Engine |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3117,
+      "method_ids": [
+        "momentum"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M38"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M39 | Trend Persistence Factor Engine |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3118,
+      "method_ids": [
+        "trend_persistence"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M39"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M40 | ATR Anchor Trail Manager |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3119,
+      "method_ids": [
+        "atr_trail"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M40"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M41 | Donchian Continuation Filter |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3120,
+      "method_ids": [
+        "donchian"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "M41"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M42 | Correlation Trend Governor |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3121,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M42"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M43 | SFM versus Trend Benchmark Recorder |",
+      "kind": "SUPPORT_OR_LOCAL_MANAGEMENT_NOT_ENTRY",
+      "line": 3122,
+      "method_ids": [],
+      "reason": "Risk, execution-quality, allocation, inventory, accounting or benchmark support, not a standalone public chart entry strategy. No management authority is added.",
+      "requirement_id": "M43"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M19 Sweep Reversal | Liquidity taken, displacement rejection, structure confirmation and valid origin/retest. | Historical validation rejection is not undone by calling the same signal a new strategy. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3064,
+      "method_ids": [
+        "sweep_reversal"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_1"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M20 Compression Breakout | Defined compression, qualified expansion/displacement and its family acceptance/retest rules. | The required compression thresholds and acceptance rules must come from accepted doctrine. Historical rejection remains recorded. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3065,
+      "method_ids": [
+        "compression_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_2"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M21A Smart Pullback \u2014 Order Block | Context/bias, valid order-block lifecycle, pullback and required structural confirmation. | An order block is not interchangeable with an FVG merely because zones overlap. Historical observe-only state remains visible. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3066,
+      "method_ids": [
+        "trend_ob"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_3"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M21B Smart Pullback \u2014 FVG | Valid imbalance lifecycle, mitigation/retest, bias and confirmation. | Preserve distinct input/zone semantics and selection/validation history. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3067,
+      "method_ids": [
+        "trend_fvg"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_4"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| Previous-Day High/Low | Authoritative previous-day boundaries and family-specific sweep or breakout-acceptance-retest behaviour. | Some sweep paths route to M19; a distinct breakout/retest path must not double-count the same semantics. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3068,
+      "method_ids": [
+        "previous_day_sweep",
+        "previous_day_breakout"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_5"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| Session Extremes | Approved session boundary/source, completed or current range state, valid sweep/expansion model. | Sweep paths may route to M19; compression expansion may route to M20. Session labelling alone does not create another strategy. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3069,
+      "method_ids": [
+        "session_asia",
+        "session_london",
+        "session_new_york",
+        "session_sweep",
+        "session_breakout"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_6"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| Liquidity Pool | Authoritative pool lifecycle and the exact accepted rejection, acceptance/retest or broken-zone/flip rule. | July's unsupported one-zone-width/next-bar interpretation was rejected. Do not revive its invalid counts or invent replacement thresholds. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3070,
+      "method_ids": [
+        "liquidity_pools",
+        "pool_rejection",
+        "pool_breakout"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ENTRY_7"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "## 9.1 Sweep Reversal Entry",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 6352,
+      "method_ids": [
+        "sweep_reversal"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "CH9_SWEEP"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "## 9.2 Continuation Pullback Entry",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 6368,
+      "method_ids": [
+        "trend_ob",
+        "trend_fvg"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "CH9_PULLBACK"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "## 9.3 Break Confirmation Entry",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 6383,
+      "method_ids": [
+        "break_confirmation"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "CH9_BREAK_CONFIRMATION"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "## 9.4 Range Equilibrium Rotation Entry",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 6398,
+      "method_ids": [
+        "range_rotation"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "CH9_RANGE_ROTATION"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "- round numbers;",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 6269,
+      "method_ids": [
+        "round_numbers"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "ROUND_NUMBER_LEVELS"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R01_LIQ_SWEEP_OB` | Liquidity sweep and reclaim, swing event, eligible OB or FVG, candle response | Retest/boundary of validated sweep and OB zone | Sweep extreme plus independently configurable padding | All bands; 0.50 is preferred only if full-distance geometry qualifies |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 199,
+      "method_ids": [
+        "sweep_reversal"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R01"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R02_WYCKOFF_SPRING` | Wyckoff accumulation hypothesis, sell-side sweep, Spring, secondary test | Spring/test zone or causal retest | Spring or tested range low, precisely versioned | D1/H4; W1 context |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 200,
+      "method_ids": [
+        "wyckoff_spring_test"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R02"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R03_WYCKOFF_UTAD` | Wyckoff distribution hypothesis, buy-side sweep, UTAD, secondary test | UTAD/test zone or causal retest | UTAD or tested range high | D1/H4; W1 context |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 201,
+      "method_ids": [
+        "wyckoff_utad_test"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R03"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R04_WYCKOFF_SOS_SOW` | Wyckoff phase evidence, SOS/SOW, range level and retest | Qualifying confirmed range-level or block retest | Range/confirmation-defined invalidation | D1/H4 with H1 refinement |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 202,
+      "method_ids": [
+        "wyckoff_break_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R04"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R05_SMC_FVG_OB` | BOS/CHoCH/MSS, displacement, OB and FVG location | Qualified OB or FVG mitigation/retest | Own proximal/distal or swing structural boundary | D1/H4/H1 |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 203,
+      "method_ids": [
+        "smc_zone_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R05"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R06_H1_PREVIOUS_BODY` | Previous completed H1 body traversal, current bar geometry, higher-timeframe levels | Eligible H1 live body-reaction or completed-bar retest | Own confirmed reaction extreme, not ATR by itself | H1 execution-level scanner candidate |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 204,
+      "method_ids": [
+        "previous_body_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R06"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R07_MACRO_EW_EXTREME` | W1 extreme, Elliott competing count, D1 structure and optionally released COT | Linked D1/H4 structural candidate, **never** Elliott or COT alone | Linked structural anchor; optional broad W1 ATR references | W1/D1 macro lens, all risk bands |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 205,
+      "method_ids": [
+        "macro_elliott"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R07"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "| `R08_HARMONIC_PRZ` | Confirmed pivot sequence, measured Fibonacci ratios, PRZ, independent sweep or price response | Price-reversal-zone boundary/midpoint or supported retest | Pattern-defined X/D invalidation with ATR variants kept separate | D1/H4/H1 when pivot evidence exists |",
+      "kind": "PUBLIC_COMPOSED_PROJECTION",
+      "line": 206,
+      "method_ids": [
+        "harmonic_prz"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "R08"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `OHLC_GEOM`: body, both wicks, close location, range, direction and live/completed status.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 165,
+      "method_ids": [
+        "candle_pressure"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_165"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `LIVE_PREV_BODY`: prior completed body high/low, live traversal, wick breach, overshoot in pips, live candle progress and time remaining, with zero-denominator safeguards.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 166,
+      "method_ids": [
+        "previous_body",
+        "previous_body_live"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_166"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `RANGE_VOL`: W1 ATR(14) Wilder completed, per-frame ATR, ADR and current live range normalisations; share outputs and seeds globally.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 167,
+      "method_ids": [
+        "atr_trail",
+        "regime_context"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_167"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `EXTREME`: 13/52/104-week or configured rolling highs/lows; label finite loaded-history maxima rather than claiming an unverified absolute historical extreme.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 168,
+      "method_ids": [
+        "rolling_extremes"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_168"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `SWING_MAP`: configurable causally confirmed or provisional pivots, higher highs, lower lows, breaks and timestamps. The *pivot confirmation time* is when sufficient right-hand completed bars exist, never the original pivot's timestamp.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 169,
+      "method_ids": [
+        "structure",
+        "support_resistance"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_169"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `SMC_STRUCTURE`: BOS, CHoCH, MSS and displacement; depends on `SWING_MAP`, `OHLC_GEOM`, `RANGE_VOL`. Labels are declared heuristics, not observations of institution identities.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 173,
+      "method_ids": [
+        "structure",
+        "mss",
+        "displacement"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_173"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `LIQUIDITY`: equal-high/low clusters, prior session/weekly extremes, price-derived estimated buy-side and sell-side pools, sweeps, reclaims and target age; depends on `SWING_MAP`, `EXTREME`, `LIVE_PREV_BODY`.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 174,
+      "method_ids": [
+        "liquidity_pools",
+        "previous_extremes",
+        "session_asia",
+        "session_london",
+        "session_new_york"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_174"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `ORDER_BLOCK`: last opposite-colour source candle before defined displacement and validated pivot break; own source candle, touch count, proximal/distal bounds and invalidation; depends on `SMC_STRUCTURE`, `OHLC_GEOM`, `RANGE_VOL`.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 175,
+      "method_ids": [
+        "order_block"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_175"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `FVG_IMBALANCE`: explicit three-candle gap, fill fraction, invalidation and current/closed candle distinction; depends on `FEATURE_CACHE`, `OHLC_GEOM`.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 176,
+      "method_ids": [
+        "fvg"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_176"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `WYCKOFF`: phase candidate, accumulation/distribution range hypothesis, Spring, UTAD, secondary test, SOS/SOW and range boundaries; depends on `SWING_MAP`, `LIQUIDITY`, `OHLC_GEOM`.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 177,
+      "method_ids": [
+        "wyckoff_phase",
+        "wyckoff_spring_test",
+        "wyckoff_utad_test",
+        "wyckoff_break_retest"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_177"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `ELLIOTT`: alternative causal wave counts, Fibonacci projections where applicable, competing interpretations, invalidation and confidence labels; depends on `SWING_MAP`, `RANGE_VOL`.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 178,
+      "method_ids": [
+        "elliott_impulse",
+        "elliott_abc",
+        "elliott_alternatives"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_178"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `HARMONIC` **optional new producer**: AB=CD completion first, then validated Gartley/Bat/Butterfly and other XABCD families only if the explicit ratio definitions are implemented and tested. Depends on the *same confirmed swing map*, never scans unrestricted raw bar combinations on every tick.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 179,
+      "method_ids": [
+        "abcd",
+        "gartley",
+        "bat",
+        "butterfly",
+        "harmonic_prz"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_179"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `PROFILE_TPO`: time-at-price bins, tails, IB, POC and value areas only with sufficient intrabar history.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 183,
+      "method_ids": [
+        "profile_tpo"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_183"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `VOLUME_PROFILE`: genuine volume-at-price when actual eligible traded-print data exist; a tick-activity profile, if constructed, must have a separately named proxy method and unit.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 184,
+      "method_ids": [
+        "volume_profile"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_184"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `VWAP_BANDS`: genuine volume-weighted VWAP and deviation bands only when weighted observations exist; tick-weighted proxy must be distinctly named. Reset/anchor policy versioned.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 185,
+      "method_ids": [
+        "vwap_bands"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_185"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `DOM_BOOK`: broker- or venue-scoped order-book depth (not global executed-forex volume).",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 186,
+      "method_ids": [
+        "dom_imbalance"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_186"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `FOOTPRINT_DELTA`: venue-reported executed prints and aggressor classification where a genuine feed exists; broker tick volume is **not** silently converted to buy-sell delta.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 187,
+      "method_ids": [
+        "footprint_delta"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_187"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `COT_MACRO`: currency-futures report mapping, class and report-as-of separately from actual public publication timestamp.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 188,
+      "method_ids": [
+        "cot_macro"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_188"
+    },
+    {
+      "document_path": "SFM_FX_ATR_Zone_Confidence_v1_2/SFM_FX_ATR_Centric_Scanner_And_Signal_Confidence_Integrated_Architecture_v1_2.md",
+      "document_sha256": "16564660729b216eb240655a5da933938eea1a23b15c73c855c4f226c0883a28",
+      "document_text": "- `CALENDAR_EVENT`: currency exposure, official release timing, observation/published distinction, event-risk windows and data completeness.",
+      "kind": "PUBLIC_SENSOR_OR_METHOD",
+      "line": 189,
+      "method_ids": [
+        "calendar_context"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "SENSOR_189"
+    },
+    {
+      "document_path": "SFM_FX_Complete_Strategies_Lot_Risk_Reabsorption_Redistribution_SLtoTP_AI_Bundle_2026-10-29.md",
+      "document_sha256": "01db47c75c9da9feff1b176fadd2d4026a2b3b795e4cac96dc74797de481a6fc",
+      "document_text": "| M10 | Cause-to-Effect Projection Tool |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 3089,
+      "method_ids": [
+        "cause_effect"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "WYCKOFF_CAUSE_EFFECT"
+    },
+    {
+      "document_path": "SFM_LogicTiles_Complete_System_Specification_V1_0.md",
+      "document_sha256": "2d3f2061bcd3fc071cd2a89ecdc97a673f1c5c993efad31fb643b78b4d1fe10d",
+      "document_text": "## 17.2 Workflow B \u2014 build a previous-body reversal observation",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 642,
+      "method_ids": [
+        "previous_body_live",
+        "previous_body"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "LOGICTILES_PREVIOUS_BODY"
+    },
+    {
+      "document_path": "SFM_LogicTiles_Complete_System_Specification_V1_0.md",
+      "document_sha256": "2d3f2061bcd3fc071cd2a89ecdc97a673f1c5c993efad31fb643b78b4d1fe10d",
+      "document_text": "## 17.3 Workflow C \u2014 identify a liquidity target candidate",
+      "kind": "SUPPORTING_SELECTOR",
+      "line": 655,
+      "method_ids": [
+        "liquidity_pools"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "LOGICTILES_LIQUIDITY_TARGET"
+    },
+    {
+      "document_path": "SFM_LogicTiles_Complete_System_Specification_V1_0.md",
+      "document_sha256": "2d3f2061bcd3fc071cd2a89ecdc97a673f1c5c993efad31fb643b78b4d1fe10d",
+      "document_text": "## 17.4 Workflow D \u2014 create a time-persistent candle condition",
+      "kind": "AUTHORING_PRIMITIVE_NOT_STRATEGY",
+      "line": 664,
+      "method_ids": [],
+      "reason": "Existing time-persistence LogicTiles primitive; not a separately named public strategy or feed.",
+      "requirement_id": "LOGICTILES_ELAPSED_TIME"
+    },
+    {
+      "document_path": "SFM_FX_Signal_Platform_Architecture_Kit_v2_2/upstream/theory_new_age.md",
+      "document_sha256": "17ba282b55ccb07f2d7d87ee5b1c50e11b1a375bd9802b70da5185fad50ca544",
+      "document_text": "| Lower/SSL area breached or tested, followed by rejection and bullish structural development | Failed extension below the lower area; possible reversal origin | BUY. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 275,
+      "method_ids": [
+        "previous_day_sweep",
+        "pool_rejection"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "LOWER_REJECTION"
+    },
+    {
+      "document_path": "SFM_FX_Signal_Platform_Architecture_Kit_v2_2/upstream/theory_new_age.md",
+      "document_sha256": "17ba282b55ccb07f2d7d87ee5b1c50e11b1a375bd9802b70da5185fad50ca544",
+      "document_text": "| Upper/BSL area breached or tested, followed by rejection and bearish structural development | Failed extension above the upper area; possible reversal origin | SELL. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 276,
+      "method_ids": [
+        "previous_day_sweep",
+        "pool_rejection"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "UPPER_REJECTION"
+    },
+    {
+      "document_path": "SFM_FX_Signal_Platform_Architecture_Kit_v2_2/upstream/theory_new_age.md",
+      "document_sha256": "17ba282b55ccb07f2d7d87ee5b1c50e11b1a375bd9802b70da5185fad50ca544",
+      "document_text": "| Upper/BSL boundary broken, accepted and supported by a held retest/new bullish progression | Continuation or expansion above the old boundary | BUY. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 277,
+      "method_ids": [
+        "previous_day_breakout",
+        "pool_breakout"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "UPPER_ACCEPTANCE"
+    },
+    {
+      "document_path": "SFM_FX_Signal_Platform_Architecture_Kit_v2_2/upstream/theory_new_age.md",
+      "document_sha256": "17ba282b55ccb07f2d7d87ee5b1c50e11b1a375bd9802b70da5185fad50ca544",
+      "document_text": "| Lower/SSL boundary broken, accepted and supported by a held retest/new bearish progression | Continuation or expansion below the old boundary | SELL. |",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 278,
+      "method_ids": [
+        "previous_day_breakout",
+        "pool_breakout"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "LOWER_ACCEPTANCE"
+    },
+    {
+      "document_path": "SFM_FX_Signal_Platform_Architecture_Kit_v2_2/upstream/theory_new_age.md",
+      "document_sha256": "17ba282b55ccb07f2d7d87ee5b1c50e11b1a375bd9802b70da5185fad50ca544",
+      "document_text": "### 10. Fibonacci as a measurement layer between HH and LL",
+      "kind": "PUBLIC_ANALYTICAL_CORE",
+      "line": 353,
+      "method_ids": [
+        "fibonacci",
+        "ote"
+      ],
+      "reason": "Bounded, uncalibrated public projection profile; not acceptance of the historical local execution strategy.",
+      "requirement_id": "FIBONACCI"
+    }
+  ],
+  "retained_initial_catalogue_ids": [
+    "sma_cross",
+    "ema_cross",
+    "macd",
+    "rsi",
+    "stochastic",
+    "adx",
+    "ichimoku",
+    "donchian",
+    "momentum",
+    "bollinger",
+    "engulfing",
+    "pinbar",
+    "inside_break",
+    "structure",
+    "liquidity",
+    "order_block",
+    "fvg",
+    "pullback_ob",
+    "pullback_fvg",
+    "wyckoff",
+    "elliott_impulse",
+    "elliott_abc",
+    "abcd",
+    "gartley",
+    "bat",
+    "butterfly",
+    "support_resistance",
+    "fibonacci",
+    "ote",
+    "previous_extremes",
+    "open_midpoint",
+    "compression"
+  ],
+  "schema_version": 1,
+  "scope": "SUPPLIED_DOCUMENT_PUBLIC_ANALYTICAL_CORES_AND_COMPOSED_PROJECTIONS",
+  "unresolved_identities": []
+}

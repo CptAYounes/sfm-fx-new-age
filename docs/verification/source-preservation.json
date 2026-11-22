@@ -1,0 +1,1434 @@
+{
+  "checked_at": "2026-11-22T10:40:37.988397+00:00",
+  "result": "PASS_ALL_BASELINE_HASHES_AND_MTIMES_UNCHANGED",
+  "input_count": 285,
+  "candidate_members": 244,
+  "candidate_mismatches": [],
+  "files": [
+    {
+      "path": ".gitignore",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "PROGRESS.md",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "README.md",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "pyproject.toml",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/check_architecture.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/install_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/launch.sh",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/run_checks.sh",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/verify_ctrader_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "scripts/verify_desktop_launch.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/__main__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/app.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/analytical_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/bitstamp_book.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/bitstamp_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/broker_depth.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/depth_capture.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/fix_capture.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/fix_protocol.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/fxopen_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/fxopen_reported.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/history.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/kraken_book.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/kraken_history.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/kraken_public.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/kraken_weekly.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/lanes.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/native_feed_audit.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/oauth.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/official_context.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/original_capture.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/protocol.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/quote_history.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/sdk_worker.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/service.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/connector/symbols.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/analytics.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/backtest.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/chart_display.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/commands.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/host_typed_routes.csv",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/order_block_profile.json",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/public_document_requirements.json",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/scanner_component_dag_44.json",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/data/tab_subtab_wiring.csv",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/defaults.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/domain.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/enums.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/extensions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/models.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/public_document_profiles.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/public_projection_inputs.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/public_strategies.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/registry.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/strategy_signals.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/supplemental.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/supplemental_wire.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/tab_data.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/contracts/venue_book.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/analytical_api.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/command_handlers.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/components.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/dag.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/projections.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/router.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/runtime.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/tab_api.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/core/tab_data.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/resources/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/resources/sfm-logo.png",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/backtesting.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/candidate_binding.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/catalogues.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/chart_projection.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/chart_studies.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/compute_pool.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/consumers.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/continuity.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/geometry.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/market.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/orders.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/point_figure_preparation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/positions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/projection_math.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/public_projections.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/replay.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/research.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/research_money.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/rules.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/scanner.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/signals.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/strategy_signal_policy.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/strategy_signals.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/supplemental.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/supplemental_files.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/timeline.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/tool_calculator.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/workflow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/services/zone_confidence_reference.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/storage/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/storage/database.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/backend_loader.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/base.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/loader.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab1/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab1/plugin.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab2/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab2/calculator.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab2/plugin.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab2/workspace.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/authoring.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/backend.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/candidates.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/order_blocks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/plugin.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_activity_alternatives.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_algorithms.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_features.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_genuine_data.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_pattern_models.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_point_figure_auto.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_price_models.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_sequence_features.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_sessions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_workspace.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/public_wyckoff.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab3/workspace.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab4/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab4/capital.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab4/pending.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab4/plugin.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/tabs/tab4/strategy_signals.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/testing/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/testing/checkpoint.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/testing/fixtures.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/__init__.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_axes.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_axis.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_canvas.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_interactions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_object_interactions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_object_manager.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_objects.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_preferences.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_projection_bar.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_projection_details.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_projection_layout.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_properties.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_public_strategies.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_workflow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/chart_workspace.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/feed_connection.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/inspection_panels.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/navigation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/research_study.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/scanner_overview.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/session_link.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui/theme.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "src/sfm_fx_new_age/ui_model.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/conftest.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/strategy_signal_cases.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_architecture_contracts.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_architecture_fences.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_architecture_review_regressions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_authoring_completion.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_backtest_workflow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_broker_dom_requirement.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_axis_rulers.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_clarity.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_context_colours.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_ctrader_interactions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_customization.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_study_rendering.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_chart_workstation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_completion_hardening.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_connector_boundary.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_cross_broker_compatibility.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_cross_lane_candidate_binding.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_desktop_install.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_document_public_strategies.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_feed_bootstrap_isolation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_feed_reconnect_epoch.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_gui_checkpoint.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_gui_navigation_refinement.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_gui_offscreen.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_gui_spine_cleanup.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_interconnection_readiness.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_multicore_projection.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_native_chart_stream.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_native_history.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_native_money.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_object_refinement.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_order_block_workflow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_order_flow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_owner_responsiveness.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_pair_chart_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_pair_research_profiles.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_parallel_contract_acceptance.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_parallel_spine_release.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_plugin_integration.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_projection_legibility.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_public_genuine_inputs.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_public_strategies.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_public_strategy_edges.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_quote_side_coherence.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_recipe_upgrade_preservation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_recovery_concurrency.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_registered_application_link.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_research_completion.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_research_money.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_router.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_runtime_wiring.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_sdk_transport_pacing.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_shared_analytics_contracts.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_shared_domain.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_shared_gap_repairs.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_shared_operators_extensions.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_shared_services_release.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_six_pair_scope.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_strategy_signal_gui.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_strategy_signal_lifecycle.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_strategy_signal_offline_navigation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_strategy_signal_pipelines.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_strategy_signal_positive.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_supplemental_file_ingress.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_tab_checkpoint.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_tab_plugins.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_tools_and_saved_login.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_tpo_reobservation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_ui_model.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_venue_day_recovery.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_venue_hour_recovery.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_venue_recovery_continuation.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_weekend_feed.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_workspace_native_contracts.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_workspace_ui_workflows.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "tests/test_workspace_workflow.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/automatic_pf_native.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/automatic_pf_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/bitstamp_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/bitstamp_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/blocker_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/broker_dom_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/chart_clarity_native.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/connected_feed_acceptance.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/connected_feed_controls.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/connected_feed_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/current_original_strategy_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/feed_bootstrap_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/finalize_public_fiat.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/fix_price_controls.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/fix_publication_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/fix_request_binding_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/fxopen_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/fxopen_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/kraken_blocker_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/kraken_public_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/kraken_public_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/kraken_recovery_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/native_activity_acceptance.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/native_activity_controls.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/native_activity_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/native_recovery_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/original_native_ui.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/original_source_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/remaining_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/remaining_original_native.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/run_kraken_desktop.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/strategy_compute_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/strategy_compute_replay.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/strategy_efficiency_native.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/strategy_efficiency_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/supplemental_original_efficiency_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/tab3_checkbox_projection_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/weekly_original_checks.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    },
+    {
+      "path": "verification/weekly_quantity_probe.py",
+      "hash_equal": true,
+      "mtime_equal": true
+    }
+  ]
+}

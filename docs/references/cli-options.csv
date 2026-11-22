@@ -1,0 +1,17 @@
+flags,help,default,action,line
+"[""--check""]",run architecture checks,not explicitly supplied,store_true,14
+"[""--summary-json""]",print runtime summary,not explicitly supplied,store_true,15
+"[""--offline-checkpoint""]","exercise synthetic shared backend and restart reconciliation, no network",not explicitly supplied,store_true,16
+"[""--fixture-session""]","open explicitly labelled in-memory synthetic UI session, not real market data",not explicitly supplied,store_true,17
+"[""--strict-genuine-data""]","disable tick/quote-activity substitutes; require genuine executions/aggressors or scoped displayed DOM as appropriate, without claiming a complete native venue book",not explicitly supplied,store_true,18
+"[""--compute-workers""]",pure analytical process ceiling: auto uses available CPUs/quota/memory and reserves a core slot; 1 is serial,auto,store,19
+"[""--state-dir""]",override local application state directory,not explicitly supplied,store,20
+"[""--supplemental-config""]",explicit local read-only analytical source configuration; never opens a network feed,not explicitly supplied,store,21
+"[""--validate-supplemental-config""]","validate source configuration without Qt, input admission, authentication or database writes",not explicitly supplied,store,22
+"[""--acquire-official-context""]","one-shot original CFTC/Federal Reserve Board HTTPS acquisition into a new directory, bound to saved source epochs; no GUI, credentials or broker calls",not explicitly supplied,store,23
+"[""--acquire-original-inputs""]",bounded read-only capture of original broker bars/ticks and CFTC/Board context into a new isolated directory; all SDK processes are joined before return,not explicitly supplied,store,24
+"[""--capture-original-depth""]",bounded native broker depth capture into a new private directory; no invented venue sequence or DOM admission,not explicitly supplied,store,25
+"[""--audit-native-feed""]",bounded real cTrader quote/history/depth health and installed-protocol capability audit; no trades or synthetic data,not explicitly supplied,store,26
+"[""--prepare-original-point-figure""]",validate a source-hash-bound operator count request and prepare original P&F ticks; no network or automatic count settings,not explicitly supplied,store,27
+"[""--capture-fix-depth""]",bounded TLS FIX Price full-book capture; fails before network if separate private FIX credentials are absent,not explicitly supplied,store,28
+"[""--fix-price-credentials""]","existing user-owned 0600 private FIX Price JSON; never OAuth, cTID or Trade credentials",not explicitly supplied,store,29

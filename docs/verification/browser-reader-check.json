@@ -1,0 +1,23 @@
+{
+  "result": "PASS_OFFLINE_READER_BROWSER",
+  "checked_at": "2026-11-22T10:49:59.966339+00:00",
+  "base": {
+    "title": "\ud83d\udc34 SFM FX New Age \u2014 Engineering Library",
+    "chapter_count": 88,
+    "main_document_count": 60,
+    "image_count": 8,
+    "all_images_loaded": true,
+    "all_internal_anchors_resolve": true,
+    "horizontal_overflow": false
+  },
+  "search": {
+    "query": "UNKNOWN",
+    "visible_chapters": 33,
+    "result_text": "33 matching chapters"
+  },
+  "restored_chapters": 88,
+  "navigation": {
+    "hash": "#chapter-024",
+    "target_title": "NA-D24 \u2014 Pending Order, Issue and Reconciliation Specification"
+  }
+}

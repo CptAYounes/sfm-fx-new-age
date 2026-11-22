@@ -1,0 +1,221 @@
+{
+  "result": "PASS_DOCUMENTATION_PACKAGE",
+  "checked_at": "2026-11-22T10:52:13.330701+00:00",
+  "package": "${DOCUMENTATION_ROOT}",
+  "source": "${PROJECT_ROOT}",
+  "checks": {
+    "exact_main_document_ids": {
+      "pass_": true,
+      "detail": null
+    },
+    "exact_main_directory_membership": {
+      "pass_": true,
+      "detail": null
+    },
+    "exact_adr_membership": {
+      "pass_": true,
+      "detail": null
+    },
+    "exact_reference_membership": {
+      "pass_": true,
+      "detail": null
+    },
+    "nonempty_substantive_documents": {
+      "pass_": true,
+      "detail": null
+    },
+    "no_unfilled_stubs": {
+      "pass_": true,
+      "detail": null
+    },
+    "relative_markdown_links_exist": {
+      "pass_": true,
+      "detail": {
+        "links": 1071,
+        "failures": []
+      }
+    },
+    "source_line_anchors_exist": {
+      "pass_": true,
+      "detail": {
+        "anchors": 703,
+        "failures": []
+      }
+    },
+    "html_exact_chapters": {
+      "pass_": true,
+      "detail": 88
+    },
+    "html_unique_ids": {
+      "pass_": true,
+      "detail": null
+    },
+    "html_internal_targets": {
+      "pass_": true,
+      "detail": null
+    },
+    "html_no_remote_runtime_resources": {
+      "pass_": true,
+      "detail": null
+    },
+    "html_local_files_exist": {
+      "pass_": true,
+      "detail": []
+    },
+    "json_files_parse": {
+      "pass_": true,
+      "detail": null
+    },
+    "browser_reader_positive_search_and_navigation": {
+      "pass_": true,
+      "detail": null
+    },
+    "typed_contract_fields_count": {
+      "pass_": true,
+      "detail": null
+    },
+    "current_product_module_count": {
+      "pass_": true,
+      "detail": null
+    },
+    "installed_distribution_inventory_count": {
+      "pass_": true,
+      "detail": null
+    },
+    "tooling_no_pyc_compile": {
+      "pass_": true,
+      "detail": []
+    },
+    "view_identity_set": {
+      "pass_": true,
+      "detail": null
+    },
+    "host_routes_count": {
+      "pass_": true,
+      "detail": null
+    },
+    "command_registry_count": {
+      "pass_": true,
+      "detail": null
+    },
+    "exact_83_unique_method_policy_set": {
+      "pass_": true,
+      "detail": null
+    },
+    "exact_1992_analytical_identities": {
+      "pass_": true,
+      "detail": null
+    },
+    "original_corpus_91_unique_requirements": {
+      "pass_": true,
+      "detail": null
+    },
+    "requirements_44_unique_source_test_links": {
+      "pass_": true,
+      "detail": null
+    },
+    "retained_test_1541_outcomes": {
+      "pass_": true,
+      "detail": null
+    },
+    "all_crosswalk_symbols_exist": {
+      "pass_": true,
+      "detail": null
+    },
+    "crosswalk_symbols_match_current_ast": {
+      "pass_": true,
+      "detail": []
+    },
+    "all_original_hashes_and_mtimes_preserved": {
+      "pass_": true,
+      "detail": {
+        "input_files": 285,
+        "drift": []
+      }
+    },
+    "sealed_v23_candidate_source_members_match": {
+      "pass_": true,
+      "detail": {
+        "members": 244,
+        "drift": []
+      }
+    },
+    "selected_original_release_receipts_unchanged": {
+      "pass_": true,
+      "detail": []
+    },
+    "fresh_171_offline_test_outcomes": {
+      "pass_": true,
+      "detail": {
+        "total": 171,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "fresh_smoke_exit_and_ten_modules": {
+      "pass_": true,
+      "detail": null
+    },
+    "fresh_three_headless_commands": {
+      "pass_": true,
+      "detail": null
+    },
+    "eight_editable_and_rendered_diagrams": {
+      "pass_": true,
+      "detail": []
+    },
+    "pdf_diagrams_inside_page": {
+      "pass_": true,
+      "detail": null
+    },
+    "pdf_page_count_matches_renderer": {
+      "pass_": true,
+      "detail": {
+        "pages": 91
+      }
+    },
+    "pdf_all_main_and_adr_ids": {
+      "pass_": true,
+      "detail": null
+    },
+    "pdf_first_and_last_substantive_paragraphs": {
+      "pass_": true,
+      "detail": {
+        "excerpts": 120,
+        "missing": []
+      }
+    },
+    "pdf_all_substantive_paragraphs": {
+      "pass_": true,
+      "detail": {
+        "excerpts": 287,
+        "missing": []
+      }
+    },
+    "pdf_no_missing_glyph_replacement": {
+      "pass_": true,
+      "detail": null
+    },
+    "sbom_structural_inventory": {
+      "pass_": true,
+      "detail": null
+    },
+    "no_operational_or_private_binary_exports": {
+      "pass_": true,
+      "detail": null
+    }
+  },
+  "failed_checks": [],
+  "main_documents": 60,
+  "adrs": 12,
+  "reference_chapters": 14,
+  "diagrams": 8,
+  "markdown_files": 88,
+  "markdown_words": 61362,
+  "pdf_pages": 91,
+  "relative_links_checked": 1071,
+  "source_anchors_checked": 703,
+  "manifest": "NOT_YET_SEALED",
+  "scope_limit": "Documentation/source-preservation/fresh offline checks only; no new native or broker qualification"
+}

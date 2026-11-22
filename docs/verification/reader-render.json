@@ -1,0 +1,10 @@
+{
+  "result": "READERS_RENDERED",
+  "html_chapters": 88,
+  "pdf_main_documents": 60,
+  "pdf_adrs": 12,
+  "pdf_diagrams": 8,
+  "pdf_pages": 91,
+  "pdf_reference_scope": "REFERENCE_DIRECTORY_ONLY; exhaustive appendices in HTML/Markdown/CSV",
+  "rendered_at": "2026-11-22T11:13:53.695905+00:00"
+}

@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sfm-fx-new-age"
+version = "0.2.0"
+description = "Local-first Forex research, source-aware signals, and human-issued pending orders"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Anthony Younes"}]
+keywords = ["forex", "research", "pyside6", "ctrader", "signals"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["PySide6>=6.7", "websocket-client>=1.8,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "build>=1.2", "markdown-it-py>=3.0"]
+docs = ["markdown-it-py>=3.0"]
+ctrader = ["ctrader-open-api>=0.9.2"]
+
+[project.urls]
+Homepage = "https://github.com/CptAYounes/sfm-fx-new-age"
+Documentation = "https://cptayounes.github.io/sfm-fx-new-age/"
+Repository = "https://github.com/CptAYounes/sfm-fx-new-age"
+Issues = "https://github.com/CptAYounes/sfm-fx-new-age/issues"
+Discussions = "https://github.com/CptAYounes/sfm-fx-new-age/discussions"
+
+[project.scripts]
+sfm-fx-new-age = "sfm_fx_new_age.__main__:main"
+sfm-fx-check = "sfm_fx_new_age.checks:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"sfm_fx_new_age.contracts.data" = ["*.csv", "*.json"]
+"sfm_fx_new_age.resources" = ["*.png"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,659 @@
+{
+  "items": [
+    {
+      "depends_on": [],
+      "emits": [
+        "MARKET_INPUT"
+      ],
+      "id": "CTRADER_SOURCE",
+      "layer": "source",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "tick_or_native_bar / ingestion"
+    },
+    {
+      "depends_on": [],
+      "emits": [
+        "EXTERNAL_INPUT"
+      ],
+      "id": "OPTIONAL_EXTERNAL_SOURCE",
+      "layer": "source",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "as_published / external"
+    },
+    {
+      "depends_on": [
+        "CTRADER_SOURCE",
+        "OPTIONAL_EXTERNAL_SOURCE"
+      ],
+      "emits": [
+        "NORMALIZED_TICK",
+        "NORMALIZED_BAR",
+        "EXTERNAL_RECORD",
+        "HEALTH_EVENT",
+        "SYMBOL_METADATA",
+        "SESSION_METADATA"
+      ],
+      "id": "INGRESS_NORMALIZER",
+      "layer": "ingest",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "per_input / ingestion"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER"
+      ],
+      "emits": [
+        "PIP_CONTRACT",
+        "SESSION_CONTRACT"
+      ],
+      "id": "SYMBOL_SESSION_REGISTRY",
+      "layer": "ingest",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_change / startup"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER"
+      ],
+      "emits": [
+        "ASOF_CONTEXT",
+        "LATE_DATA_ALERT"
+      ],
+      "id": "AVAILABILITY_WATERMARK",
+      "layer": "ingest",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "per_input / realtime"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "SYMBOL_SESSION_REGISTRY",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "BAR_LIVE",
+        "BAR_FINAL",
+        "BAR_REVISION"
+      ],
+      "id": "BAR_TIMELINE",
+      "layer": "bars",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_tick_or_close / realtime"
+    },
+    {
+      "depends_on": [
+        "BAR_TIMELINE"
+      ],
+      "emits": [
+        "FEATURE_BASE"
+      ],
+      "id": "FEATURE_CACHE",
+      "layer": "features",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "dirty_keys_only / incremental"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE"
+      ],
+      "emits": [
+        "OBS.OHLC_GEOM"
+      ],
+      "id": "OHLC_GEOM",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "live_aggregated_and_close / fast"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "OBS.LIVE_PREV_BODY"
+      ],
+      "id": "LIVE_PREV_BODY",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "event_and_h1_h4_d1_w1_close / fast"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE"
+      ],
+      "emits": [
+        "OBS.RANGE_VOL"
+      ],
+      "id": "RANGE_VOL",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "once_per_completed_bar / barclose"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE"
+      ],
+      "emits": [
+        "OBS.EXTREME",
+        "LEVEL.EXTREME"
+      ],
+      "id": "EXTREME",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "once_per_completed_bar / barclose"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE"
+      ],
+      "emits": [
+        "OBS.SWING_MAP",
+        "LEVEL.SWING"
+      ],
+      "id": "SWING_MAP",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_completed_bar / barclose"
+    },
+    {
+      "depends_on": [
+        "SWING_MAP",
+        "OHLC_GEOM",
+        "RANGE_VOL"
+      ],
+      "emits": [
+        "OBS.SMC_STRUCTURE",
+        "LEVEL.SMC"
+      ],
+      "id": "SMC_STRUCTURE",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_structural_event / structural"
+    },
+    {
+      "depends_on": [
+        "SWING_MAP",
+        "EXTREME",
+        "LIVE_PREV_BODY"
+      ],
+      "emits": [
+        "OBS.LIQUIDITY",
+        "LEVEL.LIQUIDITY"
+      ],
+      "id": "LIQUIDITY",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_level_event / fast+structural"
+    },
+    {
+      "depends_on": [
+        "SMC_STRUCTURE",
+        "OHLC_GEOM",
+        "RANGE_VOL"
+      ],
+      "emits": [
+        "OBS.ORDER_BLOCK",
+        "LEVEL.ORDER_BLOCK"
+      ],
+      "id": "ORDER_BLOCK",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_event_or_close / structural"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE",
+        "OHLC_GEOM"
+      ],
+      "emits": [
+        "OBS.FVG_IMBALANCE",
+        "LEVEL.FVG"
+      ],
+      "id": "FVG_IMBALANCE",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_3_bar_close_or_touch / barclose"
+    },
+    {
+      "depends_on": [
+        "SWING_MAP",
+        "LIQUIDITY",
+        "OHLC_GEOM"
+      ],
+      "emits": [
+        "OBS.WYCKOFF_PHASE",
+        "OBS.WYCKOFF_EVENT",
+        "LEVEL.WYCKOFF"
+      ],
+      "id": "WYCKOFF",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_range_or_phase_event / interpretive"
+    },
+    {
+      "depends_on": [
+        "SWING_MAP",
+        "RANGE_VOL"
+      ],
+      "emits": [
+        "OBS.ELLIOTT_HYPOTHESIS",
+        "LEVEL.ELLIOTT"
+      ],
+      "id": "ELLIOTT",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_pivot_change / interpretive"
+    },
+    {
+      "depends_on": [
+        "SWING_MAP",
+        "RANGE_VOL"
+      ],
+      "emits": [
+        "OBS.HARMONIC_HYPOTHESIS",
+        "LEVEL.HARMONIC_PRZ"
+      ],
+      "id": "HARMONIC",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_pivot_change / interpretive"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE",
+        "INGRESS_NORMALIZER"
+      ],
+      "emits": [
+        "OBS.PROFILE_TPO",
+        "LEVEL.TPO"
+      ],
+      "id": "PROFILE_TPO",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "session_boundary_or_requested / heavy"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE",
+        "FOOTPRINT_DELTA"
+      ],
+      "emits": [
+        "OBS.VOLUME_PROFILE",
+        "LEVEL.VOLUME_PROFILE"
+      ],
+      "id": "VOLUME_PROFILE",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "session_boundary_or_requested / heavy"
+    },
+    {
+      "depends_on": [
+        "FEATURE_CACHE",
+        "FOOTPRINT_DELTA"
+      ],
+      "emits": [
+        "OBS.VWAP_BANDS",
+        "LEVEL.VWAP"
+      ],
+      "id": "VWAP_BANDS",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "incremental_on_available_weights / medium"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "OBS.DOM_BOOK"
+      ],
+      "id": "DOM_BOOK",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "throttled_aggregate_and_level_change / fast"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "OBS.FOOTPRINT_DELTA"
+      ],
+      "id": "FOOTPRINT_DELTA",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "true_trade_print_or_window / medium"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "OBS.COT_MACRO"
+      ],
+      "id": "COT_MACRO",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "actual_publication / external"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "OBS.CALENDAR_EVENT"
+      ],
+      "id": "CALENDAR_EVENT",
+      "layer": "sensor",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "scheduled_and_published / external"
+    },
+    {
+      "depends_on": [
+        "OHLC_GEOM",
+        "LIVE_PREV_BODY",
+        "RANGE_VOL",
+        "EXTREME",
+        "SWING_MAP",
+        "SMC_STRUCTURE",
+        "LIQUIDITY",
+        "ORDER_BLOCK",
+        "FVG_IMBALANCE",
+        "WYCKOFF",
+        "ELLIOTT",
+        "HARMONIC",
+        "PROFILE_TPO",
+        "VOLUME_PROFILE",
+        "VWAP_BANDS",
+        "DOM_BOOK",
+        "FOOTPRINT_DELTA",
+        "COT_MACRO",
+        "CALENDAR_EVENT"
+      ],
+      "emits": [
+        "OBSERVATION_LEDGER",
+        "EVIDENCE_LINKS"
+      ],
+      "id": "OBSERVATION_REGISTRY",
+      "layer": "registry",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_material_revision / registry"
+    },
+    {
+      "depends_on": [
+        "EXTREME",
+        "SWING_MAP",
+        "SMC_STRUCTURE",
+        "LIQUIDITY",
+        "ORDER_BLOCK",
+        "FVG_IMBALANCE",
+        "WYCKOFF",
+        "ELLIOTT",
+        "HARMONIC",
+        "PROFILE_TPO",
+        "VOLUME_PROFILE",
+        "VWAP_BANDS"
+      ],
+      "emits": [
+        "LEVEL_INDEX",
+        "PROXIMITY_ALERT"
+      ],
+      "id": "STRUCTURAL_LEVEL_INDEX",
+      "layer": "registry",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_level_change / index"
+    },
+    {
+      "depends_on": [
+        "OBSERVATION_REGISTRY",
+        "STRUCTURAL_LEVEL_INDEX",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "EVIDENCE_CLUSTER_LEDGER",
+        "EVIDENCE_CLUSTER_REVISION"
+      ],
+      "id": "EVIDENCE_CLUSTER_RESOLVER",
+      "layer": "evidence",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_causal_evidence_change / structural"
+    },
+    {
+      "depends_on": [
+        "OBSERVATION_REGISTRY",
+        "STRUCTURAL_LEVEL_INDEX",
+        "SYMBOL_SESSION_REGISTRY"
+      ],
+      "emits": [
+        "CANDIDATE_FAMILY",
+        "CANDIDATE_VARIANT"
+      ],
+      "id": "CANDIDATE_COMPOSER",
+      "layer": "candidate",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_candidate_evidence_change / structural"
+    },
+    {
+      "depends_on": [
+        "EVIDENCE_CLUSTER_RESOLVER",
+        "CANDIDATE_COMPOSER",
+        "STRUCTURAL_LEVEL_INDEX",
+        "SYMBOL_SESSION_REGISTRY",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "PRICE_ZONE_CONFLUENCE",
+        "ZONE_EVIDENCE_MEMBERSHIP"
+      ],
+      "id": "PRICE_ZONE_CONFLUENCE",
+      "layer": "evidence",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "only_impacted_active_candidate_zones / bounded_interval_query"
+    },
+    {
+      "depends_on": [
+        "PRICE_ZONE_CONFLUENCE",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "ZONE_CONFIDENCE_SCORE",
+        "ZONE_CONFIDENCE_REVISION"
+      ],
+      "id": "ZONE_CONFIDENCE_ENGINE",
+      "layer": "qualification",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "once_per_zone_evidence_version_not_stop_variant / cheap_incremental"
+    },
+    {
+      "depends_on": [
+        "CANDIDATE_COMPOSER",
+        "RANGE_VOL",
+        "SYMBOL_SESSION_REGISTRY"
+      ],
+      "emits": [
+        "STOP_VARIANT",
+        "PIP_GEOMETRY"
+      ],
+      "id": "DISTANCE_ATR_ENGINE",
+      "layer": "geometry",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_candidate_or_atr_change / cheap"
+    },
+    {
+      "depends_on": [
+        "DISTANCE_ATR_ENGINE"
+      ],
+      "emits": [
+        "ATR_BAND_ASSIGNMENT"
+      ],
+      "id": "ATR_BAND_CLASSIFIER",
+      "layer": "geometry",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_geometry_change / cheap"
+    },
+    {
+      "depends_on": [
+        "CANDIDATE_COMPOSER",
+        "STRUCTURAL_LEVEL_INDEX",
+        "SYMBOL_SESSION_REGISTRY"
+      ],
+      "emits": [
+        "TARGET_MAP",
+        "GROSS_NET_GEOMETRY"
+      ],
+      "id": "TARGET_GEOMETRY",
+      "layer": "geometry",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_target_or_entry_change / cheap"
+    },
+    {
+      "depends_on": [
+        "DISTANCE_ATR_ENGINE",
+        "TARGET_GEOMETRY",
+        "SYMBOL_SESSION_REGISTRY",
+        "AVAILABILITY_WATERMARK"
+      ],
+      "emits": [
+        "SPREAD_BURDEN",
+        "PIP_CURRENCY_ESTIMATE",
+        "RISK_METADATA"
+      ],
+      "id": "RISK_CONTEXT",
+      "layer": "riskinfo",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_material_risk_change / cheap"
+    },
+    {
+      "depends_on": [
+        "CANDIDATE_COMPOSER",
+        "DISTANCE_ATR_ENGINE",
+        "ATR_BAND_CLASSIFIER",
+        "TARGET_GEOMETRY",
+        "RISK_CONTEXT",
+        "OBSERVATION_REGISTRY",
+        "CALENDAR_EVENT",
+        "ZONE_CONFIDENCE_ENGINE"
+      ],
+      "emits": [
+        "ELIGIBILITY",
+        "BLOCKER_CODES"
+      ],
+      "id": "OSQL_GATES",
+      "layer": "qualification",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_material_candidate_change / cheap"
+    },
+    {
+      "depends_on": [
+        "OSQL_GATES",
+        "OBSERVATION_REGISTRY",
+        "ATR_BAND_CLASSIFIER",
+        "ZONE_CONFIDENCE_ENGINE"
+      ],
+      "emits": [
+        "QUALITY_SCORE",
+        "PREFERENCE_ORDER"
+      ],
+      "id": "OSQL_SCORER",
+      "layer": "qualification",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "eligible_candidates_only / medium"
+    },
+    {
+      "depends_on": [
+        "OSQL_SCORER",
+        "OSQL_GATES",
+        "ZONE_CONFIDENCE_ENGINE"
+      ],
+      "emits": [
+        "SIGNAL_EVENT",
+        "SIGNAL_SNAPSHOT"
+      ],
+      "id": "SIGNAL_PUBLISHER",
+      "layer": "publish",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "state_change_or_heartbeat / cheap"
+    },
+    {
+      "depends_on": [
+        "INGRESS_NORMALIZER",
+        "OBSERVATION_REGISTRY",
+        "CANDIDATE_COMPOSER",
+        "SIGNAL_PUBLISHER",
+        "BAR_TIMELINE",
+        "ZONE_CONFIDENCE_ENGINE"
+      ],
+      "emits": [
+        "DURABLE_AUDIT"
+      ],
+      "id": "EVENT_STORE",
+      "layer": "storage",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "state_changes_and_barclose / io"
+    },
+    {
+      "depends_on": [
+        "OBSERVATION_REGISTRY",
+        "STRUCTURAL_LEVEL_INDEX",
+        "SIGNAL_PUBLISHER",
+        "EVENT_STORE",
+        "ZONE_CONFIDENCE_ENGINE"
+      ],
+      "emits": [
+        "READ_SNAPSHOT",
+        "READ_SIGNAL"
+      ],
+      "id": "SNAPSHOT_READ_API",
+      "layer": "serving",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_request_or_change / read"
+    },
+    {
+      "depends_on": [
+        "SNAPSHOT_READ_API"
+      ],
+      "emits": [
+        "DISPLAY"
+      ],
+      "id": "GUI_CONSUMER",
+      "layer": "consumer",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "ui_throttled / presentation"
+    },
+    {
+      "depends_on": [
+        "SNAPSHOT_READ_API"
+      ],
+      "emits": [
+        "REMOTE_READ"
+      ],
+      "id": "HERMES_BRIDGE_CONSUMER",
+      "layer": "consumer",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "read_on_demand / presentation"
+    },
+    {
+      "depends_on": [
+        "SNAPSHOT_READ_API"
+      ],
+      "emits": [
+        "OPTIONAL_RISK_REVIEW"
+      ],
+      "id": "EXECUTION_RISK_INTERFACE",
+      "layer": "consumer",
+      "status": "SOURCE_DECLARED_DESIGN_NOT_IMPLEMENTED",
+      "trigger_and_tier": "on_signal / external"
+    }
+  ],
+  "schema_version": "2.2",
+  "source": "upstream/atr_scanner_source_v1_2.md Section 15",
+  "source_claims": {
+    "components": 44,
+    "edges": 130
+  },
+  "topic_binding_note": "Dependency pairs are exact from source table; typed topic-edge CSV mentioned by source was NOT supplied. Single-output topic assignments are inferred; multi-output exact topic mappings remain unresolved."
+}

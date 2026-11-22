@@ -1,0 +1,43 @@
+main_tab,subtab_id,subtab,backend_owner,subscribed_topics,gui_to_owner_commands,presentation_priority,purpose
+1,1.1,Forex Pair Watchlist,FOREX_SYMBOL_REGISTRY,SYMBOL.SPEC;CONTEXT.W1_D1_H4,SELECT_PAIR;FILTER_FAVORITES,P3,Six active major pairs; no duplicated subscriptions
+1,1.2,W1 Macro Context,CONTEXT_SNAPSHOT_SERVICE,BAR.FINAL;OBS.EXTREME;OBS.RANGE_VOL,SELECT_PAIR;SHOW_W1,P3,Last completed weekly context and ATR(14)
+1,1.3,D1 Primary Chart,CONTEXT_SNAPSHOT_SERVICE,BAR.FINAL;LEVEL.LIQUIDITY;OBS.SMC_STRUCTURE,SELECT_PAIR;DRAW_ANNOTATION,P3,Primary structural chart
+1,1.4,H4 Entry Chart,CONTEXT_SNAPSHOT_SERVICE,BAR.FINAL;LEVEL.ORDER_BLOCK;LEVEL.FVG,SELECT_PAIR;SELECT_LEVEL,P3,Supporting qualification; level geometry
+1,1.5,H1 Optional Inspect,CONTEXT_SNAPSHOT_SERVICE,BAR.FINAL,ENABLE_OPTIONAL_H1,P3,Optional; not required feed
+1,1.6,Market Structure and Liquidity,STRATEGY_RECIPE_HOST,LEVEL_INDEX;OBS.WYCKOFF_PHASE;OBS.LIQUIDITY,FILTER_LEVELS,P3,Hypothesized pools versus structural fact
+1,1.7,ATR Bands and Fibonacci,STRATEGY_RECIPE_HOST,OBS.RANGE_VOL;PIP_GEOMETRY;ATR_BAND_ASSIGNMENT,SELECT_BANDS,P3,W1 ATR buffer versus actual entry risk
+1,1.8,Signal Overlays,CHART_OVERLAY_PROTOCOL,OVERLAY.UPDATE,SHOW_HIDE_OVERLAYS,P3,Research-generated overlays only
+1,1.9,Chart Replay,RESEARCH_REPLAY,REPLAY.DATASET;REPLAY.RESULT,START_PAUSE_STEP,P3,Offline; no broker sends
+1,1.10,Order and Position Visuals,READONLY_POSITION_MONITOR,BROKER.ORDER_STATE;POSITION.UPDATED,SELECT_ACCOUNT,P3,Read-only actual broker state
+2,2.1,Central PCB Switchboard,LOCAL_EVENT_ROUTER,PIPELINE.HEALTH;COMPONENT.HEALTH,SET_CONSUMER_SWITCH,P2,Physical source remains owned; consumer switch only
+2,2.2,44 Scanner Components,TELEMETRY_BOARD,ARCH.METRICS;PIPELINE.HEALTH,INSPECT_COMPONENT,P2,44 source-declared scanner nodes
+2,2.3,Sources and Connectivity,CT_OPEN_API_CONNECTOR,BROKER.CONNECTION_HEALTH;DATA.AUTHORITY_CHANGE,CONNECT;RECONNECT;START_MARKET_FEED;DISCONNECT_FEED;IMPORT_CTRADER_PROFILE;IMPORT_CTRADER_SESSION,P2,"OAuth, authenticated account discovery, and user-selected account"
+2,2.4,Data Freshness and LKV,BAR_AND_QUOTE_CACHE,QUOTE.LKV;BAR.FINAL;DATA.GAP,REQUEST_BACKFILL,P2,Last-known plus separate fresh/expired state
+2,2.5,Pair Contracts and Sessions,FOREX_SYMBOL_REGISTRY,SYMBOL.SPEC;SESSION.CONTRACT,ENABLE_PAIR,P2,Forex only; native pip/tick/volume
+2,2.6,Pipeline Routing and Queues,LOCAL_EVENT_ROUTER,PIPELINE.METRICS,FILTER_PIPELINES,P2,Backpressure and high-priority queue
+2,2.7,Variable Catalogue,GLOBAL_VARIABLE_REGISTRY,VARIABLE.CATALOGUE,INSPECT_VARIABLE,P2,One semantic data registry
+2,2.8,Parameter/Mutable Surface Registry,GLOBAL_PARAMETER_REGISTRY,PARAM.CATALOGUE;SURFACE.DISCOVERY,OPEN_OWNER_EDITOR,P2,Editable parameters mapped to owner
+2,2.9,Local Services and Health,TELEMETRY_BOARD,COMPONENT.HEALTH,START_STOP_NONCRITICAL,P2,Do not stop required broker reconciliation
+2,2.10,Storage and Diagnostics,LOCAL_CONFIG_STORE,CONFIG.VERSION;PIPELINE.HEALTH,EXPORT_IMPORT_CONFIG,P2,Operational storage and normal diagnostics
+3,3.1,Strategy and Recipe Library,STRATEGY_RECIPE_HOST,RECIPE.REGISTRY;CANDIDATE.PROPOSED,ENABLE_RECIPE,P2,Source-backed versions and requirements
+3,3.2,D1 Campaign and Phase,STRATEGY_RECIPE_HOST,OBS.SMC_STRUCTURE;OBS.LIQUIDITY;OBS.WYCKOFF_PHASE,SELECT_PAIR,P2,D1 phase from actual causal bars
+3,3.3,W1 Macro and ATR,STRATEGY_RECIPE_HOST,OBS.RANGE_VOL;OBS.EXTREME,SELECT_PAIR,P2,Completed W1 ATR reused once
+3,3.4,H4 Entry Qualification,STRATEGY_RECIPE_HOST,CANDIDATE_VARIANT;LEVEL_INDEX,TUNE_H4,P2,Entry after D1 evidence
+3,3.5,Structure Producers,STRATEGY_RECIPE_HOST,OBS.SWING_MAP;OBS.ORDER_BLOCK;OBS.FVG_IMBALANCE,SELECT_METHOD,P2,Shared foundational sensors
+3,3.6,Wyckoff and Liquidity,STRATEGY_RECIPE_HOST,OBS.WYCKOFF_PHASE;OBS.WYCKOFF_EVENT;OBS.LIQUIDITY,TUNE_RULES,P2,Avoid source-event double vote
+3,3.7,Elliott and Harmonics,STRATEGY_RECIPE_HOST,OBS.ELLIOTT_HYPOTHESIS;OBS.HARMONIC_HYPOTHESIS,ENABLE_OPTIONAL_SENSOR,P2,Bounded optional hypotheses
+3,3.8,ATR Geometry and Risk per Pip,STRATEGY_RECIPE_HOST,PIP_GEOMETRY;ATR_BAND_ASSIGNMENT,TUNE_BANDS,P2,0.50 1.00 1.50 2.00 variants
+3,3.9,Zone Confidence and OSQL,STRATEGY_RECIPE_HOST,ZONE_CONFIDENCE_SCORE;QUALITY_SCORE;ELIGIBILITY,TUNE_QUALIFIER,P2,Non-probabilistic confidence and gates
+3,3.10,LogicTiles Builder,LOGICTILES_TABBRIDGE,VARIABLE.CATALOGUE;PARAM.CATALOGUE;RULE.PREVIEW,SAVE_PREVIEW_ACTIVATE_RULE,P2,One reusable typed rule builder
+3,3.11,Strategy Parameter Tuning,GLOBAL_PARAMETER_REGISTRY,PARAM.EFFECTIVE,PROPOSE_VERSIONED_PARAM_CHANGE,P2,Safe atomic parameters per pair and recipe
+3,3.12,Backtesting and Walk Forward,RESEARCH_REPLAY,REPLAY.RESULT,START_REPLAY;SELECT_OOS,P3,Research results cannot issue orders
+3,3.13,Candidate Signal History,SIGNAL_VIEW_STORE,SIGNAL.SNAPSHOT;SIGNAL.EVENT,FILTER_CANDIDATES,P2,Different variants without duplicate setup
+4,4.1,Signal Queue,SIGNAL_QUEUE,SIGNAL.QUEUE_SNAPSHOT,ISSUE;CANCEL_SIGNAL;CANCEL_ALL_UNISSUED,P1,ISSUE is always a deliberate human click
+4,4.2,ISSUE Detail and Risk Preview,BROKER_INTENT_GATE,ORDER.VALIDATION;ISSUE.BLOCKER,CONFIRM_SELECTED_SIGNAL;BIND_RESEARCH_CANDIDATE,P1,"Symbol, side, price, volume, and expiry review"
+4,4.3,Broker Pending Orders,BROKER_RECONCILER,BROKER.ORDER_STATE;ORDER.MAP_UPDATE,VIEW_ORDER;SEPARATE_BROKER_CANCEL,P1,Broker state is not the same as the local signal queue
+4,4.4,Order Correlation,ORDER_CORRELATION_STORE,ORDER.MAP;ORDER.STATE,LOOKUP_SIGNAL,P2,"Client order ID, label, and broker order ID"
+4,4.5,Account Link and State,ACCOUNT_LINK,ACCOUNT.STATE;BROKER.CONNECTION_HEALTH,HUMAN_OAUTH_LOGIN;SELECT_ACCOUNT;REMEMBER_CTRADER_LOGIN;SIGN_OUT_CTRADER,P1,User-selected authenticated cTrader account; account class is metadata
+4,4.6,Position Monitor,READONLY_POSITION_MONITOR,POSITION.UPDATED,VIEW_POSITION,P1,Read-only by default; not an autonomous trading engine
+4,4.7,Capital Context 45%,PORTFOLIO_PRE_ISSUE_VIEW,PORTFOLIO.ESTIMATE;ISSUE.BLOCKER,SET_RESEARCH_POLICY,P1,Open capital and exposure definitions; no invented value
+4,4.8,Historical Broker Activity,BROKER_RECONCILER,BROKER.RECONCILE_RESPONSE,REFRESH_HISTORY,P2,Native order history and deals
+4,4.9,Optional Local Exit Addon,OPTIONAL_LOCAL_POSITION_SERVICE,POSITION.HEALTH,ENABLE_SEPARATE_ADDON,P1,Optional explicit addon; separate from signal core

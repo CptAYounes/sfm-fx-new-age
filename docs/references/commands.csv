@@ -1,0 +1,41 @@
+command,required,optional,subtabs,source
+SELECT_PAIR,"{""symbol"": ""str""}",{},"[""1.1"", ""1.2"", ""1.3"", ""1.4"", ""3.2"", ""3.3""]",src/sfm_fx_new_age/contracts/commands.py
+SELECT_ACCOUNT,"{""scope_id"": ""str""}",{},"[""1.10"", ""4.5""]",src/sfm_fx_new_age/contracts/commands.py
+ISSUE,"{""signal_id"": ""str"", ""revision"": ""int"", ""user_initiated"": ""bool""}","{""acknowledge_research"": ""bool""}","[""4.1""]",src/sfm_fx_new_age/contracts/commands.py
+CANCEL_SIGNAL,"{""signal_id"": ""str""}",{},"[""4.1""]",src/sfm_fx_new_age/contracts/commands.py
+CANCEL_ALL_UNISSUED,{},{},"[""4.1""]",src/sfm_fx_new_age/contracts/commands.py
+SEPARATE_BROKER_CANCEL,"{""order_id"": ""str"", ""user_initiated"": ""bool""}","{""expected_order_hash"": ""str"", ""expected_scope_id"": ""str""}","[""4.3""]",src/sfm_fx_new_age/contracts/commands.py
+REFRESH_HISTORY,{},"{""order_id"": ""str"", ""start"": ""str"", ""end"": ""str""}","[""4.8""]",src/sfm_fx_new_age/contracts/commands.py
+PROPOSE_VERSIONED_PARAM_CHANGE,"{""key"": ""str"", ""value"": ""object"", ""expected_version"": ""int""}","{""symbol"": ""str"", ""expected_scope_id"": ""str""}","[""3.11""]",src/sfm_fx_new_age/contracts/commands.py
+SAVE_PREVIEW_ACTIVATE_RULE,"{""rule_id"": ""str"", ""rule"": ""dict""}","{""action"": ""str"", ""expected_version"": ""int"", ""version"": ""int"", ""output"": ""str""}","[""3.10""]",src/sfm_fx_new_age/contracts/commands.py
+ENABLE_OPTIONAL_H1,"{""enabled"": ""bool""}",{},"[""1.5""]",src/sfm_fx_new_age/contracts/commands.py
+SET_CONSUMER_SWITCH,"{""consumer_id"": ""str"", ""enabled"": ""bool""}",{},"[""2.1""]",src/sfm_fx_new_age/contracts/commands.py
+CONNECT,{},{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+RECONNECT,{},{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+HUMAN_OAUTH_LOGIN,{},"{""client_id"": ""str"", ""redirect_uri"": ""str"", ""credential_path"": ""str"", ""scope"": ""str""}","[""4.5""]",src/sfm_fx_new_age/contracts/commands.py
+IMPORT_CTRADER_PROFILE,"{""path"": ""str""}",{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+IMPORT_CTRADER_SESSION,"{""path"": ""str""}",{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+REMEMBER_CTRADER_LOGIN,"{""enabled"": ""bool""}",{},"[""4.5""]",src/sfm_fx_new_age/contracts/commands.py
+SIGN_OUT_CTRADER,{},{},"[""4.5""]",src/sfm_fx_new_age/contracts/commands.py
+START_MARKET_FEED,{},{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+DISCONNECT_FEED,{},{},"[""2.3""]",src/sfm_fx_new_age/contracts/commands.py
+REQUEST_BACKFILL,"{""symbol"": ""str"", ""timeframe"": ""str"", ""start"": ""str"", ""end"": ""str""}",{},"[""2.4""]",src/sfm_fx_new_age/contracts/commands.py
+ENABLE_PAIR,"{""symbol"": ""str"", ""enabled"": ""bool""}",{},"[""2.5""]",src/sfm_fx_new_age/contracts/commands.py
+START_STOP_NONCRITICAL,"{""consumer_id"": ""str"", ""enabled"": ""bool""}",{},"[""2.9""]",src/sfm_fx_new_age/contracts/commands.py
+OPEN_OWNER_EDITOR,"{""surface_id"": ""str""}",{},"[""2.8""]",src/sfm_fx_new_age/contracts/commands.py
+TUNE_H4,"{""key"": ""str"", ""value"": ""object"", ""expected_version"": ""int""}",{},"[""3.4""]",src/sfm_fx_new_age/contracts/commands.py
+TUNE_RULES,"{""key"": ""str"", ""value"": ""object"", ""expected_version"": ""int""}",{},"[""3.6""]",src/sfm_fx_new_age/contracts/commands.py
+TUNE_BANDS,"{""key"": ""str"", ""value"": ""object"", ""expected_version"": ""int""}",{},"[""3.8""]",src/sfm_fx_new_age/contracts/commands.py
+TUNE_QUALIFIER,"{""key"": ""str"", ""value"": ""object"", ""expected_version"": ""int""}",{},"[""3.9""]",src/sfm_fx_new_age/contracts/commands.py
+START_REPLAY,"{""dataset_id"": ""str""}","{""action"": ""str"", ""run_id"": ""str"", ""configuration"": ""dict"", ""bars"": ""list"", ""source_ref"": ""str""}","[""3.12""]",src/sfm_fx_new_age/contracts/commands.py
+START_PAUSE_STEP,"{""run_id"": ""str"", ""action"": ""str""}","{""cursor"": ""int""}","[""1.9""]",src/sfm_fx_new_age/contracts/commands.py
+SELECT_OOS,"{""dataset_id"": ""str"", ""train"": ""int"", ""test"": ""int""}",{},"[""3.12""]",src/sfm_fx_new_age/contracts/commands.py
+ENABLE_OPTIONAL_SENSOR,"{""node_id"": ""str"", ""enabled"": ""bool""}",{},"[""3.7""]",src/sfm_fx_new_age/contracts/commands.py
+ENABLE_RECIPE,"{""recipe_id"": ""str"", ""version"": ""int"", ""enabled"": ""bool""}",{},"[""3.1""]",src/sfm_fx_new_age/contracts/commands.py
+SELECT_METHOD,"{""node_id"": ""str""}",{},"[""3.5""]",src/sfm_fx_new_age/contracts/commands.py
+CONFIRM_SELECTED_SIGNAL,"{""signal_id"": ""str"", ""revision"": ""int""}","{""acknowledge_research"": ""bool""}","[""4.2""]",src/sfm_fx_new_age/contracts/commands.py
+BIND_RESEARCH_CANDIDATE,"{""candidate_id"": ""str"", ""candidate_revision"": ""int"", ""variant_id"": ""str"", ""units"": ""str"", ""expected_version"": ""int"", ""user_initiated"": ""bool""}",{},"[""4.2""]",src/sfm_fx_new_age/contracts/commands.py
+DRAW_ANNOTATION,"{""annotation_id"": ""str"", ""timeframe"": ""str"", ""points"": ""list"", ""text"": ""str"", ""expected_version"": ""int""}",{},"[""1.3""]",src/sfm_fx_new_age/contracts/commands.py
+SELECT_LEVEL,"{""level_id"": ""str""}",{},"[""1.4""]",src/sfm_fx_new_age/contracts/commands.py
+EXPORT_IMPORT_CONFIG,"{""action"": ""str""}","{""configuration"": ""dict"", ""expected_versions"": ""dict""}","[""2.10""]",src/sfm_fx_new_age/contracts/commands.py
+SET_RESEARCH_POLICY,"{""policy"": ""dict"", ""expected_version"": ""int"", ""expected_scope_id"": ""str""}",{},"[""4.7""]",src/sfm_fx_new_age/contracts/commands.py

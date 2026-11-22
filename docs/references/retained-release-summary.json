@@ -1,0 +1,77 @@
+{
+  "source_receipts": {
+    "FINAL-ACCEPTANCE.json": {
+      "path": ".runtime/strategy-signals-v23/FINAL-ACCEPTANCE.json",
+      "sha256": "9b3db4833c72ce6a2023d1bfed1e04c35877a27ea30feb6ef8f866983838d84e"
+    },
+    "candidate-04.json": {
+      "path": ".runtime/strategy-signals-v23/candidate-04.json",
+      "sha256": "21ceeb9c683d686246b138961a54bbdec8190e76553042ef20399a16d13a6023"
+    },
+    "pipeline-matrix-candidate04.json": {
+      "path": ".runtime/strategy-signals-v23/pipeline-matrix-candidate04.json",
+      "sha256": "e15af79b45b5c184539220091322fb7b1d22cb8b2d05e9dfe1064665e7be1517"
+    },
+    "candidate-04-source-full-estate.json": {
+      "path": ".runtime/strategy-signals-v23/candidate-04-source-full-estate.json",
+      "sha256": "3d8e756e786f15d56cf410cf59f7d5b3dd3b944e87f5fb88d2df298316eae309"
+    },
+    "candidate-04-installed-full-estate.json": {
+      "path": ".runtime/strategy-signals-v23/candidate-04-installed-full-estate.json",
+      "sha256": "bb27b49c149525e12aabd8cbe91ea5656b66f66427111b878f9417ce0bd81dd5"
+    },
+    "qualification-policy-v5.json": {
+      "path": ".runtime/strategy-signals-v23/qualification-policy-v5.json",
+      "sha256": "b0b377cd593bd224845c7bcf1fe1f8e377e264a7641827fa02470518beeea85e"
+    }
+  },
+  "final_acceptance": {
+    "result": "QUALIFIED_V23_ALL_83_PIPELINES_FOR_SINGLE_MANIFEST_LAST_SEAL",
+    "version": "0.2.0",
+    "candidate": "candidate-04",
+    "candidate_sha256": "21ceeb9c683d686246b138961a54bbdec8190e76553042ef20399a16d13a6023",
+    "source_files": 244,
+    "package_files": 158,
+    "test_modules": 76,
+    "strategies": 83,
+    "source_tests": 1541,
+    "installed_tests": 1541,
+    "native": [
+      {
+        "lane": "source",
+        "operating_seconds": 913.5614971089999,
+        "max_owner_pump_seconds": 0.8578982530016219,
+        "max_timer_lateness_seconds": 1.083879207001155,
+        "p95_timer_lateness_seconds": 0.32815226200036707
+      },
+      {
+        "lane": "installed",
+        "operating_seconds": 913.4688070670018,
+        "max_owner_pump_seconds": 0.8538757159985835,
+        "max_timer_lateness_seconds": 1.0887467900014598,
+        "p95_timer_lateness_seconds": 0.25513653100133526
+      }
+    ],
+    "preseal_readback_sha256": "5e06f19a6d0bdecab8f8f37306315241a9248c12eecf9b35ef10dbd5d6af7d66",
+    "verifier_sha256": "2d40105ed4a2c9bee1cae3e9538d8104b9f9cf63850ade83a84bb9e7e07ddf5d",
+    "verifier_controls_sha256": "e674a3a68052d761a03bdf43b292c80472fe6563c3cfe3e8b4b5ef09245d7b39",
+    "wheel": "source-repository/.runtime/strategy-signals-v23/wheel-04/sfm_fx_new_age-0.2.0-py3-none-any.whl",
+    "wheel_sha256": "bb3a8527e33e8122b16f78f187946edc087eba4f721db023be5910148048bfc1",
+    "created_at": "2026-11-18T00:48:28.718881+00:00",
+    "broker_mutations": 0,
+    "normal_database_scope": "IMMUTABLE_NAMESPACE_SNAPSHOT_NOT_CONCURRENT_HOST_DATABASE",
+    "all_83_genuine_positive_signal_claim": false,
+    "profitability_claim": false,
+    "autonomous_trading": false,
+    "remaining_implementation_or_qualification_gates": [],
+    "canonical_diary": "source-repository/PROGRESS.md",
+    "diary_role": "Mutable sole project diary; final seal/readback publication follows outside this sealed evidence tree",
+    "retained_bytes_before_final_metadata": 6158140313,
+    "aggregate_bound_bytes": 8589934592
+  },
+  "source_cases": 1541,
+  "installed_cases": 1541,
+  "module_count": 76,
+  "exact_collection_equal": true,
+  "pipeline_count": 83
+}

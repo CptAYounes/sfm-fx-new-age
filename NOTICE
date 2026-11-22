@@ -1,0 +1,22 @@
+SFM FX New Age — third-party notices and distribution boundaries
+
+The root MIT license covers the original project source, documentation and
+project-supplied assets in this repository. It does not relicense dependencies,
+external market data, third-party publications, vendor services or trademarks.
+
+Runtime/optional dependency metadata in the reference environment identifies:
+- PySide6 / Shiboken: LGPL metadata; inspect the exact Qt for Python packages,
+  component licenses and notices before redistributing a packaged application.
+- websocket-client: Apache-2.0.
+- ctrader-open-api (optional): MIT.
+Transitive dependencies retain their respective licenses. pip installs them
+separately; this repository does not vendor their source or binary wheels.
+
+The observed environment inventory is in docs/references/sbom.cdx.json and
+is not a completed legal compliance audit or a vulnerability attestation.
+Distributors remain responsible for the obligations of their actual build.
+
+cTrader and provider names identify interoperable services. No affiliation,
+endorsement or provider data redistribution right is implied. External source
+URLs in analytical definitions are references, not republished articles.
+Credentials, private account records and native market captures are excluded.

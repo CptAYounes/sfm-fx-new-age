@@ -1,0 +1,61 @@
+id,title,classification,path
+NA-D01,Product Charter and Product Requirements,PRODUCT_BASELINE,documents/01-product-charter.md
+NA-D02,"Stakeholders, User Stories and Use Cases",DERIVED_REQUIREMENTS,documents/02-stakeholders-use-cases.md
+NA-D03,"System Scope, Authority and Non-Goals",AS_BUILT_CONSTRAINTS,documents/03-scope-authority-boundaries.md
+NA-D04,Domain Glossary and Terminology,REFERENCE,documents/04-glossary.md
+NA-D05,Software Requirements Specification,DERIVED_REQUIREMENTS,documents/05-software-requirements.md
+NA-D06,Quality Attribute Requirements and Scenarios,DERIVED_QUALITY_BASELINE,documents/06-quality-attributes.md
+NA-D07,Software Architecture Description,AS_BUILT_ARCHITECTURE,documents/07-architecture-description.md
+NA-D08,System Context and External Interfaces,AS_BUILT_CONTEXT,documents/08-system-context.md
+NA-D09,Container and Process Architecture,AS_BUILT_PROCESS_VIEW,documents/09-container-process-architecture.md
+NA-D10,Component Design and Responsibility Allocation,AS_BUILT_COMPONENT_VIEW,documents/10-components-ownership.md
+NA-D11,Runtime Scenarios and Sequence Design,AS_BUILT_DYNAMIC_VIEW,documents/11-runtime-sequences.md
+NA-D12,Deployment Architecture and Environment Boundaries,AS_BUILT_DEPLOYMENT,documents/12-deployment-architecture.md
+NA-D13,Domain Model and Bounded Contexts,AS_BUILT_DOMAIN_DESIGN,documents/13-domain-model.md
+NA-D14,Data Dictionary and Serialization Contracts,AS_BUILT_DATA_REFERENCE,documents/14-data-dictionary.md
+NA-D15,"Database Design, Transactions and Migration Specification",AS_BUILT_PERSISTENCE,documents/15-persistence-schema-migrations.md
+NA-D16,API Design and Interface Control Document,AS_BUILT_INTERFACE_CONTRACT,documents/16-api-interface-control.md
+NA-D17,"Event Model, Topic Catalogue and Routing Specification",AS_BUILT_EVENT_DESIGN,documents/17-event-routing.md
+NA-D18,"Connector, Authentication and Protocol Design",AS_BUILT_CONNECTOR_DESIGN,documents/18-connector-auth-protocols.md
+NA-D19,Market and Supplemental Source Provenance Specification,AS_BUILT_DATA_AUTHORITY,documents/19-source-provenance.md
+NA-D20,"Temporal Model, Causality and Freshness Design",AS_BUILT_TEMPORAL_CONTRACT,documents/20-temporal-causality.md
+NA-D21,Analytical Method and Projection Design,AS_BUILT_ANALYTICAL_DESIGN,documents/21-analytical-method-design.md
+NA-D22,"Scanner DAG, Variables and LogicTiles Design",AS_BUILT_RULE_ENGINE,documents/22-scanner-logictiles.md
+NA-D23,Strategy-to-Signal Policy and Lifecycle Specification,AS_BUILT_SIGNAL_DESIGN,documents/23-strategy-signal-lifecycle.md
+NA-D24,"Pending Order, Issue and Reconciliation Specification",AS_BUILT_EXECUTION_DESIGN,documents/24-order-issue-reconciliation.md
+NA-D25,"UI Architecture, Navigation and Interaction Specification",AS_BUILT_UI_DESIGN,documents/25-ui-navigation.md
+NA-D26,Plugin and Extension Developer Specification,AS_BUILT_EXTENSION_CONTRACT,documents/26-plugins-extensions.md
+NA-D27,"Concurrency, Scheduling and Resource Ownership",AS_BUILT_CONCURRENCY_DESIGN,documents/27-concurrency-resource-model.md
+NA-D28,"Replay, Backtesting and Walk-Forward Specification",AS_BUILT_RESEARCH_MODEL,documents/28-replay-backtesting.md
+NA-D29,"Configuration, Parameter Registry and Environment Reference",AS_BUILT_CONFIGURATION,documents/29-configuration-parameters.md
+NA-D30,Security Architecture and Trust Boundaries,AS_BUILT_SECURITY_ASSESSMENT,documents/30-security-architecture.md
+NA-D31,Threat Model and Abuse Case Analysis,DESIGN_ASSESSMENT,documents/31-threat-model.md
+NA-D32,"Privacy, Sensitive Data and Information Handling",OPERATIONAL_POLICY_PROPOSAL,documents/32-privacy-data-handling.md
+NA-D33,Software Safety and Hazard Analysis,DESIGN_ASSESSMENT,documents/33-safety-hazard-analysis.md
+NA-D34,Software Development and Lifecycle Plan,MAINTENANCE_PROCESS_PROPOSAL,documents/34-software-development-plan.md
+NA-D35,Coding Standards and Code Review Checklist,ENGINEERING_PROCESS_PROPOSAL,documents/35-coding-review-standards.md
+NA-D36,"Build, Packaging and Reproducibility Specification",AS_BUILT_BUILD_REFERENCE,documents/36-build-packaging.md
+NA-D37,Software Test and Quality Assurance Strategy,AS_BUILT_TEST_BASELINE_AND_GUIDANCE,documents/37-test-strategy.md
+NA-D38,Acceptance Test Specification and Release Criteria,DERIVED_ACCEPTANCE_SPECIFICATION,documents/38-acceptance-test-specification.md
+NA-D39,"Requirements, Design and Test Traceability",TRACEABILITY_REFERENCE,documents/39-requirements-traceability.md
+NA-D40,Release and Configuration Management Plan,MAINTENANCE_PROCESS_PROPOSAL,documents/40-release-configuration-management.md
+NA-D41,"Installation, Upgrade and Uninstall Guide",OPERATOR_PROCEDURE,documents/41-installation-upgrade.md
+NA-D42,Operations Runbook,OPERATOR_PROCEDURE,documents/42-operations-runbook.md
+NA-D43,"Monitoring, Diagnostics and Troubleshooting Guide",AS_BUILT_OBSERVABILITY_AND_RUNBOOK,documents/43-monitoring-troubleshooting.md
+NA-D44,"Backup, Restore and Disaster Recovery Plan",OPERATIONAL_POLICY_PROPOSAL,documents/44-backup-disaster-recovery.md
+NA-D45,Incident Response and Problem Management Runbook,OPERATIONAL_POLICY_PROPOSAL,documents/45-incident-response.md
+NA-D46,User Guide and Operator Workflows,OPERATOR_GUIDE,documents/46-user-manual.md
+NA-D47,"Maintenance, Evolution and Support Plan",MAINTENANCE_PROCESS_PROPOSAL,documents/47-maintenance-evolution.md
+NA-D48,"Risk Register, Limitations and Technical Debt Assessment",SOURCE_GROUNDED_ASSESSMENT,documents/48-risks-technical-debt.md
+NA-D49,Architecture Decision Register and Rationale,RETROSPECTIVE_DECISION_RECORDS,documents/49-architecture-decisions.md
+NA-D50,Evidence Model and Verification Assessment,SOURCE_AND_RECEIPT_ASSESSMENT,documents/50-evidence-qualification.md
+NA-D51,Compatibility and Interoperability Specification,AS_BUILT_COMPATIBILITY,documents/51-compatibility-interoperability.md
+NA-D52,"Data Retention, Archival and Evidence Preservation",AS_BUILT_RULES_AND_POLICY_PROPOSAL,documents/52-retention-archival.md
+NA-D53,"Usability, Accessibility and Human Factors Specification",AS_BUILT_UI_ASSESSMENT_AND_PROPOSALS,documents/53-usability-accessibility.md
+NA-D54,"Performance, Capacity and Responsiveness Qualification",RETAINED_MEASUREMENTS_AND_AS_BUILT_LIMITS,documents/54-performance-capacity.md
+NA-D55,Change Impact and Dependency Analysis,ENGINEERING_REFERENCE,documents/55-change-impact-analysis.md
+NA-D56,"Compliance Scope, Licensing and Distribution Review",NONCERTIFICATION_ASSESSMENT,documents/56-compliance-licensing.md
+NA-D57,Developer Onboarding and Architecture Reading Guide,DEVELOPER_GUIDE,documents/57-developer-onboarding.md
+NA-D58,"Documentation Governance, Control and Maintenance",DOCUMENTATION_POLICY,documents/58-documentation-governance.md
+NA-D59,Dependency Inventory and Software Bill of Materials,OBSERVED_ENVIRONMENT_INVENTORY,documents/59-dependency-sbom.md
+NA-D60,"Failure Modes, Recovery Matrix and Residual Guarantees",AS_BUILT_FAILURE_DESIGN,documents/60-failure-modes-recovery.md

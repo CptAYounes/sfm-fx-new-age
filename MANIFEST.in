@@ -1,0 +1,10 @@
+include LICENSE NOTICE README.md PROGRESS.md CONTRIBUTING.md CODE_OF_CONDUCT.md SECURITY.md SUPPORT.md AGENTS.md
+include requirements/constraints-py313.txt
+include docs/.nojekyll
+recursive-include docs *.md *.html *.pdf *.json *.csv *.sql *.xml *.log *.sha256 *.dot *.svg *.png *.py
+recursive-include scripts *.py *.sh
+recursive-include verification *.py
+recursive-exclude * __pycache__ *.py[cod]
+prune .runtime
+prune .venv
+prune build

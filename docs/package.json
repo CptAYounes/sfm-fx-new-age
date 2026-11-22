@@ -1,0 +1,1085 @@
+{
+  "package": "SFM FX New Age Architecture and Engineering Documentation",
+  "documentation_version": "1.0",
+  "generated_at": "2026-11-22T10:40:37.988397+00:00",
+  "source_baseline": "0.2.0 / V23 candidate-04",
+  "source_root": "..",
+  "counts": {
+    "main_documents": 60,
+    "architecture_decisions": 12,
+    "reference_documents": 14,
+    "diagrams": 8,
+    "analytical_profiles": 83,
+    "active_analytical_identities": 1992,
+    "backend_views": 42,
+    "host_routes": 41,
+    "commands": 40,
+    "derived_requirements": 44,
+    "frozen_corpus_requirements": 91,
+    "current_product_python_modules": 152,
+    "typed_contract_fields": 280,
+    "installed_python_distributions": 131,
+    "historical_release_cases_per_build": 1541,
+    "fresh_offline_tests": 171
+  },
+  "documents": [
+    {
+      "id": "NA-D01",
+      "number": 1,
+      "slug": "product-charter",
+      "title": "Product Charter and Product Requirements",
+      "classification": "PRODUCT_BASELINE",
+      "sources": [
+        "core/runtime.py",
+        "contracts/domain.py",
+        "README.md",
+        "PROGRESS.md"
+      ],
+      "path": "documents/01-product-charter.md"
+    },
+    {
+      "id": "NA-D02",
+      "number": 2,
+      "slug": "stakeholders-use-cases",
+      "title": "Stakeholders, User Stories and Use Cases",
+      "classification": "DERIVED_REQUIREMENTS",
+      "sources": [
+        "core/tab_api.py",
+        "services/workflow.py",
+        "services/orders.py",
+        "tabs/tab3/public_workspace.py",
+        "tabs/tab4/strategy_signals.py"
+      ],
+      "path": "documents/02-stakeholders-use-cases.md"
+    },
+    {
+      "id": "NA-D03",
+      "number": 3,
+      "slug": "scope-authority-boundaries",
+      "title": "System Scope, Authority and Non-Goals",
+      "classification": "AS_BUILT_CONSTRAINTS",
+      "sources": [
+        "contracts/domain.py",
+        "contracts/registry.py",
+        "contracts/tab_data.py",
+        "services/orders.py",
+        "README.md"
+      ],
+      "path": "documents/03-scope-authority-boundaries.md"
+    },
+    {
+      "id": "NA-D04",
+      "number": 4,
+      "slug": "glossary",
+      "title": "Domain Glossary and Terminology",
+      "classification": "REFERENCE",
+      "sources": [
+        "contracts/domain.py",
+        "contracts/analytics.py",
+        "contracts/strategy_signals.py",
+        "services/positions.py"
+      ],
+      "path": "documents/04-glossary.md"
+    },
+    {
+      "id": "NA-D05",
+      "number": 5,
+      "slug": "software-requirements",
+      "title": "Software Requirements Specification",
+      "classification": "DERIVED_REQUIREMENTS",
+      "sources": [
+        "contracts/domain.py",
+        "contracts/registry.py",
+        "contracts/commands.py",
+        "services/orders.py",
+        "contracts/strategy_signals.py",
+        "contracts/backtest.py"
+      ],
+      "path": "documents/05-software-requirements.md"
+    },
+    {
+      "id": "NA-D06",
+      "number": 6,
+      "slug": "quality-attributes",
+      "title": "Quality Attribute Requirements and Scenarios",
+      "classification": "DERIVED_QUALITY_BASELINE",
+      "sources": [
+        "core/router.py",
+        "storage/database.py",
+        "services/compute_pool.py",
+        "services/workflow.py",
+        "tests/test_owner_responsiveness.py"
+      ],
+      "path": "documents/06-quality-attributes.md"
+    },
+    {
+      "id": "NA-D07",
+      "number": 7,
+      "slug": "architecture-description",
+      "title": "Software Architecture Description",
+      "classification": "AS_BUILT_ARCHITECTURE",
+      "sources": [
+        "core/runtime.py",
+        "core/tab_api.py",
+        "services/scanner.py",
+        "connector/service.py",
+        "storage/database.py",
+        "app.py"
+      ],
+      "path": "documents/07-architecture-description.md"
+    },
+    {
+      "id": "NA-D08",
+      "number": 8,
+      "slug": "system-context",
+      "title": "System Context and External Interfaces",
+      "classification": "AS_BUILT_CONTEXT",
+      "sources": [
+        "connector/service.py",
+        "connector/analytical_feed.py",
+        "connector/kraken_public.py",
+        "connector/bitstamp_feed.py",
+        "services/supplemental_files.py"
+      ],
+      "path": "documents/08-system-context.md"
+    },
+    {
+      "id": "NA-D09",
+      "number": 9,
+      "slug": "container-process-architecture",
+      "title": "Container and Process Architecture",
+      "classification": "AS_BUILT_PROCESS_VIEW",
+      "sources": [
+        "core/runtime.py",
+        "connector/sdk_worker.py",
+        "connector/oauth.py",
+        "services/compute_pool.py",
+        "connector/kraken_public.py"
+      ],
+      "path": "documents/09-container-process-architecture.md"
+    },
+    {
+      "id": "NA-D10",
+      "number": 10,
+      "slug": "components-ownership",
+      "title": "Component Design and Responsibility Allocation",
+      "classification": "AS_BUILT_COMPONENT_VIEW",
+      "sources": [
+        "core/runtime.py",
+        "core/components.py",
+        "services/market.py",
+        "services/research.py",
+        "services/orders.py",
+        "services/strategy_signals.py"
+      ],
+      "path": "documents/10-components-ownership.md"
+    },
+    {
+      "id": "NA-D11",
+      "number": 11,
+      "slug": "runtime-sequences",
+      "title": "Runtime Scenarios and Sequence Design",
+      "classification": "AS_BUILT_DYNAMIC_VIEW",
+      "sources": [
+        "__main__.py",
+        "core/runtime.py",
+        "connector/service.py",
+        "services/strategy_signals.py",
+        "services/orders.py",
+        "storage/database.py"
+      ],
+      "path": "documents/11-runtime-sequences.md"
+    },
+    {
+      "id": "NA-D12",
+      "number": 12,
+      "slug": "deployment-architecture",
+      "title": "Deployment Architecture and Environment Boundaries",
+      "classification": "AS_BUILT_DEPLOYMENT",
+      "sources": [
+        "__main__.py",
+        "scripts/launch.sh",
+        "scripts/install_desktop.py",
+        "connector/sdk_worker.py",
+        "README.md"
+      ],
+      "path": "documents/12-deployment-architecture.md"
+    },
+    {
+      "id": "NA-D13",
+      "number": 13,
+      "slug": "domain-model",
+      "title": "Domain Model and Bounded Contexts",
+      "classification": "AS_BUILT_DOMAIN_DESIGN",
+      "sources": [
+        "contracts/domain.py",
+        "contracts/analytics.py",
+        "services/research.py",
+        "services/signals.py",
+        "services/positions.py"
+      ],
+      "path": "documents/13-domain-model.md"
+    },
+    {
+      "id": "NA-D14",
+      "number": 14,
+      "slug": "data-dictionary",
+      "title": "Data Dictionary and Serialization Contracts",
+      "classification": "AS_BUILT_DATA_REFERENCE",
+      "sources": [
+        "contracts/domain.py",
+        "contracts/analytics.py",
+        "contracts/models.py",
+        "contracts/supplemental.py",
+        "contracts/tab_data.py",
+        "contracts/backtest.py"
+      ],
+      "path": "documents/14-data-dictionary.md"
+    },
+    {
+      "id": "NA-D15",
+      "number": 15,
+      "slug": "persistence-schema-migrations",
+      "title": "Database Design, Transactions and Migration Specification",
+      "classification": "AS_BUILT_PERSISTENCE",
+      "sources": [
+        "storage/database.py",
+        "services/market.py",
+        "services/research.py",
+        "services/signals.py"
+      ],
+      "path": "documents/15-persistence-schema-migrations.md"
+    },
+    {
+      "id": "NA-D16",
+      "number": 16,
+      "slug": "api-interface-control",
+      "title": "API Design and Interface Control Document",
+      "classification": "AS_BUILT_INTERFACE_CONTRACT",
+      "sources": [
+        "core/tab_api.py",
+        "core/analytical_api.py",
+        "contracts/commands.py",
+        "contracts/tab_data.py",
+        "tabs/base.py"
+      ],
+      "path": "documents/16-api-interface-control.md"
+    },
+    {
+      "id": "NA-D17",
+      "number": 17,
+      "slug": "event-routing",
+      "title": "Event Model, Topic Catalogue and Routing Specification",
+      "classification": "AS_BUILT_EVENT_DESIGN",
+      "sources": [
+        "core/router.py",
+        "core/projections.py",
+        "core/runtime.py",
+        "contracts/models.py",
+        "contracts/data/host_typed_routes.csv"
+      ],
+      "path": "documents/17-event-routing.md"
+    },
+    {
+      "id": "NA-D18",
+      "number": 18,
+      "slug": "connector-auth-protocols",
+      "title": "Connector, Authentication and Protocol Design",
+      "classification": "AS_BUILT_CONNECTOR_DESIGN",
+      "sources": [
+        "connector/service.py",
+        "connector/sdk_worker.py",
+        "connector/oauth.py",
+        "connector/protocol.py",
+        "connector/symbols.py",
+        "connector/fix_capture.py"
+      ],
+      "path": "documents/18-connector-auth-protocols.md"
+    },
+    {
+      "id": "NA-D19",
+      "number": 19,
+      "slug": "source-provenance",
+      "title": "Market and Supplemental Source Provenance Specification",
+      "classification": "AS_BUILT_DATA_AUTHORITY",
+      "sources": [
+        "connector/broker_depth.py",
+        "connector/kraken_public.py",
+        "connector/kraken_weekly.py",
+        "connector/bitstamp_feed.py",
+        "connector/analytical_feed.py",
+        "services/supplemental.py",
+        "services/supplemental_files.py"
+      ],
+      "path": "documents/19-source-provenance.md"
+    },
+    {
+      "id": "NA-D20",
+      "number": 20,
+      "slug": "temporal-causality",
+      "title": "Temporal Model, Causality and Freshness Design",
+      "classification": "AS_BUILT_TEMPORAL_CONTRACT",
+      "sources": [
+        "contracts/domain.py",
+        "services/market.py",
+        "services/public_projections.py",
+        "services/strategy_signals.py",
+        "services/replay.py",
+        "connector/quote_history.py"
+      ],
+      "path": "documents/20-temporal-causality.md"
+    },
+    {
+      "id": "NA-D21",
+      "number": 21,
+      "slug": "analytical-method-design",
+      "title": "Analytical Method and Projection Design",
+      "classification": "AS_BUILT_ANALYTICAL_DESIGN",
+      "sources": [
+        "contracts/public_strategies.py",
+        "contracts/public_document_profiles.py",
+        "services/public_projections.py",
+        "tabs/tab3/public_algorithms.py",
+        "tabs/tab3/public_genuine_data.py",
+        "services/projection_math.py"
+      ],
+      "path": "documents/21-analytical-method-design.md"
+    },
+    {
+      "id": "NA-D22",
+      "number": 22,
+      "slug": "scanner-logictiles",
+      "title": "Scanner DAG, Variables and LogicTiles Design",
+      "classification": "AS_BUILT_RULE_ENGINE",
+      "sources": [
+        "core/dag.py",
+        "services/scanner.py",
+        "services/rules.py",
+        "services/catalogues.py",
+        "core/analytical_api.py",
+        "tabs/tab3/authoring.py"
+      ],
+      "path": "documents/22-scanner-logictiles.md"
+    },
+    {
+      "id": "NA-D23",
+      "number": 23,
+      "slug": "strategy-signal-lifecycle",
+      "title": "Strategy-to-Signal Policy and Lifecycle Specification",
+      "classification": "AS_BUILT_SIGNAL_DESIGN",
+      "sources": [
+        "contracts/strategy_signals.py",
+        "services/strategy_signal_policy.py",
+        "services/strategy_signals.py",
+        "tabs/tab4/strategy_signals.py",
+        "tests/test_strategy_signal_lifecycle.py"
+      ],
+      "path": "documents/23-strategy-signal-lifecycle.md"
+    },
+    {
+      "id": "NA-D24",
+      "number": 24,
+      "slug": "order-issue-reconciliation",
+      "title": "Pending Order, Issue and Reconciliation Specification",
+      "classification": "AS_BUILT_EXECUTION_DESIGN",
+      "sources": [
+        "services/orders.py",
+        "services/signals.py",
+        "storage/database.py",
+        "connector/protocol.py",
+        "connector/service.py",
+        "services/positions.py"
+      ],
+      "path": "documents/24-order-issue-reconciliation.md"
+    },
+    {
+      "id": "NA-D25",
+      "number": 25,
+      "slug": "ui-navigation",
+      "title": "UI Architecture, Navigation and Interaction Specification",
+      "classification": "AS_BUILT_UI_DESIGN",
+      "sources": [
+        "app.py",
+        "ui/navigation.py",
+        "ui/chart_workspace.py",
+        "services/workflow.py",
+        "tabs/tab2/workspace.py",
+        "ui/inspection_panels.py"
+      ],
+      "path": "documents/25-ui-navigation.md"
+    },
+    {
+      "id": "NA-D26",
+      "number": 26,
+      "slug": "plugins-extensions",
+      "title": "Plugin and Extension Developer Specification",
+      "classification": "AS_BUILT_EXTENSION_CONTRACT",
+      "sources": [
+        "tabs/base.py",
+        "tabs/loader.py",
+        "tabs/backend_loader.py",
+        "core/analytical_api.py",
+        "tabs/tab3/backend.py",
+        "core/tab_api.py"
+      ],
+      "path": "documents/26-plugins-extensions.md"
+    },
+    {
+      "id": "NA-D27",
+      "number": 27,
+      "slug": "concurrency-resource-model",
+      "title": "Concurrency, Scheduling and Resource Ownership",
+      "classification": "AS_BUILT_CONCURRENCY_DESIGN",
+      "sources": [
+        "core/runtime.py",
+        "core/router.py",
+        "services/compute_pool.py",
+        "connector/sdk_worker.py",
+        "storage/database.py",
+        "services/public_projections.py"
+      ],
+      "path": "documents/27-concurrency-resource-model.md"
+    },
+    {
+      "id": "NA-D28",
+      "number": 28,
+      "slug": "replay-backtesting",
+      "title": "Replay, Backtesting and Walk-Forward Specification",
+      "classification": "AS_BUILT_RESEARCH_MODEL",
+      "sources": [
+        "contracts/backtest.py",
+        "services/replay.py",
+        "services/backtesting.py",
+        "ui/research_study.py",
+        "tests/test_backtest_workflow.py"
+      ],
+      "path": "documents/28-replay-backtesting.md"
+    },
+    {
+      "id": "NA-D29",
+      "number": 29,
+      "slug": "configuration-parameters",
+      "title": "Configuration, Parameter Registry and Environment Reference",
+      "classification": "AS_BUILT_CONFIGURATION",
+      "sources": [
+        "__main__.py",
+        "contracts/defaults.py",
+        "services/catalogues.py",
+        "services/research_money.py",
+        "services/supplemental_files.py"
+      ],
+      "path": "documents/29-configuration-parameters.md"
+    },
+    {
+      "id": "NA-D30",
+      "number": 30,
+      "slug": "security-architecture",
+      "title": "Security Architecture and Trust Boundaries",
+      "classification": "AS_BUILT_SECURITY_ASSESSMENT",
+      "sources": [
+        "connector/oauth.py",
+        "connector/sdk_worker.py",
+        "services/supplemental_files.py",
+        "contracts/commands.py",
+        "core/tab_api.py",
+        "connector/fix_capture.py"
+      ],
+      "path": "documents/30-security-architecture.md"
+    },
+    {
+      "id": "NA-D31",
+      "number": 31,
+      "slug": "threat-model",
+      "title": "Threat Model and Abuse Case Analysis",
+      "classification": "DESIGN_ASSESSMENT",
+      "sources": [
+        "connector/oauth.py",
+        "connector/sdk_worker.py",
+        "services/supplemental_files.py",
+        "services/orders.py",
+        "services/compute_pool.py"
+      ],
+      "path": "documents/31-threat-model.md"
+    },
+    {
+      "id": "NA-D32",
+      "number": 32,
+      "slug": "privacy-data-handling",
+      "title": "Privacy, Sensitive Data and Information Handling",
+      "classification": "OPERATIONAL_POLICY_PROPOSAL",
+      "sources": [
+        "connector/oauth.py",
+        "connector/sdk_worker.py",
+        "storage/database.py",
+        "connector/original_capture.py",
+        "README.md"
+      ],
+      "path": "documents/32-privacy-data-handling.md"
+    },
+    {
+      "id": "NA-D33",
+      "number": 33,
+      "slug": "safety-hazard-analysis",
+      "title": "Software Safety and Hazard Analysis",
+      "classification": "DESIGN_ASSESSMENT",
+      "sources": [
+        "services/orders.py",
+        "services/strategy_signals.py",
+        "services/research_money.py",
+        "services/positions.py",
+        "storage/database.py"
+      ],
+      "path": "documents/33-safety-hazard-analysis.md"
+    },
+    {
+      "id": "NA-D34",
+      "number": 34,
+      "slug": "software-development-plan",
+      "title": "Software Development and Lifecycle Plan",
+      "classification": "MAINTENANCE_PROCESS_PROPOSAL",
+      "sources": [
+        "PROGRESS.md",
+        "pyproject.toml",
+        "core/runtime.py",
+        "tests/test_architecture_fences.py"
+      ],
+      "path": "documents/34-software-development-plan.md"
+    },
+    {
+      "id": "NA-D35",
+      "number": 35,
+      "slug": "coding-review-standards",
+      "title": "Coding Standards and Code Review Checklist",
+      "classification": "ENGINEERING_PROCESS_PROPOSAL",
+      "sources": [
+        "tests/test_architecture_fences.py",
+        "contracts/domain.py",
+        "contracts/commands.py",
+        "core/tab_api.py",
+        "storage/database.py"
+      ],
+      "path": "documents/35-coding-review-standards.md"
+    },
+    {
+      "id": "NA-D36",
+      "number": 36,
+      "slug": "build-packaging",
+      "title": "Build, Packaging and Reproducibility Specification",
+      "classification": "AS_BUILT_BUILD_REFERENCE",
+      "sources": [
+        "pyproject.toml",
+        "scripts/launch.sh",
+        "scripts/install_desktop.py",
+        "scripts/run_checks.sh",
+        "PROGRESS.md"
+      ],
+      "path": "documents/36-build-packaging.md"
+    },
+    {
+      "id": "NA-D37",
+      "number": 37,
+      "slug": "test-strategy",
+      "title": "Software Test and Quality Assurance Strategy",
+      "classification": "AS_BUILT_TEST_BASELINE_AND_GUIDANCE",
+      "sources": [
+        "tests/conftest.py",
+        "tests/test_architecture_fences.py",
+        "tests/test_strategy_signal_positive.py",
+        "tests/test_connector_boundary.py",
+        "PROGRESS.md"
+      ],
+      "path": "documents/37-test-strategy.md"
+    },
+    {
+      "id": "NA-D38",
+      "number": 38,
+      "slug": "acceptance-test-specification",
+      "title": "Acceptance Test Specification and Release Criteria",
+      "classification": "DERIVED_ACCEPTANCE_SPECIFICATION",
+      "sources": [
+        "tests/test_order_flow.py",
+        "tests/test_strategy_signal_positive.py",
+        "tests/test_strategy_signal_lifecycle.py",
+        "tests/test_workspace_ui_workflows.py",
+        "tests/test_backtest_workflow.py"
+      ],
+      "path": "documents/38-acceptance-test-specification.md"
+    },
+    {
+      "id": "NA-D39",
+      "number": 39,
+      "slug": "requirements-traceability",
+      "title": "Requirements, Design and Test Traceability",
+      "classification": "TRACEABILITY_REFERENCE",
+      "sources": [
+        "contracts/data/public_document_requirements.json",
+        "contracts/public_strategies.py",
+        "contracts/strategy_signals.py",
+        "tests/test_document_public_strategies.py",
+        "tests/test_strategy_signal_positive.py"
+      ],
+      "path": "documents/39-requirements-traceability.md"
+    },
+    {
+      "id": "NA-D40",
+      "number": 40,
+      "slug": "release-configuration-management",
+      "title": "Release and Configuration Management Plan",
+      "classification": "MAINTENANCE_PROCESS_PROPOSAL",
+      "sources": [
+        "pyproject.toml",
+        "PROGRESS.md",
+        "scripts/install_desktop.py",
+        "contracts/public_strategies.py"
+      ],
+      "path": "documents/40-release-configuration-management.md"
+    },
+    {
+      "id": "NA-D41",
+      "number": 41,
+      "slug": "installation-upgrade",
+      "title": "Installation, Upgrade and Uninstall Guide",
+      "classification": "OPERATOR_PROCEDURE",
+      "sources": [
+        "README.md",
+        "pyproject.toml",
+        "scripts/launch.sh",
+        "scripts/install_desktop.py",
+        "__main__.py"
+      ],
+      "path": "documents/41-installation-upgrade.md"
+    },
+    {
+      "id": "NA-D42",
+      "number": 42,
+      "slug": "operations-runbook",
+      "title": "Operations Runbook",
+      "classification": "OPERATOR_PROCEDURE",
+      "sources": [
+        "connector/service.py",
+        "ui/feed_connection.py",
+        "services/orders.py",
+        "services/positions.py",
+        "__main__.py"
+      ],
+      "path": "documents/42-operations-runbook.md"
+    },
+    {
+      "id": "NA-D43",
+      "number": 43,
+      "slug": "monitoring-troubleshooting",
+      "title": "Monitoring, Diagnostics and Troubleshooting Guide",
+      "classification": "AS_BUILT_OBSERVABILITY_AND_RUNBOOK",
+      "sources": [
+        "connector/service.py",
+        "core/router.py",
+        "services/compute_pool.py",
+        "ui/feed_connection.py",
+        "checks.py"
+      ],
+      "path": "documents/43-monitoring-troubleshooting.md"
+    },
+    {
+      "id": "NA-D44",
+      "number": 44,
+      "slug": "backup-disaster-recovery",
+      "title": "Backup, Restore and Disaster Recovery Plan",
+      "classification": "OPERATIONAL_POLICY_PROPOSAL",
+      "sources": [
+        "storage/database.py",
+        "connector/oauth.py",
+        "services/replay.py",
+        "PROGRESS.md"
+      ],
+      "path": "documents/44-backup-disaster-recovery.md"
+    },
+    {
+      "id": "NA-D45",
+      "number": 45,
+      "slug": "incident-response",
+      "title": "Incident Response and Problem Management Runbook",
+      "classification": "OPERATIONAL_POLICY_PROPOSAL",
+      "sources": [
+        "services/orders.py",
+        "connector/service.py",
+        "connector/oauth.py",
+        "storage/database.py",
+        "PROGRESS.md"
+      ],
+      "path": "documents/45-incident-response.md"
+    },
+    {
+      "id": "NA-D46",
+      "number": 46,
+      "slug": "user-manual",
+      "title": "User Guide and Operator Workflows",
+      "classification": "OPERATOR_GUIDE",
+      "sources": [
+        "README.md",
+        "app.py",
+        "tabs/tab3/public_workspace.py",
+        "tabs/tab4/strategy_signals.py",
+        "ui/research_study.py"
+      ],
+      "path": "documents/46-user-manual.md"
+    },
+    {
+      "id": "NA-D47",
+      "number": 47,
+      "slug": "maintenance-evolution",
+      "title": "Maintenance, Evolution and Support Plan",
+      "classification": "MAINTENANCE_PROCESS_PROPOSAL",
+      "sources": [
+        "PROGRESS.md",
+        "contracts/public_strategies.py",
+        "contracts/registry.py",
+        "tests/test_recipe_upgrade_preservation.py"
+      ],
+      "path": "documents/47-maintenance-evolution.md"
+    },
+    {
+      "id": "NA-D48",
+      "number": 48,
+      "slug": "risks-technical-debt",
+      "title": "Risk Register, Limitations and Technical Debt Assessment",
+      "classification": "SOURCE_GROUNDED_ASSESSMENT",
+      "sources": [
+        "README.md",
+        "pyproject.toml",
+        "connector/oauth.py",
+        "services/orders.py",
+        "contracts/backtest.py",
+        "PROGRESS.md"
+      ],
+      "path": "documents/48-risks-technical-debt.md"
+    },
+    {
+      "id": "NA-D49",
+      "number": 49,
+      "slug": "architecture-decisions",
+      "title": "Architecture Decision Register and Rationale",
+      "classification": "RETROSPECTIVE_DECISION_RECORDS",
+      "sources": [
+        "PROGRESS.md",
+        "core/runtime.py",
+        "core/tab_api.py",
+        "services/orders.py",
+        "storage/database.py",
+        "contracts/strategy_signals.py"
+      ],
+      "path": "documents/49-architecture-decisions.md"
+    },
+    {
+      "id": "NA-D50",
+      "number": 50,
+      "slug": "evidence-qualification",
+      "title": "Evidence Model and Verification Assessment",
+      "classification": "SOURCE_AND_RECEIPT_ASSESSMENT",
+      "sources": [
+        "PROGRESS.md",
+        "tests/test_architecture_fences.py",
+        "tests/test_strategy_signal_positive.py",
+        "checks.py"
+      ],
+      "path": "documents/50-evidence-qualification.md"
+    },
+    {
+      "id": "NA-D51",
+      "number": 51,
+      "slug": "compatibility-interoperability",
+      "title": "Compatibility and Interoperability Specification",
+      "classification": "AS_BUILT_COMPATIBILITY",
+      "sources": [
+        "pyproject.toml",
+        "connector/symbols.py",
+        "connector/protocol.py",
+        "contracts/domain.py",
+        "core/tab_api.py",
+        "README.md"
+      ],
+      "path": "documents/51-compatibility-interoperability.md"
+    },
+    {
+      "id": "NA-D52",
+      "number": 52,
+      "slug": "retention-archival",
+      "title": "Data Retention, Archival and Evidence Preservation",
+      "classification": "AS_BUILT_RULES_AND_POLICY_PROPOSAL",
+      "sources": [
+        "storage/database.py",
+        "connector/kraken_public.py",
+        "services/supplemental.py",
+        "PROGRESS.md"
+      ],
+      "path": "documents/52-retention-archival.md"
+    },
+    {
+      "id": "NA-D53",
+      "number": 53,
+      "slug": "usability-accessibility",
+      "title": "Usability, Accessibility and Human Factors Specification",
+      "classification": "AS_BUILT_UI_ASSESSMENT_AND_PROPOSALS",
+      "sources": [
+        "ui/navigation.py",
+        "ui/theme.py",
+        "ui/chart_projection_bar.py",
+        "ui/chart_projection_details.py",
+        "ui/research_study.py",
+        "tests/test_gui_navigation_refinement.py"
+      ],
+      "path": "documents/53-usability-accessibility.md"
+    },
+    {
+      "id": "NA-D54",
+      "number": 54,
+      "slug": "performance-capacity",
+      "title": "Performance, Capacity and Responsiveness Qualification",
+      "classification": "RETAINED_MEASUREMENTS_AND_AS_BUILT_LIMITS",
+      "sources": [
+        "services/compute_pool.py",
+        "core/runtime.py",
+        "connector/service.py",
+        "storage/database.py",
+        "tests/test_owner_responsiveness.py",
+        "README.md"
+      ],
+      "path": "documents/54-performance-capacity.md"
+    },
+    {
+      "id": "NA-D55",
+      "number": 55,
+      "slug": "change-impact-analysis",
+      "title": "Change Impact and Dependency Analysis",
+      "classification": "ENGINEERING_REFERENCE",
+      "sources": [
+        "core/runtime.py",
+        "contracts/registry.py",
+        "services/public_projections.py",
+        "services/strategy_signals.py",
+        "services/orders.py",
+        "storage/database.py"
+      ],
+      "path": "documents/55-change-impact-analysis.md"
+    },
+    {
+      "id": "NA-D56",
+      "number": 56,
+      "slug": "compliance-licensing",
+      "title": "Compliance Scope, Licensing and Distribution Review",
+      "classification": "NONCERTIFICATION_ASSESSMENT",
+      "sources": [
+        "pyproject.toml",
+        "connector/oauth.py",
+        "contracts/public_strategies.py",
+        "README.md"
+      ],
+      "path": "documents/56-compliance-licensing.md"
+    },
+    {
+      "id": "NA-D57",
+      "number": 57,
+      "slug": "developer-onboarding",
+      "title": "Developer Onboarding and Architecture Reading Guide",
+      "classification": "DEVELOPER_GUIDE",
+      "sources": [
+        "PROGRESS.md",
+        "pyproject.toml",
+        "core/runtime.py",
+        "core/tab_api.py",
+        "tests/test_architecture_fences.py"
+      ],
+      "path": "documents/57-developer-onboarding.md"
+    },
+    {
+      "id": "NA-D58",
+      "number": 58,
+      "slug": "documentation-governance",
+      "title": "Documentation Governance, Control and Maintenance",
+      "classification": "DOCUMENTATION_POLICY",
+      "sources": [
+        "PROGRESS.md",
+        "tests/test_architecture_fences.py",
+        "README.md"
+      ],
+      "path": "documents/58-documentation-governance.md"
+    },
+    {
+      "id": "NA-D59",
+      "number": 59,
+      "slug": "dependency-sbom",
+      "title": "Dependency Inventory and Software Bill of Materials",
+      "classification": "OBSERVED_ENVIRONMENT_INVENTORY",
+      "sources": [
+        "pyproject.toml",
+        "connector/sdk_worker.py",
+        "README.md"
+      ],
+      "path": "documents/59-dependency-sbom.md"
+    },
+    {
+      "id": "NA-D60",
+      "number": 60,
+      "slug": "failure-modes-recovery",
+      "title": "Failure Modes, Recovery Matrix and Residual Guarantees",
+      "classification": "AS_BUILT_FAILURE_DESIGN",
+      "sources": [
+        "services/orders.py",
+        "services/continuity.py",
+        "services/strategy_signals.py",
+        "connector/service.py",
+        "services/supplemental_files.py",
+        "services/compute_pool.py"
+      ],
+      "path": "documents/60-failure-modes-recovery.md"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "ADR-001",
+      "title": "Local modular desktop with one shared runtime",
+      "path": "decisions/ADR-001-local-shared-runtime.md"
+    },
+    {
+      "id": "ADR-002",
+      "title": "Four workspaces, 42 stable contracts, dynamic Trading Tools",
+      "path": "decisions/ADR-002-stable-workspaces.md"
+    },
+    {
+      "id": "ADR-003",
+      "title": "Scoped API and explicit command/data ownership",
+      "path": "decisions/ADR-003-scoped-tab-api.md"
+    },
+    {
+      "id": "ADR-004",
+      "title": "Exact namespace plus connection epoch",
+      "path": "decisions/ADR-004-source-namespace.md"
+    },
+    {
+      "id": "ADR-005",
+      "title": "Causal immutable histories and separate current pointers",
+      "path": "decisions/ADR-005-causal-history.md"
+    },
+    {
+      "id": "ADR-006",
+      "title": "One deliberate pending Limit Issue edge",
+      "path": "decisions/ADR-006-human-issue.md"
+    },
+    {
+      "id": "ADR-007",
+      "title": "Durable reservation and UNKNOWN reconciliation",
+      "path": "decisions/ADR-007-unknown-reconcile.md"
+    },
+    {
+      "id": "ADR-008",
+      "title": "Distinct source semantics and disclosed activity alternatives",
+      "path": "decisions/ADR-008-strict-source-semantics.md"
+    },
+    {
+      "id": "ADR-009",
+      "title": "SQLite WAL/FULL with explicit atomic/savepoint boundaries",
+      "path": "decisions/ADR-009-durable-sqlite.md"
+    },
+    {
+      "id": "ADR-010",
+      "title": "Pure spawned analytical math with owner-side admission",
+      "path": "decisions/ADR-010-pure-worker-math.md"
+    },
+    {
+      "id": "ADR-011",
+      "title": "Isolated replay and explicit historical model clocks",
+      "path": "decisions/ADR-011-isolated-research.md"
+    },
+    {
+      "id": "ADR-012",
+      "title": "Version immutable semantics and preserve literal user choices",
+      "path": "decisions/ADR-012-semantic-versioning.md"
+    }
+  ],
+  "references": [
+    "references/01-source-module-catalogue.md",
+    "references/02-typed-contract-catalogue.md",
+    "references/03-api-command-catalogue.md",
+    "references/04-view-route-dataset-catalogue.md",
+    "references/05-complete-strategy-policy-catalogue.md",
+    "references/06-original-corpus-crosswalk.md",
+    "references/07-test-evidence-catalogue.md",
+    "references/08-registered-parameters-surfaces.md",
+    "references/09-persistence-schema-records.md",
+    "references/10-dependency-sbom-reference.md",
+    "references/11-cli-reference.md",
+    "references/12-release-evidence-readme.md",
+    "references/13-requirements-traceability.md",
+    "references/14-documentation-coverage-matrix.md"
+  ],
+  "diagrams": [
+    {
+      "id": "01-system-context",
+      "title": "System context \u2014 data and deliberate action",
+      "path": "diagrams/01-system-context.svg",
+      "png": "diagrams/01-system-context.png",
+      "source": "diagrams/01-system-context.dot"
+    },
+    {
+      "id": "02-process-ownership",
+      "title": "Process and storage boundaries",
+      "path": "diagrams/02-process-ownership.svg",
+      "png": "diagrams/02-process-ownership.png",
+      "source": "diagrams/02-process-ownership.dot"
+    },
+    {
+      "id": "03-components",
+      "title": "Logical component responsibilities",
+      "path": "diagrams/03-components.svg",
+      "png": "diagrams/03-components.png",
+      "source": "diagrams/03-components.dot"
+    },
+    {
+      "id": "04-data-model",
+      "title": "Physical schema and logical associations",
+      "path": "diagrams/04-data-model.svg",
+      "png": "diagrams/04-data-model.png",
+      "source": "diagrams/04-data-model.dot"
+    },
+    {
+      "id": "05-research-to-issue",
+      "title": "Research, local binding and separate Issue",
+      "path": "diagrams/05-research-to-issue.svg",
+      "png": "diagrams/05-research-to-issue.png",
+      "source": "diagrams/05-research-to-issue.dot"
+    },
+    {
+      "id": "06-order-uncertainty",
+      "title": "Order state and external uncertainty",
+      "path": "diagrams/06-order-uncertainty.svg",
+      "png": "diagrams/06-order-uncertainty.png",
+      "source": "diagrams/06-order-uncertainty.dot"
+    },
+    {
+      "id": "07-source-lifecycle",
+      "title": "Source authority lifecycle",
+      "path": "diagrams/07-source-lifecycle.svg",
+      "png": "diagrams/07-source-lifecycle.png",
+      "source": "diagrams/07-source-lifecycle.dot"
+    },
+    {
+      "id": "08-replay-isolation",
+      "title": "Historical research isolation",
+      "path": "diagrams/08-replay-isolation.svg",
+      "png": "diagrams/08-replay-isolation.png",
+      "source": "diagrams/08-replay-isolation.dot"
+    }
+  ],
+  "authority": "Companion documentation only; no product source/runtime/broker mutations",
+  "evidence_classes": [
+    "INSPECTED_SOURCE",
+    "FRESH_OFFLINE_CHECK",
+    "RETAINED_QUALIFICATION",
+    "PROPOSED_PROCEDURE"
+  ],
+  "public_edition": {
+    "publication": "Open-source 0.2.0",
+    "license": "MIT",
+    "historical_source_baseline": true,
+    "portable_verifier": "../scripts/verify_publication.py"
+  }
+}

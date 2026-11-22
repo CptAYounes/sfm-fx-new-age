@@ -1,0 +1,90 @@
+[
+  {
+    "id": "01-system-context",
+    "page": 71,
+    "left": 12.0,
+    "top": 128.5,
+    "width": 1502.0,
+    "height": 547.0972067039106,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "02-process-ownership",
+    "page": 72,
+    "left": 12.0,
+    "top": 128.5,
+    "width": 1502.0,
+    "height": 433.3727598566308,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "03-components",
+    "page": 73,
+    "left": 119.67495029821077,
+    "top": 128.5,
+    "width": 1286.6500994035785,
+    "height": 840.5,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "04-data-model",
+    "page": 74,
+    "left": 12.0,
+    "top": 128.5,
+    "width": 1502.0,
+    "height": 600.0704310868246,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "05-research-to-issue",
+    "page": 75,
+    "left": 37.16308325709059,
+    "top": 175.5,
+    "width": 957.6738334858188,
+    "height": 1287.5,
+    "page_width": 1032,
+    "page_height": 1526,
+    "fully_inside_content": true
+  },
+  {
+    "id": "06-order-uncertainty",
+    "page": 76,
+    "left": 12.0,
+    "top": 128.5,
+    "width": 1502.0,
+    "height": 570.023088023088,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "07-source-lifecycle",
+    "page": 77,
+    "left": 24.475788900979296,
+    "top": 128.5,
+    "width": 1477.0484221980414,
+    "height": 840.5,
+    "page_width": 1526,
+    "page_height": 1032,
+    "fully_inside_content": true
+  },
+  {
+    "id": "08-replay-isolation",
+    "page": 78,
+    "left": 97.85666666666668,
+    "top": 128.5,
+    "width": 836.2866666666666,
+    "height": 1334.5,
+    "page_width": 1032,
+    "page_height": 1526,
+    "fully_inside_content": true
+  }
+]

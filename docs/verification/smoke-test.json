@@ -1,0 +1,38 @@
+{
+  "started": "2026-11-22T10:17:35.935791+00:00",
+  "command": [
+    "${PROJECT_ROOT}/.venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=/home/masterea/.hermes/cache/scratch/new_age_documentation_work/pytest-disposable",
+    "-q",
+    "--junitxml=/home/masterea/.hermes/cache/scratch/new_age_documentation_work/documentation-smoke.xml",
+    "tests/test_architecture_contracts.py",
+    "tests/test_architecture_fences.py",
+    "tests/test_order_flow.py",
+    "tests/test_recovery_concurrency.py",
+    "tests/test_shared_domain.py",
+    "tests/test_strategy_signal_pipelines.py",
+    "tests/test_strategy_signal_offline_navigation.py",
+    "tests/test_backtest_workflow.py",
+    "tests/test_six_pair_scope.py",
+    "tests/test_plugin_integration.py"
+  ],
+  "returncode": 0,
+  "modules": [
+    "test_architecture_contracts.py",
+    "test_architecture_fences.py",
+    "test_order_flow.py",
+    "test_recovery_concurrency.py",
+    "test_shared_domain.py",
+    "test_strategy_signal_pipelines.py",
+    "test_strategy_signal_offline_navigation.py",
+    "test_backtest_workflow.py",
+    "test_six_pair_scope.py",
+    "test_plugin_integration.py"
+  ],
+  "scope": "FRESH_OFFLINE_DOCUMENTATION_BASELINE_SMOKE_NOT_FULL_RELEASE_REQUALIFICATION"
+}

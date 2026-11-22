@@ -1,0 +1,234 @@
+{
+  "parameters": [
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 30,
+      "key": "feed.quote_max_age_seconds",
+      "maximum": "3600",
+      "minimum": "1",
+      "owner": "BAR_AND_QUOTE_CACHE",
+      "scope": "GLOBAL",
+      "unit": "seconds"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "0.375",
+      "key": "geometry.band_0",
+      "maximum": "20",
+      "minimum": "0.0001",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "ATR_MULTIPLE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "0.750",
+      "key": "geometry.band_1",
+      "maximum": "20",
+      "minimum": "0.0001",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "ATR_MULTIPLE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "1.250",
+      "key": "geometry.band_2",
+      "maximum": "20",
+      "minimum": "0.0001",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "ATR_MULTIPLE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "1.750",
+      "key": "geometry.band_3",
+      "maximum": "20",
+      "minimum": "0.0001",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "ATR_MULTIPLE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "2.250",
+      "key": "geometry.band_4",
+      "maximum": "20",
+      "minimum": "0.0001",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "ATR_MULTIPLE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "0.75",
+      "key": "ob_candidate.evidence_reliability",
+      "maximum": "1",
+      "minimum": "0.01",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 14400,
+      "key": "ob_candidate.expiry_seconds",
+      "maximum": "604800",
+      "minimum": "60",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "3",
+      "key": "ob_candidate.max_spread_pips",
+      "maximum": "100",
+      "minimum": "0.01",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "1",
+      "key": "ob_candidate.min_reward_r",
+      "maximum": "100",
+      "minimum": "0.01",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "0.60",
+      "key": "order_block.body_fraction",
+      "maximum": "1",
+      "minimum": "0.01",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 14,
+      "key": "order_block.lookback",
+      "maximum": "100",
+      "minimum": "2",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "number",
+      "default": "1.00",
+      "key": "order_block.range_multiple",
+      "maximum": "10",
+      "minimum": "0.01",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 20,
+      "key": "order_block.source_lookback",
+      "maximum": "100",
+      "minimum": "1",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "RESEARCH_PROFILE"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 2,
+      "key": "scanner.pivot_left",
+      "maximum": "20",
+      "minimum": "1",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "completed_bars"
+    },
+    {
+      "activation_boundary": "CORE_EVENT",
+      "choices": [],
+      "data_type": "integer",
+      "default": 2,
+      "key": "scanner.pivot_right",
+      "maximum": "20",
+      "minimum": "1",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "scope": "GLOBAL",
+      "unit": "completed_bars"
+    }
+  ],
+  "surfaces": [
+    {
+      "classification": "RESEARCH_CONFIGURATION",
+      "command": "PROPOSE_VERSIONED_PARAM_CHANGE",
+      "owner": "BAR_AND_QUOTE_CACHE",
+      "parameter_keys": [
+        "feed.quote_max_age_seconds"
+      ],
+      "subtab_id": "2.4",
+      "surface_id": "feed.freshness"
+    },
+    {
+      "classification": "RESEARCH_CONFIGURATION",
+      "command": "PROPOSE_VERSIONED_PARAM_CHANGE",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "parameter_keys": [
+        "geometry.band_0",
+        "geometry.band_1",
+        "geometry.band_2",
+        "geometry.band_3",
+        "geometry.band_4"
+      ],
+      "subtab_id": "3.8",
+      "surface_id": "geometry.research_bands"
+    },
+    {
+      "classification": "RESEARCH_CONFIGURATION",
+      "command": "PROPOSE_VERSIONED_PARAM_CHANGE",
+      "owner": "STRATEGY_RECIPE_HOST",
+      "parameter_keys": [
+        "scanner.pivot_left",
+        "scanner.pivot_right"
+      ],
+      "subtab_id": "3.5",
+      "surface_id": "scanner.research_pivots"
+    }
+  ],
+  "variables": []
+}

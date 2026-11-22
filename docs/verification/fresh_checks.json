@@ -1,0 +1,38 @@
+[
+  {
+    "command": [
+      "${PROJECT_ROOT}/.venv/bin/python",
+      "-B",
+      "-m",
+      "sfm_fx_new_age",
+      "--check"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"components\": 29,\n  \"legacy_execution_term_matches\": [],\n  \"main_tabs\": 4,\n  \"ok\": true,\n  \"route_scope\": \"DECLARED_HOST_CONTRACTS_NOT_FULL_DOMAIN_IMPLEMENTATION\",\n  \"routes\": 41,\n  \"scanner_declared_edges\": 130,\n  \"scanner_declared_nodes\": 44,\n  \"snapshot_contracts\": 42,\n  \"subtabs\": 42,\n  \"subtabs_by_tab\": {\n    \"1\": 10,\n    \"2\": 10,\n    \"3\": 13,\n    \"4\": 9\n  },\n  \"unknown_owners\": [],\n  \"unknown_route_components\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "${PROJECT_ROOT}/.venv/bin/python",
+      "-B",
+      "-m",
+      "sfm_fx_new_age",
+      "--summary-json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"components\": 29,\n  \"main_tabs\": 4,\n  \"routes\": 41,\n  \"subtabs\": 42,\n  \"subtabs_by_tab\": {\n    \"1\": 10,\n    \"2\": 10,\n    \"3\": 13,\n    \"4\": 9\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "${PROJECT_ROOT}/.venv/bin/python",
+      "-B",
+      "-m",
+      "sfm_fx_new_age",
+      "--offline-checkpoint"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"cross_tab_order_identity\": true,\n  \"duplicate_rejected\": true,\n  \"fixture_bars\": 108,\n  \"fixture_submissions\": 1,\n  \"local_cancel_preserves_broker_order\": true,\n  \"main_tabs\": 4,\n  \"network_calls\": 0,\n  \"ok\": true,\n  \"real_broker_orders\": 0,\n  \"restart_reconciled\": true,\n  \"scope\": \"OFFLINE_SYNTHETIC_FIXTURE_ONLY\",\n  \"subtabs\": 42,\n  \"tab_api_version\": 1\n}\n",
+    "stderr": ""
+  }
+]
