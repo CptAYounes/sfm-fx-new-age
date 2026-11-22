@@ -12,6 +12,8 @@
 
 > **Research software, not a promise of returns.** Historical studies, synthetic fixtures and software tests do not establish a profitable edge or authorize trading. Broker operations can lose money. Start offline; never put credentials or account exports into an issue or pull request.
 
+> **Dependency security warning:** GitHub identified **37 dependency advisories, including one critical**, in the initial reference environment. Several legacy versions are pinned by the current upstream optional cTrader SDK. Exploitability has not been fully triaged; this release is **not security-cleared for real-account or exposed-network use**. See [remediation issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14) and [SECURITY.md](SECURITY.md). The verified offline tests are not a security audit.
+
 ## What it does
 
 - **Four workspaces:** Chart Engine, Trading Tools, Strategy Research, and signal/operations workflows, backed by **42 stable view contracts**.
