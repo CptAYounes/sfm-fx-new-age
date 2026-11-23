@@ -35,7 +35,7 @@ requests==2.32.3
 service-identity==24.2.0
 setuptools==84.2.1
 shiboken6==6.8.2.1
-Twisted==24.3.0
+Twisted==26.10.0rc1
 typing_extensions==4.13.2
 urllib3==2.8.0
 websocket-client==1.9.2
