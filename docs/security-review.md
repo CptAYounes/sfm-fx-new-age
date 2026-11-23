@@ -59,15 +59,9 @@ Already verified: public visibility, MIT license, private vulnerability reportin
 
 CodeQL default setup is configured for Python with weekly scheduled analysis; the initial managed setup completed successfully. The security PR's exact-product head passed both hosted CodeQL checks and showed no open PR-ref code-scanning alerts. Its initial main-branch TLS-default warning is addressed by the explicit FIX context above. Branch protection requires the actually observed `CodeQL` check from GitHub Advanced Security (app 57789). Final main-branch analysis is a separate readback after merge. Hosted code scanning is distinct from the full offline unit-test suite.
 
-The repository's application-test Actions template remains inert until the owner grants `workflow` scope. Activate it only through normal authorization:
+The repository's application-test workflow is active at [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) following the owner's normal `workflow` authorization on November 23, 2026. It repeats the full offline suite and package/documentation checks, separately installs the built wheel for the security regressions, and scans committed history using checksum-verified Gitleaks. It uses read-only repository permissions and no broker secrets. The [Actions page](https://github.com/CptAYounes/sfm-fx-new-age/actions/workflows/ci.yml) is authoritative for hosted run results. Successful checks must be observed before their exact names and expected app IDs are required in branch protection.
 
-```bash
-gh auth refresh -h github.com -s workflow
-```
-
-Run this on the same machine/account used for publication, complete GitHub's browser approval yourself, then move `.github/ci-template.yml` to `.github/workflows/ci.yml`, commit and push. No password or token should be pasted into a chat, issue or repository. Once it runs successfully, require its real check names in branch protection; do not invent a required check that has never run.
-
-The API did not expose account-level two-factor authentication status. The owner should verify **GitHub Settings → Password and authentication** and enable 2FA if absent. Extra generic-pattern/validity secret-scanning options were requested but read back disabled; review **Repository Settings → Security → Advanced Security / Secret Protection** if available for the account. They are enhancements, not a reason to disable the already enabled standard protections or delay ordinary source collaboration.
+The owner reports completing the account-level two-factor authentication check/setup. The saved OAuth API still does not independently expose its status; this is owner confirmation, not an API-verified 2FA claim. Extra generic-pattern/validity secret-scanning options were requested but read back disabled. They are optional enhancements, not a reason to disable the already enabled standard protections or delay ordinary source collaboration.
 
 No cTrader-account setting change, credential rotation or live application restart is justified solely by these findings. A rotation would be appropriate if actual credential exposure were identified; this review did not find or assert such exposure. Installing the updated public source does not automatically update a separate existing local installation.
 
