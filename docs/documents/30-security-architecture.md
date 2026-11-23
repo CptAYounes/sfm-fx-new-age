@@ -4,6 +4,12 @@
 
 **Classification:** AS_BUILT_SECURITY_ASSESSMENT · **Authored:** 2026-11-22 · **Approval:** source-grounded authoring; no fabricated owner signoff.
 
+## 0.2.1 public security update — November 23, 2026
+
+The original baseline below is retained as historical authoring evidence. The public 0.2.1 update adds a fixed HTTPS token destination, redirect refusal, bounded/duplicate-key-refusing token JSON, typed token/expiry checks, nonblocking regular single-link credential reads, bounded atomic saves and a required full service-identity verifier. The optional FIX client explicitly requires TLS 1.2+, certificate validation and hostname checking. Storage remains filesystem-permission-protected plaintext, not an encrypted keychain. Synthetic regression tests cover these controls; they are not new live account/TLS or broker-action receipts.
+
+Compatible dependency updates resolve 13 of the original 37 advisories including the critical trust-store finding; 24 SDK-constrained package advisories remain. See the [current security review](../security-review.md) and [machine-readable review](../verification/security-dependencies.json) for exposure distinctions and limits. Provider authentication is not a patch for local client dependencies.
+
 ## Assets and boundaries
 Protected assets include OAuth/application secrets, account identifiers, order intent/correlation, source integrity, local research history and saved operator choices. Boundaries separate human/browser authorization, external network responses, SDK/acquisition workers, the application owner, file publishers and durable state.
 

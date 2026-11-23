@@ -6,6 +6,10 @@
 
 This is the complete finite companion set: **60 main architecture/engineering documents, 12 retrospective ADRs, 14 source-linked reference documents and 8 rendered diagrams**, plus machine-readable traceability, catalogues, SBOM and verification receipts. It describes the actual New Age signal/research desktop, not the older SFM FX Engine/cBot architecture.
 
+## Current public update — 0.2.1
+
+The original authoring baseline and test totals below are historical. The [November 23 security recheck](security-review.md) records compatible dependency remediation, targeted OAuth/credential/TLS hardening, a current verification-environment inventory and the remaining SDK-constrained advisories. Public source modifications are bound by `publication.json`; original source digests are retained rather than represented as still matching. No operating account/session was used to validate this update.
+
 ## Open first
 
 - [Engineering handbook — offline HTML](SFM_FX_New_Age_Engineering_Handbook.html): all main documents, ADRs, reference chapters and diagrams; local full-text navigation search.

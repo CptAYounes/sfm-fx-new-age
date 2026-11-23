@@ -1077,10 +1077,11 @@
     "PROPOSED_PROCEDURE"
   ],
   "public_edition": {
-    "publication": "Open-source 0.2.0",
+    "publication": "Open-source 0.2.1 security update",
     "license": "MIT",
     "historical_source_baseline": true,
-    "portable_verifier": "../scripts/verify_publication.py"
+    "portable_verifier": "../scripts/verify_publication.py",
+    "initial_public_release": "0.2.0"
   },
   "public_source_url": "https://github.com/CptAYounes/sfm-fx-new-age/blob/main"
 }

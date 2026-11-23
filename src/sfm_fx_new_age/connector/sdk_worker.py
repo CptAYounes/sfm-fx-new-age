@@ -60,6 +60,9 @@ def paced_protocol(*,clock=None):
 
 def verified_client(host, port, reactor):
     """SDK Client methods with explicit hostname-verifying TLS and paced framing."""
+    # Fail closed when the supported hostname verifier is unavailable rather
+    # than accepting Twisted's reduced-assurance optional-dependency fallback.
+    from service_identity.pyopenssl import verify_hostname
     from ctrader_open_api import Client, TcpProtocol
     from twisted.application.internet import ClientService
     from twisted.internet.endpoints import SSL4ClientEndpoint

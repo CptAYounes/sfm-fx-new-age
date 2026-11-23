@@ -2,7 +2,7 @@
 <h1 align="center">SFM FX New Age</h1>
 <p align="center"><strong>A local-first desktop for Forex research, source-aware signals, and deliberate human execution.</strong></p>
 <p align="center">
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/offline_tests-1541_passed-2ea44f" alt="Initial public edition: 1541 offline tests passed"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/offline_tests-1574_passed-2ea44f" alt="0.2.1 verification: 1574 offline tests passed"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2ea44f" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Python-3.13%2B-3776AB" alt="Python 3.13 or newer">
   <img src="https://img.shields.io/badge/desktop-PySide6-41CD52" alt="PySide6 desktop">
@@ -12,7 +12,7 @@
 
 > **Research software, not a promise of returns.** Historical studies, synthetic fixtures and software tests do not establish a profitable edge or authorize trading. Broker operations can lose money. Start offline; never put credentials or account exports into an issue or pull request.
 
-> **Dependency security warning:** GitHub identified **37 dependency advisories, including one critical**, in the initial reference environment. Several legacy versions are pinned by the current upstream optional cTrader SDK. Exploitability has not been fully triaged; this release is **not security-cleared for real-account or exposed-network use**. See [remediation issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14) and [SECURITY.md](SECURITY.md). The verified offline tests are not a security audit.
+> **Security recheck (0.2.1):** compatible updates resolve **13 of the original 37 dependency advisories, including the critical certifi issue**. **24 SDK-constrained package advisories remain (12 high, 8 medium, 4 low)**; some involve unused server features, while parser/TLS dependencies still need remediation. Token, credential-file and TLS handling are hardened. This is not a blanket security clearance. See the [review and evidence](docs/security-review.md), [issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14), and [SECURITY.md](SECURITY.md).
 
 ## What it does
 
@@ -94,13 +94,13 @@ python scripts/verify_publication.py
 python -m build
 ```
 
-The initial public copy passed **1,541 offline tests**, with no failures/errors/skips. A [GitHub Actions template](.github/ci-template.yml) is included but **not active**: the maintainer's saved GitHub authorization currently lacks `workflow` permission. See [activation instructions](docs/development.md#activating-github-actions); the badge above reports the verified local publication run, not a hosted CI run.
+The 0.2.1 public copy passed **1,574 offline tests**, with no failures/errors/skips; all **33 security regressions** also passed against an independently installed wheel. [Verification receipt](docs/verification/security-tests.json). GitHub-managed **CodeQL is active**, with weekly scanning and its actual security check required by branch protection. A [GitHub Actions template](.github/ci-template.yml) is included but **not active**: the maintainer's saved GitHub authorization currently lacks `workflow` permission. See [activation instructions](docs/development.md#activating-github-actions); the badge above reports the verified local publication run, not a hosted CI run.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for review expectations and [open issues](https://github.com/CptAYounes/sfm-fx-new-age/issues) for improvements. Good contributions include reproducibility, portability, accessibility, source correctness, performance evidence and small, tested extensions. Please distinguish implemented behavior, proposed features and unverified trading hypotheses.
 
 ## Status and limits
 
-This is the **0.2.0 initial public source release**, not a production trading guarantee. Price-based studies do not reconstruct unknown ticks, execution order or broker costs. Optional provider entitlement, autonomous exits, broker-side stop protection, a consolidated FX full book and profitability certification are not supplied. Tests use labelled synthetic data unless explicitly stated otherwise. Connected verification scripts are operator tools, not routine CI commands.
+This is the **0.2.1 security-hardening update** to the initial 0.2.0 public release, not a production trading guarantee. Price-based studies do not reconstruct unknown ticks, execution order or broker costs. Optional provider entitlement, autonomous exits, broker-side stop protection, a consolidated FX full book and profitability certification are not supplied. Tests use labelled synthetic data unless explicitly stated otherwise. Connected verification scripts are operator tools, not routine CI commands.
 
 [PROGRESS.md](PROGRESS.md) retains the sanitized engineering history and remains the single project progress diary. The original local runtime and sealed private receipts are intentionally not distributed.
 

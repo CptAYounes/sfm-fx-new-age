@@ -1,0 +1,555 @@
+{
+  "checked_at": "2026-11-23T05:48:42.678924+00:00",
+  "scope": "GitHub reviewed PyPI advisories matched against 39 resolved Python 3.13 reference constraints, querying original/canonical/known alert package aliases and deduplicating GHSA IDs; not exhaustive exploitability or Qt/OS/native assessment",
+  "packages": [
+    {
+      "package": "attrs",
+      "queried_aliases": [
+        "attrs"
+      ],
+      "version": "25.3.0",
+      "advisories": []
+    },
+    {
+      "package": "Automat",
+      "queried_aliases": [
+        "Automat",
+        "automat"
+      ],
+      "version": "25.4.16",
+      "advisories": []
+    },
+    {
+      "package": "build",
+      "queried_aliases": [
+        "build"
+      ],
+      "version": "1.6.1",
+      "advisories": []
+    },
+    {
+      "package": "certifi",
+      "queried_aliases": [
+        "certifi"
+      ],
+      "version": "2026.11.20",
+      "advisories": []
+    },
+    {
+      "package": "cffi",
+      "queried_aliases": [
+        "cffi"
+      ],
+      "version": "2.1.1",
+      "advisories": []
+    },
+    {
+      "package": "charset-normalizer",
+      "queried_aliases": [
+        "charset-normalizer"
+      ],
+      "version": "3.4.2",
+      "advisories": []
+    },
+    {
+      "package": "constantly",
+      "queried_aliases": [
+        "constantly"
+      ],
+      "version": "23.10.4",
+      "advisories": []
+    },
+    {
+      "package": "cryptography",
+      "queried_aliases": [
+        "cryptography"
+      ],
+      "version": "42.0.8",
+      "advisories": [
+        {
+          "ghsa_id": "GHSA-537c-gmf6-5ccf",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-537c-gmf6-5ccf",
+          "summary": "Vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "ghsa_id": "GHSA-79v4-65xg-pq4g",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-79v4-65xg-pq4g",
+          "summary": "Vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "ghsa_id": "GHSA-h4gh-qq45-vh27",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-h4gh-qq45-vh27",
+          "summary": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels"
+        },
+        {
+          "ghsa_id": "GHSA-jwv3-5hgf-82ww",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-jwv3-5hgf-82ww",
+          "summary": "python-cryptography: Duplicate self-signed intermediates can cause exponential path-building"
+        },
+        {
+          "ghsa_id": "GHSA-m959-cc7f-wv43",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-m959-cc7f-wv43",
+          "summary": "cryptography has incomplete DNS name constraint enforcement on peer names"
+        },
+        {
+          "ghsa_id": "GHSA-r6ph-v2qm-q3c2",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-r6ph-v2qm-q3c2",
+          "summary": "cryptography Vulnerable to a Subgroup Attack Due to Missing Subgroup Validation for SECT Curves"
+        }
+      ]
+    },
+    {
+      "package": "ctrader_open_api",
+      "queried_aliases": [
+        "ctrader-open-api",
+        "ctrader_open_api"
+      ],
+      "version": "0.9.2",
+      "advisories": []
+    },
+    {
+      "package": "hyperlink",
+      "queried_aliases": [
+        "hyperlink"
+      ],
+      "version": "21.0.0",
+      "advisories": []
+    },
+    {
+      "package": "idna",
+      "queried_aliases": [
+        "idna"
+      ],
+      "version": "3.20",
+      "advisories": []
+    },
+    {
+      "package": "incremental",
+      "queried_aliases": [
+        "incremental"
+      ],
+      "version": "24.7.2",
+      "advisories": []
+    },
+    {
+      "package": "iniconfig",
+      "queried_aliases": [
+        "iniconfig"
+      ],
+      "version": "2.3.1",
+      "advisories": []
+    },
+    {
+      "package": "inputimeout",
+      "queried_aliases": [
+        "inputimeout"
+      ],
+      "version": "1.0.4",
+      "advisories": []
+    },
+    {
+      "package": "markdown-it-py",
+      "queried_aliases": [
+        "markdown-it-py"
+      ],
+      "version": "4.0.0",
+      "advisories": []
+    },
+    {
+      "package": "mdurl",
+      "queried_aliases": [
+        "mdurl"
+      ],
+      "version": "0.1.2",
+      "advisories": []
+    },
+    {
+      "package": "packaging",
+      "queried_aliases": [
+        "packaging"
+      ],
+      "version": "25.0",
+      "advisories": []
+    },
+    {
+      "package": "pluggy",
+      "queried_aliases": [
+        "pluggy"
+      ],
+      "version": "1.7.0",
+      "advisories": []
+    },
+    {
+      "package": "protobuf",
+      "queried_aliases": [
+        "protobuf"
+      ],
+      "version": "3.20.1",
+      "advisories": [
+        {
+          "ghsa_id": "GHSA-7gcm-g887-7qv7",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-7gcm-g887-7qv7",
+          "summary": "protobuf affected by a JSON recursion depth bypass"
+        },
+        {
+          "ghsa_id": "GHSA-8gq9-2x98-w8hf",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-8gq9-2x98-w8hf",
+          "summary": "protobuf-cpp and protobuf-python have potential Denial of Service issue"
+        },
+        {
+          "ghsa_id": "GHSA-8qvm-5x2c-j2w7",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-8qvm-5x2c-j2w7",
+          "summary": "protobuf-python has a potential Denial of Service issue"
+        }
+      ]
+    },
+    {
+      "package": "pyasn1",
+      "queried_aliases": [
+        "pyasn1"
+      ],
+      "version": "0.6.5",
+      "advisories": []
+    },
+    {
+      "package": "pyasn1_modules",
+      "queried_aliases": [
+        "pyasn1-modules",
+        "pyasn1_modules"
+      ],
+      "version": "0.4.2",
+      "advisories": []
+    },
+    {
+      "package": "pycparser",
+      "queried_aliases": [
+        "pycparser"
+      ],
+      "version": "3.12",
+      "advisories": []
+    },
+    {
+      "package": "Pygments",
+      "queried_aliases": [
+        "Pygments",
+        "pygments"
+      ],
+      "version": "2.21.0",
+      "advisories": []
+    },
+    {
+      "package": "pyOpenSSL",
+      "queried_aliases": [
+        "pyOpenSSL",
+        "pyopenssl"
+      ],
+      "version": "24.1.0",
+      "advisories": [
+        {
+          "ghsa_id": "GHSA-5pwr-322w-8jr4",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-5pwr-322w-8jr4",
+          "summary": "pyOpenSSL DTLS cookie callback buffer overflow"
+        },
+        {
+          "ghsa_id": "GHSA-vp96-hxj8-p424",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-vp96-hxj8-p424",
+          "summary": "pyOpenSSL allows TLS connection bypass via unhandled callback exception in set_tlsext_servername_callback"
+        }
+      ]
+    },
+    {
+      "package": "pyproject_hooks",
+      "queried_aliases": [
+        "pyproject-hooks",
+        "pyproject_hooks"
+      ],
+      "version": "1.3.3",
+      "advisories": []
+    },
+    {
+      "package": "PySide6",
+      "queried_aliases": [
+        "PySide6",
+        "pyside6"
+      ],
+      "version": "6.8.2.1",
+      "advisories": []
+    },
+    {
+      "package": "PySide6_Addons",
+      "queried_aliases": [
+        "PySide6_Addons",
+        "pyside6-addons"
+      ],
+      "version": "6.8.2.1",
+      "advisories": []
+    },
+    {
+      "package": "PySide6_Essentials",
+      "queried_aliases": [
+        "PySide6_Essentials",
+        "pyside6-essentials"
+      ],
+      "version": "6.8.2.1",
+      "advisories": []
+    },
+    {
+      "package": "pytest",
+      "queried_aliases": [
+        "pytest"
+      ],
+      "version": "9.2.0",
+      "advisories": []
+    },
+    {
+      "package": "PyYAML",
+      "queried_aliases": [
+        "PyYAML",
+        "pyyaml"
+      ],
+      "version": "6.0.3",
+      "advisories": []
+    },
+    {
+      "package": "requests",
+      "queried_aliases": [
+        "requests"
+      ],
+      "version": "2.32.3",
+      "advisories": [
+        {
+          "ghsa_id": "GHSA-9hjg-9r4m-mvj7",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-9hjg-9r4m-mvj7",
+          "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs"
+        },
+        {
+          "ghsa_id": "GHSA-gc5v-m9x4-r6x2",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-gc5v-m9x4-r6x2",
+          "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function"
+        }
+      ]
+    },
+    {
+      "package": "service-identity",
+      "queried_aliases": [
+        "service-identity"
+      ],
+      "version": "24.2.0",
+      "advisories": []
+    },
+    {
+      "package": "setuptools",
+      "queried_aliases": [
+        "setuptools"
+      ],
+      "version": "84.2.1",
+      "advisories": []
+    },
+    {
+      "package": "shiboken6",
+      "queried_aliases": [
+        "shiboken6"
+      ],
+      "version": "6.8.2.1",
+      "advisories": []
+    },
+    {
+      "package": "Twisted",
+      "queried_aliases": [
+        "Twisted",
+        "twisted"
+      ],
+      "version": "24.3.0",
+      "advisories": [
+        {
+          "ghsa_id": "GHSA-2qrf-pqgx-qh9v",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-2qrf-pqgx-qh9v",
+          "summary": "Twisted: Denial of Service in the Twisted IMAP4 Server via a Negative Literal Size in SEARCH"
+        },
+        {
+          "ghsa_id": "GHSA-3476-c5c2-fr73",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-3476-c5c2-fr73",
+          "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted words domish XML Element Stream via an Unbounded Element Tree"
+        },
+        {
+          "ghsa_id": "GHSA-53xc-49m8-p798",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-53xc-49m8-p798",
+          "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted IRC Server via an Unbounded Line Buffer"
+        },
+        {
+          "ghsa_id": "GHSA-8pqf-f4m5-798g",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-8pqf-f4m5-798g",
+          "summary": "Twisted: IMAP wildcardToRegexp() ReDoS"
+        },
+        {
+          "ghsa_id": "GHSA-c8m8-j448-xjx7",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-c8m8-j448-xjx7",
+          "summary": "twisted.web has disordered HTTP pipeline response"
+        },
+        {
+          "ghsa_id": "GHSA-cf56-g6w6-pqq2",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-cf56-g6w6-pqq2",
+          "summary": "Twisted vulnerable to HTML injection in HTTP redirect body"
+        },
+        {
+          "ghsa_id": "GHSA-cwm5-jh59-mwxr",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-cwm5-jh59-mwxr",
+          "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted conch Telnet Transport via an Unbounded Subnegotiation Buffer"
+        },
+        {
+          "ghsa_id": "GHSA-grgv-6hw6-v9g4",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-grgv-6hw6-v9g4",
+          "summary": "Twisted has a Denial of Service (DoS) in twisted.names via Crafted DNS Compression Pointer Chains"
+        },
+        {
+          "ghsa_id": "GHSA-jj36-9pvh-vj5r",
+          "severity": "low",
+          "url": "https://github.com/advisories/GHSA-jj36-9pvh-vj5r",
+          "summary": "Twisted: DNS Response Spoofing in twisted.names Due to Missing Source Address Validation"
+        },
+        {
+          "ghsa_id": "GHSA-q7qq-6mhp-9rc4",
+          "severity": "medium",
+          "url": "https://github.com/advisories/GHSA-q7qq-6mhp-9rc4",
+          "summary": "Twisted: HTTP Request Smuggling in twisted.web via a Bare CR or LF in a Header Value"
+        },
+        {
+          "ghsa_id": "GHSA-vpp8-g58w-m8mp",
+          "severity": "high",
+          "url": "https://github.com/advisories/GHSA-vpp8-g58w-m8mp",
+          "summary": "Twisted: Unauthenticated Remote Denial of Service in the Twisted HTTP/2 Server via Rapid Stream Reset"
+        }
+      ]
+    },
+    {
+      "package": "typing_extensions",
+      "queried_aliases": [
+        "typing-extensions",
+        "typing_extensions"
+      ],
+      "version": "4.13.2",
+      "advisories": []
+    },
+    {
+      "package": "urllib3",
+      "queried_aliases": [
+        "urllib3"
+      ],
+      "version": "2.8.0",
+      "advisories": []
+    },
+    {
+      "package": "websocket-client",
+      "queried_aliases": [
+        "websocket-client"
+      ],
+      "version": "1.9.2",
+      "advisories": []
+    },
+    {
+      "package": "zope.interface",
+      "queried_aliases": [
+        "zope-interface",
+        "zope.interface"
+      ],
+      "version": "7.2",
+      "advisories": []
+    }
+  ],
+  "before_advisories": 37,
+  "resolved_advisory_ids": [
+    {
+      "ghsa_id": "GHSA-6q48-6c7w-9gw2",
+      "package": "certifi",
+      "severity": "critical"
+    },
+    {
+      "ghsa_id": "GHSA-xmj3-9gf7-h52w",
+      "package": "setuptools",
+      "severity": "low"
+    },
+    {
+      "ghsa_id": "GHSA-vxq7-64xx-v4gw",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-8988-9cw3-xx77",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "package": "setuptools",
+      "severity": "medium"
+    },
+    {
+      "ghsa_id": "GHSA-65pc-fj4g-8rjx",
+      "package": "idna",
+      "severity": "medium"
+    },
+    {
+      "ghsa_id": "GHSA-qccp-gfcp-xxvc",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-6w46-j5rx-g56g",
+      "package": "pytest",
+      "severity": "medium"
+    },
+    {
+      "ghsa_id": "GHSA-38jv-5279-wg99",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-2xpw-w6gg-jr37",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-gm62-xv2j-4w53",
+      "package": "urllib3",
+      "severity": "high"
+    },
+    {
+      "ghsa_id": "GHSA-48p4-8xcf-vxj5",
+      "package": "urllib3",
+      "severity": "medium"
+    },
+    {
+      "ghsa_id": "GHSA-pq67-6m6q-mj2v",
+      "package": "urllib3",
+      "severity": "medium"
+    }
+  ],
+  "remaining_advisory_matches": 24,
+  "remaining_severity_counts": {
+    "high": 12,
+    "low": 4,
+    "medium": 8
+  },
+  "all_remaining_sdk_constrained": true
+}

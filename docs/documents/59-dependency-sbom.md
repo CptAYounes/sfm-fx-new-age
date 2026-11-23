@@ -4,6 +4,10 @@
 
 **Classification:** OBSERVED_ENVIRONMENT_INVENTORY · **Authored:** 2026-11-22 · **Approval:** source-grounded authoring; no fabricated owner signoff.
 
+## 0.2.1 public dependency review — November 23, 2026
+
+The authoring inventory below remains historical. The public security update adds a distinct [39-distribution resolved verification-environment SBOM](../verification/security-environment.cdx.json), reference constraints and a [package/advisory identity report](../verification/security-dependencies.json). Compatible certifi/urllib3/idna/pytest/setuptools upgrades resolve 13 original advisory IDs including the critical certifi issue; 24 SDK-constrained package matches remain. The `ctrader` extra now includes a full compatible hostname-verifier dependency. The project version is 0.2.1; the old 0.2.0 source and inventory are not rewritten to imply they were upgraded. See the [security review](../security-review.md).
+
 ## Inventory scope
 The package includes a machine-readable observed-environment inventory and CycloneDX-format component list. Components are read from installed Python distribution metadata in the application environment; direct requirements come from `pyproject.toml`. The top-level product is 0.2.0. This is not a complete OS/container SBOM, dependency resolver lock, signed provenance attestation or vulnerability scan.
 

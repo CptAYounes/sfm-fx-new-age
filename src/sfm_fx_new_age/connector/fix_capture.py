@@ -21,6 +21,15 @@ from sfm_fx_new_age.contracts.supplemental_wire import validate_wire_shape
 
 FIX_FIELDS={'schema_version','host','tls_port','sender_comp_id','target_comp_id','username','password','scope_id'}
 
+
+def price_tls_context():
+    """Explicit client verification and TLS 1.2 floor; no network operation."""
+    context=ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    context.minimum_version=ssl.TLSVersion.TLSv1_2
+    context.load_default_certs(ssl.Purpose.SERVER_AUTH)
+    return context
+
+
 def load_price_credentials(path):
     body=SecretStore(Path(path)).load()
     if set(body)!=FIX_FIELDS or type(body['schema_version']) is not int or body['schema_version']!=1:raise ValueError('Exact private FIX Price configuration required')
@@ -105,7 +114,7 @@ def capture_fix_price(source_database,credentials_path,output_directory,*,captur
         if not path.exists():proof['result']='FIX_PRICE_CREDENTIALS_MISSING';return proof
         config=load_price_credentials(path);proof['credentials_present']=True;bindings=original_bindings(source_database,config['scope_id'])
         proof['network_started']=True;plain=socket.create_connection((config['host'],config['tls_port']),timeout=10);socket_opened=True
-        try:sock=ssl.create_default_context().wrap_socket(plain,server_hostname=config['host'])
+        try:sock=price_tls_context().wrap_socket(plain,server_hostname=config['host'])
         except Exception:plain.close();raise
         sock.settimeout(.5);proof['stream_closed']=False;proof['tls_verified']=True;session=PriceSession(config,sock);session.send('A',[(98,'0'),(108,'30'),(141,'Y'),(553,config['username']),(554,config['password'])]);session_id=str(uuid4());list_id='list-'+str(uuid4());request_id='book-'+str(uuid4());ids={};subscribed=False;last_receive=monotonic();last_send=monotonic();capture_started=None
         while monotonic()-start<min(90,capture_seconds+40):
