@@ -1,5 +1,9 @@
 # Public-edition provenance and boundaries
 
+## 0.2.1 maintenance update
+
+The November 23, 2026 update retains this initial-publication history while adding resolver-compatible dependency remediation and targeted OAuth/credential/TLS hardening. Current public source hashes are rebound explicitly in `publication.json`; original source digests are retained. The operating local checkout, credentials and broker runtime are not part of this mutation. See the [security review](security-review.md), current [environment inventory](verification/security-environment.cdx.json) and [advisory report](verification/security-dependencies.json). The original tagged 0.2.0 release is unchanged; 0.2.1 is a separate release.
+
 ## Scope
 
 This repository publishes SFM FX New Age 0.2.0 and its complete companion engineering library at the owner's request. The owner selected open-source publication; the public edition uses the permissive root MIT license for original source and documentation. Dependencies, third-party data and trademarks keep their own terms.

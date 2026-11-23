@@ -6,7 +6,7 @@
 
 The reference package-advisory matches fall from **37 to 24**, resolving **13 advisories including the one critical certifi advisory**. Remaining severities are **12 high, 8 medium and 4 low**. No alert was dismissed to obtain this reduction. These are dependency-advisory matches, not counts of confirmed exploitable application paths, and they can change as advisory databases change.
 
-The exact package versions, queried original/canonical package aliases, resolved GHSA IDs and remaining matches are retained in [security-dependencies.json](verification/security-dependencies.json). A current environment inventory is [security-environment.cdx.json](verification/security-environment.cdx.json). The original 131-distribution authoring inventory remains a separate historical artifact.
+The exact package versions, queried original/canonical package aliases, resolved GHSA IDs and remaining matches are retained in [security-dependencies.json](verification/security-dependencies.json). Normal resolver dry-runs separately confirm [all five upgrade conflicts](verification/security-sdk-resolution.json); no `--no-deps` override was used. A current environment inventory is [security-environment.cdx.json](verification/security-environment.cdx.json). The original 131-distribution authoring inventory remains a separate historical artifact.
 
 ## Why cTrader security is not sufficient by itself
 
@@ -35,6 +35,10 @@ The resolver also updated pytest's required helper distributions. The build-syst
 
 Regression tests use synthetic credentials/certificates and offline HTTP responses. Their coverage includes the real urllib redirect-handler chain, bounded response reads, credential preservation on rejection, FIFO timeout rejection and missing-verifier failure. They do not authenticate an account or issue a broker operation.
 
+## Executed verification
+
+The final source suite passed **1,574 tests** (zero failures/errors/skips) in 363.47 pytest-reported seconds and exited with code 0. All **33 security regressions** passed again against a separately installed 0.2.1 wheel outside the checkout. Architecture, synthetic restart/reconciliation, `pip check`, 158-file wheel/source parity, wheel/sdist builds and portable source/documentation integrity checks passed. The restart checkpoint reports zero network calls and zero real broker orders. The [source-bound test receipt](verification/security-tests.json) retains exact case counts, test-source digests and the local JUnit digest without private paths.
+
 ## Why 24 package advisories remain
 
 The latest stable upstream `ctrader-open-api` package available at this check is **0.9.2**. Its metadata pins Twisted 24.3.0, pyOpenSSL 24.1.0, protobuf 3.20.1 and requests 2.32.3. That pyOpenSSL version constrains cryptography below 43. An actual normal-resolver experiment rejects combining that SDK with a modern Twisted version. Ignoring the resolver or changing upstream metadata would be a connector migration, not a compatible package update.
@@ -53,7 +57,9 @@ No remaining alert was dismissed as "not used." An observed missing call path ca
 
 Already verified: public visibility, MIT license, private vulnerability reporting, Dependabot alerts/security updates, secret scanning, push protection, read-only default workflow permissions, review/conversation branch protection and HTTPS documentation hosting.
 
-A CodeQL default-setup scan is being configured through GitHub's managed service; its actual check results are distinct from this offline software test suite. The repository's application-test Actions template remains inert until the owner grants `workflow` scope. Activate it only through normal authorization:
+CodeQL default setup is configured for Python with weekly scheduled analysis; the initial managed setup completed successfully. The security PR's exact-product head passed both hosted CodeQL checks and showed no open PR-ref code-scanning alerts. Its initial main-branch TLS-default warning is addressed by the explicit FIX context above. Branch protection requires the actually observed `CodeQL` check from GitHub Advanced Security (app 57789). Final main-branch analysis is a separate readback after merge. Hosted code scanning is distinct from the full offline unit-test suite.
+
+The repository's application-test Actions template remains inert until the owner grants `workflow` scope. Activate it only through normal authorization:
 
 ```bash
 gh auth refresh -h github.com -s workflow
