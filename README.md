@@ -2,7 +2,7 @@
 <h1 align="center">SFM FX New Age</h1>
 <p align="center"><strong>A local-first desktop for Forex research, source-aware signals, and deliberate human execution.</strong></p>
 <p align="center">
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/offline_tests-1574_passed-2ea44f" alt="0.2.1 verification: 1574 offline tests passed"></a>
+  <a href="https://github.com/CptAYounes/sfm-fx-new-age/actions/workflows/ci.yml"><img src="https://github.com/CptAYounes/sfm-fx-new-age/actions/workflows/ci.yml/badge.svg?branch=main" alt="GitHub Actions offline tests, build and secret scan"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2ea44f" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/Python-3.13%2B-3776AB" alt="Python 3.13 or newer">
   <img src="https://img.shields.io/badge/desktop-PySide6-41CD52" alt="PySide6 desktop">
@@ -94,7 +94,7 @@ python scripts/verify_publication.py
 python -m build
 ```
 
-The 0.2.1 public copy passed **1,574 offline tests**, with no failures/errors/skips; all **33 security regressions** also passed against an independently installed wheel. [Verification receipt](docs/verification/security-tests.json). GitHub-managed **CodeQL is active**, with weekly scanning and its actual security check required by branch protection. A [GitHub Actions template](.github/ci-template.yml) is included but **not active**: the maintainer's saved GitHub authorization currently lacks `workflow` permission. See [activation instructions](docs/development.md#activating-github-actions); the badge above reports the verified local publication run, not a hosted CI run.
+The 0.2.1 public copy passed **1,574 offline tests**, with no failures/errors/skips; all **33 security regressions** also passed against an independently installed wheel. [Verification receipt](docs/verification/security-tests.json). The active [GitHub Actions workflow](.github/workflows/ci.yml) repeats the full offline suite, architecture/restart checks, dependency consistency, source/documentation integrity, package build, independently installed-wheel security tests and checksum-verified secret scan. The badge links to actual hosted results rather than a static local test count. GitHub-managed **CodeQL** remains a separate weekly and pull-request security check. See [CI details](docs/development.md#github-actions).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for review expectations and [open issues](https://github.com/CptAYounes/sfm-fx-new-age/issues) for improvements. Good contributions include reproducibility, portability, accessibility, source correctness, performance evidence and small, tested extensions. Please distinguish implemented behavior, proposed features and unverified trading hypotheses.
 

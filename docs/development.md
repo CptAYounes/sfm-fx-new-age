@@ -52,10 +52,10 @@ Install documentation/build tools with `python -m pip install -c requirements/co
 
 Current priorities are clean-clone portability, additional Linux/platform qualification, accessibility/keyboard review, evidence-led performance work, and carefully scoped analytical extensions with explicit genuine-data requirements. These are opportunities, not claims that a feature is implemented or a trading system profitable. Use issues and discussions for coordination; keep only `PROGRESS.md` as the progress diary.
 
-## Activating GitHub Actions
+## GitHub Actions
 
-The initial public edition includes `.github/ci-template.yml` rather than an active workflow: the maintainer's saved OAuth authorization can publish source but lacks GitHub's separate `workflow` scope. Local offline verification and clean-clone checks passed; no hosted CI result is implied.
+The active workflow is [`.github/workflows/ci.yml`](../.github/workflows/ci.yml). It runs on pull requests, pushes to `main`, version tags and manual dispatch. The owner granted the normal GitHub `workflow` scope on November 23, 2026; the earlier inert template has been replaced rather than maintained as a second configuration.
 
-A maintainer can authorize the additional permission through GitHub's normal browser flow (`gh auth refresh -h github.com -s workflow`), then move the template into `.github/workflows/ci.yml`, commit and push. Fork maintainers may activate it using their own properly authorized account. Never send a token or password in an issue/chat, and do not bypass GitHub's scope checks.
+The two jobs are **Offline tests and build (Python 3.13)** and **Secret scan**. They use read-only repository permissions, SHA-pinned official actions with persisted checkout credentials disabled, Python 3.13 reference constraints, `pip check`, the full offline suite, architecture/restart and portable package/documentation checks, wheel/sdist builds, and checksum-verified Gitleaks history scanning. The built wheel is installed into a separate venv outside the checkout; its import root is checked before repeating the architecture/restart checks and 33 security regressions. JUnit reports and distribution artifacts are retained for 14 days.
 
-The template uses read-only repository permissions, SHA-pinned official actions, Python 3.13, the full offline suite, package/documentation checks and checksum-verified Gitleaks. It does not run connected broker-acceptance scripts.
+No broker credentials or connected acceptance scripts are used. SDK-constrained dependency advisories remain unresolved; passing CI does not imply security, native-market or profitability certification. Managed weekly/PR CodeQL remains independent of this workflow. Only real, successful hosted check names should be added to branch protection, with their expected GitHub App identity preserved. Fork maintainers can use the workflow with their own properly authorized account; never send a token or password in an issue/chat.
