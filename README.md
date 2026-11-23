@@ -12,7 +12,7 @@
 
 > **Research software, not a promise of returns.** Historical studies, synthetic fixtures and software tests do not establish a profitable edge or authorize trading. Broker operations can lose money. Start offline; never put credentials or account exports into an issue or pull request.
 
-> **Dependency security warning:** GitHub identified **37 dependency advisories, including one critical**, in the initial reference environment. Several legacy versions are pinned by the current upstream optional cTrader SDK. Exploitability has not been fully triaged; this release is **not security-cleared for real-account or exposed-network use**. See [remediation issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14) and [SECURITY.md](SECURITY.md). The verified offline tests are not a security audit.
+> **Security recheck (0.2.1):** compatible updates resolve **13 of the original 37 dependency advisories, including the critical certifi issue**. **24 SDK-constrained package advisories remain (12 high, 8 medium, 4 low)**; some involve unused server features, while parser/TLS dependencies still need remediation. Token, credential-file and TLS handling are hardened. This is not a blanket security clearance. See the [review and evidence](docs/security-review.md), [issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14), and [SECURITY.md](SECURITY.md).
 
 ## What it does
 
@@ -100,7 +100,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for review expectations and [open issues]
 
 ## Status and limits
 
-This is the **0.2.0 initial public source release**, not a production trading guarantee. Price-based studies do not reconstruct unknown ticks, execution order or broker costs. Optional provider entitlement, autonomous exits, broker-side stop protection, a consolidated FX full book and profitability certification are not supplied. Tests use labelled synthetic data unless explicitly stated otherwise. Connected verification scripts are operator tools, not routine CI commands.
+This is the **0.2.1 security-hardening update** to the initial 0.2.0 public release, not a production trading guarantee. Price-based studies do not reconstruct unknown ticks, execution order or broker costs. Optional provider entitlement, autonomous exits, broker-side stop protection, a consolidated FX full book and profitability certification are not supplied. Tests use labelled synthetic data unless explicitly stated otherwise. Connected verification scripts are operator tools, not routine CI commands.
 
 [PROGRESS.md](PROGRESS.md) retains the sanitized engineering history and remains the single project progress diary. The original local runtime and sealed private receipts are intentionally not distributed.
 

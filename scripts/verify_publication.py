@@ -98,7 +98,7 @@ def main() -> int:
     oversized = [str(p.relative_to(ROOT)) for p in candidates if p.is_file() and p.stat().st_size > 10_000_000]
     check('no_oversized_payloads', not oversized, oversized)
     metadata = tomllib.loads((ROOT / 'pyproject.toml').read_text())
-    check('license_and_version', metadata['project']['license'] == 'MIT' and metadata['project']['version'] == '0.2.0' and 'Copyright (c) 2026 Anthony Younes' in (ROOT / 'LICENSE').read_text())
+    check('license_and_version', metadata['project']['license'] == 'MIT' and metadata['project']['version'] == provenance['version'] and 'Copyright (c) 2026 Anthony Younes' in (ROOT / 'LICENSE').read_text())
 
     meta = json.loads((DOCS / 'package.json').read_text())
     check('60_main_documents', [d['id'] for d in meta['documents']] == [f'NA-D{i:02d}' for i in range(1, 61)] and {str(p.relative_to(DOCS)) for p in (DOCS / 'documents').glob('*.md')} == {d['path'] for d in meta['documents']})

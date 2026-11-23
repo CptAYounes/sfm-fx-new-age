@@ -128,7 +128,9 @@ def test_fixture_cannot_import_portal_session(runtime,tmp_path):
 def test_refresh_http_uses_documented_method_without_echoing_request(monkeypatch):
     import sfm_fx_new_age.connector.oauth as oauth
     calls=[]
-    monkeypatch.setattr(oauth,'urlopen',lambda request,timeout:calls.append((request.method,request.full_url,timeout)))
+    class Opener:
+        def open(self,request,timeout):calls.append((request.method,request.full_url,timeout))
+    monkeypatch.setattr(oauth,'build_opener',lambda *handlers:Opener())
     oauth.token_http_request(oauth.TOKEN_URL+'?grant_type=refresh_token&refresh_token=SYNTHETIC',15)
     oauth.token_http_request(oauth.TOKEN_URL+'?grant_type=authorization_code&code=SYNTHETIC',15)
     assert [c[0] for c in calls]==['POST','GET']

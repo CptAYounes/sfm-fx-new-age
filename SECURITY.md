@@ -6,9 +6,9 @@ The current `main` branch and latest public 0.2.x release are the maintenance ta
 
 ## Known dependency advisories
 
-At initial publication on November 22, 2026, GitHub identified **37 open package advisories: 1 critical, 18 high, 13 medium and 5 low** in the preserved reference environment. This is not an exploitability determination, and the counts may change as GitHub updates its database or dependencies change. The critical advisory affects the pinned certifi reference version. Several other legacy packages are constrained by the current upstream optional cTrader SDK (0.9.2).
+The November 23, 2026 **0.2.1** recheck resolves **13 of the original 37 advisories, including the critical certifi finding**, through resolver-compatible updates. The current reference environment matches **24 remaining advisories (12 high, 8 medium, 4 low)**, all in packages pinned directly or transitively by the optional cTrader SDK. No alerts were dismissed to produce the reduction. Package matches are not a completed exploitability determination; current observed exposure and remaining parser/TLS risk are documented in the [security review](docs/security-review.md).
 
-Track triage and compatible remediation in [issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14). Do not use this initial edition with real accounts or exposed network services as if it were security-cleared. Do not force incompatible dependency versions or merge bot upgrade PRs without resolver, offline regression and explicitly authorized native-compatibility evidence. Secret scanning and passing tests do not resolve these advisories.
+Track remaining work in [issue #14](https://github.com/CptAYounes/sfm-fx-new-age/issues/14). Do not treat the reference stack as security-cleared merely because provider authentication and offline tests pass. Do not force incompatible dependency versions or merge bot upgrade PRs without resolver, offline regression and explicitly authorized native-compatibility evidence. Secret scanning and passing tests do not resolve the SDK-constrained advisories.
 
 ## Report vulnerabilities privately
 

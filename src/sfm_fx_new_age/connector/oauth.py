@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass,field
 from pathlib import Path
 from urllib.parse import urlparse,parse_qs,urlencode
-from urllib.request import urlopen,Request
+from urllib.request import build_opener,HTTPRedirectHandler,Request
 from urllib.error import HTTPError,URLError
 from http.server import ThreadingHTTPServer,BaseHTTPRequestHandler
 from threading import Thread,RLock
@@ -12,12 +12,41 @@ import json,os,secrets,stat,re
 
 AUTH_URL='https://id.ctrader.com/my/settings/openapi/grantingaccess/'
 TOKEN_URL='https://openapi.ctrader.com/apps/token'
+PRIVATE_JSON_LIMIT=65536
+
+
+class TokenRedirectHandler(HTTPRedirectHandler):
+    """Never forward a credential-bearing token request through a redirect."""
+    def redirect_request(self,req,fp,code,msg,headers,newurl):
+        # Do not retain either credential-bearing URL in the public exception.
+        raise HTTPError(TOKEN_URL,code,'Token endpoint redirect refused',headers,None)
+
+
+def private_json_response(response):
+    """Read one bounded, unambiguous object; never include its bytes in errors."""
+    payload=response.read(PRIVATE_JSON_LIMIT+1)
+    if len(payload)>PRIVATE_JSON_LIMIT:raise ValueError('Private JSON exceeds the size limit')
+    def unique_object(pairs):
+        body={}
+        for key,value in pairs:
+            if key in body:raise ValueError('Duplicate private JSON field')
+            body[key]=value
+        return body
+    body=json.loads(payload,object_pairs_hook=unique_object)
+    if type(body) is not dict:raise ValueError('Private JSON object required')
+    return body
 
 
 def token_http_request(url,timeout):
     """Official token API: code exchange GET, refresh POST; never log its URL."""
-    grant=parse_qs(urlparse(url).query).get('grant_type',[])
-    return urlopen(Request(url,method='POST' if grant==['refresh_token'] else 'GET',
+    destination=urlparse(url)
+    grant=parse_qs(destination.query).get('grant_type',[])
+    if (destination.scheme!='https' or destination.hostname!='openapi.ctrader.com'
+        or destination.port not in (None,443) or destination.path!='/apps/token'
+        or destination.username or destination.password or destination.fragment or destination.params
+        or grant not in (['refresh_token'],['authorization_code'])):
+        raise ValueError('Official HTTPS token endpoint and one supported grant required')
+    return build_opener(TokenRedirectHandler()).open(Request(url,method='POST' if grant==['refresh_token'] else 'GET',
         headers={'Accept':'application/json','Content-Type':'application/json'}),timeout=timeout)
 
 
@@ -40,27 +69,30 @@ class SecretStore:
 
     def load(self)->dict:
         self._check_parent()
-        fd=os.open(self.path,os.O_RDONLY|os.O_NOFOLLOW)
+        fd=os.open(self.path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
         try:
             info=os.fstat(fd)
-            if info.st_size>65536:raise ValueError('Private credential file exceeds the size limit')
-            if not stat.S_ISREG(info.st_mode) or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:
-                raise ValueError('Secret file must be user-owned regular mode 0600')
-            with os.fdopen(fd,'r') as handle:fd=-1;body=json.load(handle)
+            if info.st_size>PRIVATE_JSON_LIMIT:raise ValueError('Private credential file exceeds the size limit')
+            if not stat.S_ISREG(info.st_mode) or info.st_nlink!=1 or info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)!=0o600:
+                raise ValueError('Secret file must be user-owned single-link regular mode 0600')
+            with os.fdopen(fd,'rb') as handle:fd=-1;body=private_json_response(handle)
         finally:
             if fd>=0:os.close(fd)
         if type(body) is not dict:raise ValueError('Secret record must be an object')
         return body
 
     def save(self,body:dict):
+        if type(body) is not dict:raise ValueError('Secret record must be an object')
+        payload=json.dumps(body).encode('utf-8')
+        if len(payload)>PRIVATE_JSON_LIMIT:raise ValueError('Private credential file exceeds the size limit')
         self._check_parent(create=True)
         if self.path.is_symlink():raise ValueError('Secret symlink rejected')
         if self.path.exists():self.load() # refuse an unsafe existing target
         temp=self.path.with_name('.token-'+secrets.token_hex(12))
         fd=os.open(temp,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
         try:
-            with os.fdopen(fd,'w') as handle:
-                json.dump(body,handle);handle.flush();os.fsync(handle.fileno())
+            with os.fdopen(fd,'wb') as handle:
+                handle.write(payload);handle.flush();os.fsync(handle.fileno())
             os.replace(temp,self.path)
             parent=os.open(self.path.parent,os.O_DIRECTORY)
             try:os.fsync(parent)
@@ -144,9 +176,11 @@ class OAuthSession:
         params=fields|{'client_id':self.config.client_id,'client_secret':saved['client_secret']}
         self.last_error=None;self.last_http_status=None
         try:
-            with self.request(TOKEN_URL+'?'+urlencode(params),timeout=15) as response:body=json.load(response)
+            with self.request(TOKEN_URL+'?'+urlencode(params),timeout=15) as response:body=private_json_response(response)
             self.last_error=token_error_code(body)
-            if not body.get('accessToken') or not body.get('refreshToken') or int(body.get('expiresIn',0))<=0:raise ValueError('Token response refused')
+            if (any(type(body.get(key)) is not str or not body[key] or len(body[key])>8192 for key in ('accessToken','refreshToken'))
+                or type(body.get('expiresIn')) not in (int,str)
+                or not 0<int(body['expiresIn'])<=2147483647):raise ValueError('Token response refused')
             saved.update(access_token=body['accessToken'],refresh_token=body['refreshToken'],expires_at=time()+int(body['expiresIn']))
             with self._state_lock:
                 if self.closed or generation!=self._generation:raise ValueError('OAuth session was closed')
@@ -157,8 +191,9 @@ class OAuthSession:
                     self.last_status='TOKEN_EXCHANGE_FAILED'
                     if isinstance(exc,HTTPError):
                         self.last_http_status=exc.code
-                        try:self.last_error=token_error_code(json.load(exc))
+                        try:self.last_error=token_error_code(private_json_response(exc))
                         except Exception:pass
+                        finally:exc.close()
                         self.last_error=self.last_error or ('RATE_LIMITED' if exc.code==429 else 'HTTP_'+str(exc.code))
                     elif isinstance(exc,(URLError,TimeoutError,OSError)):self.last_error='CONNECTION_FAILED'
                     self.last_error=self.last_error or 'TOKEN_EXCHANGE_FAILED'

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "product_files": [
     {
@@ -28,9 +28,9 @@
     },
     {
       "path": "src/sfm_fx_new_age/__init__.py",
-      "sha256": "f4b53f8b88849e51d69259f4d594dee0a197c8b780d23b3586bce65393d64ad6",
+      "sha256": "3ebde498f37e313f7c6ac3fc3f9406bff0e56f435b7e82203d83f802ff358974",
       "original_sha256": "f4b53f8b88849e51d69259f4d594dee0a197c8b780d23b3586bce65393d64ad6",
-      "unchanged": true
+      "unchanged": false
     },
     {
       "path": "src/sfm_fx_new_age/storage/database.py",
@@ -100,9 +100,9 @@
     },
     {
       "path": "src/sfm_fx_new_age/connector/oauth.py",
-      "sha256": "2407ceb096d9451c6b91b3bac400717017156ea111478c039653171713223da0",
+      "sha256": "bbc2bc73e4f68c52be05a553902ab9e6639b8d8c7a3a65b67e3028e49fc7daef",
       "original_sha256": "2407ceb096d9451c6b91b3bac400717017156ea111478c039653171713223da0",
-      "unchanged": true
+      "unchanged": false
     },
     {
       "path": "src/sfm_fx_new_age/connector/broker_depth.py",
@@ -178,9 +178,9 @@
     },
     {
       "path": "src/sfm_fx_new_age/connector/fix_capture.py",
-      "sha256": "917c2dfdecfe42af8ea9efb507438724074968b564df21cc1d38c771e328f3f8",
+      "sha256": "b42e14fadce3b175738bf44c332e57a16d0e61dffe2969d00bbc625cbb221e6e",
       "original_sha256": "917c2dfdecfe42af8ea9efb507438724074968b564df21cc1d38c771e328f3f8",
-      "unchanged": true
+      "unchanged": false
     },
     {
       "path": "src/sfm_fx_new_age/connector/service.py",
@@ -202,9 +202,9 @@
     },
     {
       "path": "src/sfm_fx_new_age/connector/sdk_worker.py",
-      "sha256": "e6ed4e3969ff5f104f0c4d6c8a56c10a1aab30aadb8695109c56f8a3d15b39bc",
+      "sha256": "12c859003f380f6eba2a79a6dd3bec93e19ae951ca500e7c86be40d8cc2bb8f3",
       "original_sha256": "e6ed4e3969ff5f104f0c4d6c8a56c10a1aab30aadb8695109c56f8a3d15b39bc",
-      "unchanged": true
+      "unchanged": false
     },
     {
       "path": "src/sfm_fx_new_age/connector/fxopen_feed.py",
